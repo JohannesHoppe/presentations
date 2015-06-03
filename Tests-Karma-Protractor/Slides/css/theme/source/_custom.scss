@@ -135,14 +135,39 @@ ul.model {
     }
 }
 
-/*
 .reveal .state-background {
     background-image: url('../../images/pixel.png');
     background-repeat: no-repeat;
     background-position: left top;
-    background-size: 454px 454px;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+   
 }
-*/
+
+.jasmine .reveal .state-background {
+    background-image: url('../../images/logo-jasmine-state.svg');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+    transition: background-image 0.8s linear;
+}
+
+.tumbleweed .reveal .state-background {
+
+    background-image: url('../../images/logo-jasmine-state.svg'), url('../../images/tumbleweed.gif');
+    background-position: left top, center bottom;
+    background-size: auto auto, 100% 110%;
+
+
+    -webkit-transition: background-image 0.8s linear, none;
+    -moz-transition: background-image 0.8s linear, none;
+    -o-transition: background-image 0.8s linear, none;
+    transition: background-image 0.8s linear, none;
+}
 
 code.small {
     font-size: 14px;
