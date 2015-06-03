@@ -20,7 +20,7 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2015.
 
 Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute Architektur. Durch automatisierte Tests lässt sich sicherstellen, dass die Software fehlerfrei funktioniert und die fachlichen Spezifikationen erfüllt sind. In diesem Vortrag wird der Test-Runner Karma vorgestellt, mit welchem Unit-Test für JavaScript Anwendungen erstellt werden können. Zum Einsatz wird das BDD-Framework Jasmine kommen. Oberflächentests sind eine gute Ergänzung zu Unit-Tests, denn mit ihnen lässt sich die Anwendung aus der Sicht des Anwenders überprüfen. Hierfür wird Protractor beleuchtet, welcher auf Basis von Selenium End-To-End-Tests von JavaScript-Anwendungen und speziell von AngularJS-Anwendungen ermöglicht.
 
-[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides)
+[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides)  
 
 <hr>
 
@@ -43,7 +43,7 @@ Erfahren Sie in diesem Vortrag, wie das OData Protokoll aufgebaut ist und wie Me
 Das Intel Galileo Board ist ein Einplatinencomputer, mit dem Sie das Internet der Dinge erforschen und innovative Projekte erstellen können. Dieser Vortrag zeigt alles, was Sie brauchen um loszulegen: Das kostenfreie Intel XDK und wie dadurch mit JavaScript die Logik für den Zugriff auf Sensoren programmiert wird. Sie steigen mit den Grundlagen ein und werden dann mit den wichtigsten Frameworks und Vorgehensweisen vertraut gemacht. 
 
 [» Github-Repository mit vielen Anleitungen](https://github.com/JohannesHoppe/Workshop_Javascript_Internet-of-Things/)  
-[» Beispiel-Anwendungen "Intel IoT on Galileo with mobile companion app"](https://github.com/JohannesHoppe/Workshop_Javascript_Internet-of-Things/tree/gh-pages/examples)
+[» Beispiel-Anwendungen "Intel IoT on Galileo with mobile companion app"](https://github.com/JohannesHoppe/Workshop_Javascript_Internet-of-Things/tree/gh-pages/examples)  
 [» Präsentation Starten](johanneshoppe.github.io/Workshop_Javascript_Internet-of-Things/Slides/index_short.html)
 
 <hr>
