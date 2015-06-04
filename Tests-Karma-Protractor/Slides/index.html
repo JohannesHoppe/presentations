@@ -171,13 +171,21 @@
                         $ npm install karma --save-dev
                         $ npm install -g karma-cli
                         $ npm install karma-jasmine karma-chrome-launcher --save-dev
-                        $ npm test
+                        $ karma start  #oder: npm test
                         ```
                         
                         <br/>
                         <br/>
-                        <small>Tipp: Karma nicht global installieren - Versionskonflikte!</small>
+                        <small>Tipp: Karma nicht global installieren - Versionskonflikte zwischen Projekten!</small>
                     </section>   
+                    
+                    <section data-markdown data-state="karma">
+                        ### Windows? 
+                        
+                        ```txt contenteditable cmd white
+                        SET CHROME_BIN = "C:\Users\me_000\AppData\Local\Google\Chrome\Application\chrome.exe"
+                        ```
+                    </section>
                     
                     <section data-markdown data-state="karma">
                         ### package.json

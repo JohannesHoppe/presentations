@@ -61,11 +61,13 @@
     });
 
 
-    $(function() {
+    $(function () {
+
         // some dirty fixes
         $("code[fragment]").addClass("fragment");
         $("code[small]").addClass("small");
         $("code[cmd]").addClass("cmd");
+        $("code[white]").addClass("white");
 
         // start print page if print-pdf link was clicked
         $(function () {
