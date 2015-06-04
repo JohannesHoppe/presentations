@@ -65,6 +65,7 @@
         // some dirty fixes
         $("code[fragment]").addClass("fragment");
         $("code[small]").addClass("small");
+        $("code[cmd]").addClass("cmd");
 
         // start print page if print-pdf link was clicked
         $(function () {

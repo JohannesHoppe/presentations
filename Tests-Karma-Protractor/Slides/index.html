@@ -164,42 +164,50 @@
                     
 
                     <section data-markdown data-state="karma">
-                        ## Plain
-                        
-                        * <span title="lokale Installation">npm install karma --save-dev</span> 
-                        * <span title="startet lokale Installation">npm install -g karma-cli</span> 
+                        ### Plain
+                             
+                        ```js contenteditable cmd
+                        $ npm init
+                        $ npm install karma --save-dev
+                        $ npm install -g karma-cli
+                        $ npm install karma-jasmine karma-chrome-launcher --save-dev
+                        $ npm test
+                        ```
                         
                         <br/>
                         <br/>
                         <small>Tipp: Karma nicht global installieren - Versionskonflikte!</small>
-                    </section>                                                     
+                    </section>   
+                    
+                    <section data-markdown data-state="karma">
+                        ### package.json
+                        
+                        ```js contenteditable small
+                        {
+                          "name": "Tests-Karma-Protractor",
+                          "version": "1.0.0",
+                          "description": "Example package",
+                          "main": "index.js",
+                          "directories": {
+                            "test": "test"
+                          },
+                          "scripts": {
+                            "test": "karma start"
+                          },
+                          "author": "Johannes Hoppe",
+                          "license": "MIT",
+                          "devDependencies": {
+                            "jasmine-core": "^2.3.4",
+                            "karma": "^0.12.36",
+                            "karma-chrome-launcher": "^0.1.12",
+                            "karma-jasmine": "^0.3.5"
+                          }
+                        }
+                        ```
+                    </section>                                                    
                      
 
-                    <section data-markdown data-state="karma">
-                        ## Plain
-                        
-                        * npm install karma --save-dev  # lokale Installation
-                        * npm install -g karma-cli      # startet lokale karma
-
-                        ```js contenteditable       
-                        // Blinking LED - Node.js
-                                            
-                        var mraa = require('mraa');
-                            myOnboardLed = new mraa.Gpio(13),
-                            ledState = true;
-
-                        myOnboardLed.dir(mraa.DIR_OUT);
-
-                        function loop()
-                        {
-                            myOnboardLed.write(ledState ? 1 : 0);
-                            ledState = !ledState;
-                            setTimeout(loop, 1000);
-                        }
-                        
-                        loop();
-                        ```
-                    </section>                                                     
+                                                                       
  
 
 
