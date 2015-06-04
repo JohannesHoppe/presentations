@@ -44,7 +44,7 @@
                 <section>
                     
                     <img src="images/logo-keep-calm.svg" width="75%"  alt="" style="margin-top: -100px;"/>  
-                    <h1 class="nowrap" style="font-size: 0.7em; margin-top: -80px; text-shadow: none;">MIT KARMA & PROTRACTOR</h1>                        
+                    <h1 class="nowrap" style="font-size: 0.7em; margin-top: -80px; text-shadow: none;">WITH KARMA & PROTRACTOR</h1>                        
 
                     <br class="hidePrint" />
                     <br class="hidePrint" />
@@ -137,7 +137,7 @@
                         ```
                     </section>
 
-                    <section data-markdown data-state="jasmine tumbleweed">
+                    <section data-markdown data-state="tumbleweed">
                         <h2 style="color:#8a4182">Früher</h2>
                         
                         <iframe src="js/jasmine/SpecRunner.html" class="spec" scrolling="no"></iframe>
@@ -147,13 +147,60 @@
                         <img src="images/logo-karma.svg" alt="" width="50%" />
                     </section> 
 
-                    <section data-markdown>
+                    <section data-markdown data-state="karma">
                         <blockquote style="width: 710px; color:gray;">
                             On the <b style="color:black;">AngularJS</b> team, we rely on testing and we always seek better tools to make our life easier.
                             That's why we created
                             <b style="color:black;">Karma</b> - a test runner that fits all our needs.
                         </blockquote>
-                    </section>
+                    </section>        
+                    
+                    <section>
+                        
+                        <div style="display: inline-block;font-size: 0.8em;">&nbsp;<br />var gretchenfrage =</div>    
+                        <div style="display: inline-block;"><img src="images/logo-js.svg" style="height:180px;" alt="" /><br />plain</div>||<div style="display: inline-block;"><img src="images/logo-grunt.svg" style="height:200px;" alt="" /><br />grunt</div>||<div style="display: inline-block;"><img src="images/logo-gulp.svg" style="height:200px;width: 200px;" alt="" /><br />gulp;</div><div style="display: inline-block;width:100px;">&nbsp;</div>
+
+                    </section> 
+                    
+
+                    <section data-markdown data-state="karma">
+                        ## Plain
+                        
+                        * <span title="lokale Installation">npm install karma --save-dev</span> 
+                        * <span title="startet lokale Installation">npm install -g karma-cli</span> 
+                        
+                        <br/>
+                        <br/>
+                        <small>Tipp: Karma nicht global installieren - Versionskonflikte!</small>
+                    </section>                                                     
+                     
+
+                    <section data-markdown data-state="karma">
+                        ## Plain
+                        
+                        * npm install karma --save-dev  # lokale Installation
+                        * npm install -g karma-cli      # startet lokale karma
+
+                        ```js contenteditable       
+                        // Blinking LED - Node.js
+                                            
+                        var mraa = require('mraa');
+                            myOnboardLed = new mraa.Gpio(13),
+                            ledState = true;
+
+                        myOnboardLed.dir(mraa.DIR_OUT);
+
+                        function loop()
+                        {
+                            myOnboardLed.write(ledState ? 1 : 0);
+                            ledState = !ledState;
+                            setTimeout(loop, 1000);
+                        }
+                        
+                        loop();
+                        ```
+                    </section>                                                     
+ 
 
 
                 </section>
