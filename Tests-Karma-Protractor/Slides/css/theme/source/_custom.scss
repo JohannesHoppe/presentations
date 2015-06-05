@@ -148,12 +148,20 @@ ul.model {
 }
 
 .jasmine .reveal .state-background {
+    
     background-image: url('../../images/logo-jasmine-state.svg');
     
     -webkit-transition: background-image 0.8s linear;
     -moz-transition: background-image 0.8s linear;
     -o-transition: background-image 0.8s linear;
     transition: background-image 0.8s linear;
+}
+
+section[data-state="jasmine"],
+section[data-state="tumbleweed"] {
+    h1, h2, h3, h4, strong {
+        color: #8a4182 !important;
+    }
 }
 
 .tumbleweed .reveal .state-background {
@@ -179,6 +187,11 @@ ul.model {
      transition: background-image 0.8s linear;
 }
 
+section[data-state="karma"] {
+    h1, h2, h3, h4, strong {
+        color: #429f87 !important;
+    }
+}
 
 code {
     &.small {
@@ -226,7 +239,7 @@ code {
 }
 
 @keyframes "blink"         { from, to { color: transparent; } 50% { color: white; } }
-@-moz-keyframes blink      { from, to { color: transparent; } 50% { color: white; } }
+@-moz-keyframes "blink"    { from, to { color: transparent; } 50% { color: white; } }
 @-webkit-keyframes "blink" { from, to { color: transparent; } 50% { color: white; } }
 @-ms-keyframes "blink"     { from, to { color: transparent; } 50% { color: white; } }
 @-o-keyframes "blink"      { from, to { color: transparent; } 50% { color: white; } }

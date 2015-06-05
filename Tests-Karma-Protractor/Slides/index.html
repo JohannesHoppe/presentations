@@ -67,17 +67,17 @@
                         ![tools](images/icon_bug.png)
                     </section> 
                     
-                    <section data-markdown>
+                    <section data-markdown data-state="jasmine">
                         <img src="images/logo-jasmine.svg" alt="" width="30%" />
                         
                         __b__ehavior-__d__riven __d__evelopment (BDD) framework
                     </section>  
                                       
                     <section data-markdown data-state="jasmine">
-                        <h3 style="color:#8a4182">Suites, <span title="Specifications">Specs</span> & Expectations</h3>    
+                        ### Suites, <span title="Specifications">Specs</span> & Expectations</h3>    
                         <br/>
 
-                        ```js contenteditable 
+                        ```javascript contenteditable 
                         describe("a suite", function() {
                            it("contains spec with an expectation", function() {
                              expect(true).toBe(true);
@@ -87,7 +87,7 @@
                     </section> 
 
                     <section data-markdown data-state="jasmine">
-                        <h2 style="color:#8a4182">Früher</h2>       
+                        ## Früher
                         <small>Jasmine HTML runner</small>
                         
                         ```html contenteditable small
@@ -138,7 +138,7 @@
                     </section>
 
                     <section data-markdown data-state="tumbleweed">
-                        <h2 style="color:#8a4182">Früher</h2>
+                        ## Früher
                         
                         <iframe src="js/jasmine/SpecRunner.html" class="spec" scrolling="no"></iframe>
                     </section>
@@ -149,9 +149,9 @@
 
                     <section data-markdown data-state="karma">
                         <blockquote style="width: 710px; color:gray;">
-                            On the <b style="color:black;">AngularJS</b> team, we rely on testing and we always seek better tools to make our life easier.
+                            On the <strong>AngularJS</strong> team, we rely on testing and we always seek better tools to make our life easier.
                             That's why we created
-                            <b style="color:black;">Karma</b> - a test runner that fits all our needs.
+                            <strong>Karma</strong> - a test runner that fits all our needs.
                         </blockquote>
                     </section>        
                     
@@ -164,13 +164,15 @@
                     
 
                     <section data-markdown data-state="karma">
-                        ### Plain
+                        <h4 style="font-size: 0.5em; line-height: 0;">Heute mal</h4>
+                        ### Plain Node.js
                              
-                        ```js contenteditable cmd
+                        ```cmd contenteditable cmd
                         $ npm init
                         $ npm install karma --save-dev
                         $ npm install -g karma-cli
                         $ npm install karma-jasmine karma-chrome-launcher --save-dev
+                        $ karma init
                         $ karma start  #oder: npm test
                         ```
                         
@@ -183,14 +185,14 @@
                         ### Windows? 
                         
                         ```txt contenteditable cmd white
-                        SET CHROME_BIN = "C:\Users\me_000\AppData\Local\Google\Chrome\Application\chrome.exe"
+                        SET CHROME_BIN = "C:\Users\Me\AppData\Local\Google\Chrome\Application\chrome.exe"
                         ```
                     </section>
                     
                     <section data-markdown data-state="karma">
                         ### package.json
                         
-                        ```js contenteditable small
+                        ```javascript contenteditable small
                         {
                           "name": "Tests-Karma-Protractor",
                           "version": "1.0.0",
@@ -211,6 +213,30 @@
                             "karma-jasmine": "^0.3.5"
                           }
                         }
+                        ```
+                    </section>
+                    
+                    <section data-markdown data-state="karma">
+                        ### karma.conf.js
+                        
+                        ```javascript contenteditable
+                        module.exports = function(config) {
+                          config.set({
+                            basePath: './',
+                            frameworks: ['jasmine'],
+                            files: [
+                                'scripts/**/*.js',
+                                'test/*.spec.js',
+                                {
+                                    pattern: '**/*.js',
+                                    included: false // available but NOT included via _LT_script_GT_
+                                }
+                            ],
+                            exclude: [],
+                            autoWatch: true,
+                            browsers: ['Chrome']
+                          });
+                        };
                         ```
                     </section>                                                    
                      
@@ -233,34 +259,7 @@
                         <img src="images/logo-protractor.png" alt="" width="50%" />
                     </section> 
 
-                </section>
-                
-                <section>                
-                    
-                    <section data-markdown>
-                        ## todo
-
-                        ```js contenteditable       
-                        // Blinking LED - Node.js
-                                            
-                        var mraa = require('mraa');
-                            myOnboardLed = new mraa.Gpio(13),
-                            ledState = true;
-
-                        myOnboardLed.dir(mraa.DIR_OUT);
-
-                        function loop()
-                        {
-                            myOnboardLed.write(ledState ? 1 : 0);
-                            ledState = !ledState;
-                            setTimeout(loop, 1000);
-                        }
-                        
-                        loop();
-                        ```
-                    </section>                                                     
-                                
-                </section>                
+                </section>               
 
                 <section>
                     

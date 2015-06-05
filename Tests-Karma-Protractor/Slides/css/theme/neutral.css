@@ -333,6 +333,15 @@ ul.model span a {
   transition: background-image 0.8s linear;
 }
 
+section[data-state="jasmine"] h1, section[data-state="jasmine"] h2, section[data-state="jasmine"] h3, section[data-state="jasmine"] h4, section[data-state="jasmine"] strong,
+section[data-state="tumbleweed"] h1,
+section[data-state="tumbleweed"] h2,
+section[data-state="tumbleweed"] h3,
+section[data-state="tumbleweed"] h4,
+section[data-state="tumbleweed"] strong {
+  color: #8a4182 !important;
+}
+
 .tumbleweed .reveal .state-background {
   background-image: url("../../images/logo-jasmine-state.svg"), url("../../images/tumbleweed.gif");
   background-position: left top, center bottom;
@@ -349,6 +358,10 @@ ul.model span a {
   -moz-transition: background-image 0.8s linear;
   -o-transition: background-image 0.8s linear;
   transition: background-image 0.8s linear;
+}
+
+section[data-state="karma"] h1, section[data-state="karma"] h2, section[data-state="karma"] h3, section[data-state="karma"] h4, section[data-state="karma"] strong {
+  color: #429f87 !important;
 }
 
 code.small {
@@ -394,7 +407,7 @@ code.cmd.white span {
     color: white;
   }
 }
-@-moz-keyframes blink {
+@-moz-keyframes "blink" {
   from, to {
     color: transparent;
   }
