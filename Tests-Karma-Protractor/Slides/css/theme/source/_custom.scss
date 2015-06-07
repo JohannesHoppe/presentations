@@ -200,7 +200,6 @@ code {
         max-height: 500px;
     }
 
-
     &.cmd {
 
         background-color: #202020;
@@ -236,6 +235,21 @@ code {
         }
     }
 
+}
+
+garfield {
+
+    display: block;
+    position: relative;
+    width: 350px;
+    height: 240px;
+    margin-left: 570px;
+    margin-top: -226px;
+
+    background-image: url('../../images/garfield2.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 350px 240px;
 }
 
 @keyframes "blink"         { from, to { color: transparent; } 50% { color: white; } }

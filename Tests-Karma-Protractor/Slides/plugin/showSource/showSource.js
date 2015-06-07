@@ -66,6 +66,7 @@
         // some dirty fixes
         $("code[fragment]").addClass("fragment");
         $("code[small]").addClass("small");
+        $("code[garfield]").addClass("garfield");
         $("code[cmd]").addClass("cmd");
         $("code[white]").addClass("white");
 

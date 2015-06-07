@@ -1,19 +1,5 @@
 ﻿requirejs.config({
     baseUrl: '/base', // !!!
-    paths: { },
-    shim: {
-        angular: {
-            exports: 'angular'
-        },
-        'angular-route': {
-            exports: 'angular',
-            deps: ['angular']
-        },
-        'angular-mocks': {
-            exports: 'angular',
-            deps: ['angular']
-        }
-    },
     deps: (function() {
 
         var allTestFiles = [];

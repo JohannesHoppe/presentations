@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Application: Hello Garfield</title>
+  <link href="css/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">  
+  <link href="css/style.css" rel="stylesheet">  
+</head>
+<body class="container">
+
+    <div class="jumbotron">
+        <p>Hello</p>
+        <h1 id="name">Hello</h1>
+        <garfield></garfield>
+    </div>
+
+    <script src="scripts/Garfield.js"></script>  
+    <script>
+        var garfield = new Garfield();
+        document.getElementById("name").innerText = garfield.getName();
+    </script>
+</body>
+</html>
