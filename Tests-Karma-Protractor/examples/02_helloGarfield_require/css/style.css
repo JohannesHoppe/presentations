@@ -1,0 +1,19 @@
+.jumbotron {
+   position: relative;
+}
+
+garfield{
+
+    display: block;
+    position: absolute;
+    width: 350px;
+    height: 240px;
+    bottom: -75px;
+    right: 30px;
+
+    background-image: url('garfield2.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 350px 240px;
+
+}

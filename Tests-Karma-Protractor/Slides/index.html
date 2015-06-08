@@ -228,7 +228,7 @@
                                 'scripts/**/*.js',
                                 'test/*.spec.js',
                                 {
-                                    pattern: '**/*.js',
+                                    pattern: 'scripts/**/*.js',
                                     included: false // available but NOT included via _LT_script_GT_
                                 }
                             ],
@@ -266,7 +266,27 @@
 
                     </section> 
                                                                        
- 
+                    <section data-markdown data-state="karma">
+                        ```javascript contenteditable  
+                        define('Garfield', [], function() {
+
+                            var Garfield = function () {
+                                this.getName = function () {
+                                    return "Garfield";
+                                };
+                            };
+    
+                            return Garfield;
+                        });
+
+                        require(['Garfield'], function(Garfield) {
+    
+                            var garfield = new Garfield();
+                            garfield.getName();
+                        });
+                        ```   
+                        <garfield></garfield>
+                    </section> 
 
 
                 </section>

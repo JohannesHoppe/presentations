@@ -1,0 +1,3 @@
+﻿requirejs.config({
+    baseUrl: 'scripts'
+});

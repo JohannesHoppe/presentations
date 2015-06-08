@@ -7,7 +7,7 @@ module.exports = function(config) {
         'test/*.spec.js',
         // these files will available in the webserver but NOT loaded with a <script> tag
         {
-            pattern: '**/*.js',
+            pattern: 'scripts/**/*.js',
             included: false
         }
     ],
