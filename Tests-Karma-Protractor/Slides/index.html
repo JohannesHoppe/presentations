@@ -224,14 +224,7 @@
                           config.set({
                             basePath: './',
                             frameworks: ['jasmine'],
-                            files: [
-                                'scripts/**/*.js',
-                                'test/*.spec.js',
-                                {
-                                    pattern: 'scripts/**/*.js',
-                                    included: false // available but NOT included via _LT_script_GT_
-                                }
-                            ],
+                            files: ['scripts/**/*.js'],
                             exclude: [],
                             autoWatch: true,
                             browsers: ['Chrome']

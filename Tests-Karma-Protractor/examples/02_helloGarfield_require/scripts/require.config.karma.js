@@ -12,6 +12,9 @@
             
         return allTestFiles;
     })(),
-    callback: window.__karma__.start
+    callback: function() { 
+        debugger; 
+        return window.__karma__.start
+    }
 });
 
