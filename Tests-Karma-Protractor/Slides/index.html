@@ -263,22 +263,41 @@
                         ```javascript contenteditable  
                         define('Garfield', [], function() {
 
-                            var Garfield = function () {
-                                this.getName = function () {
-                                    return "Garfield";
-                                };
-                            };
+                        var Garfield = function () {
+                        this.getName = function () {
+                        return "Garfield";
+                        };
+                        };
     
-                            return Garfield;
+                        return Garfield;
                         });
 
                         require(['Garfield'], function(Garfield) {
     
-                            var garfield = new Garfield();
-                            garfield.getName();
+                        var garfield = new Garfield();
+                        garfield.getName();
                         });
                         ```   
                         <garfield></garfield>
+                    </section>
+                                                                                           
+                    <section data-markdown data-state="karma">
+                        ### Finaler Unit-Test
+
+                        <br/>
+                        ```javascript contenteditable  
+                        define(['Garfield'], function(Garfield) {
+
+                            describe('Garfield', function() {
+        
+                                it('should have a name', function() {
+        
+                                    var garfield = new Garfield();
+                                    expect(garfield.getName()).toEqual("Garfield");
+                                });
+                            });
+                        });
+                        ```   
                     </section> 
                 
                     <section data-markdown data-state="karma">
@@ -352,11 +371,49 @@
                             
                         ```javascript contenteditable 
                         exports.config = {
-                          seleniumAddress: 'http://localhost:4444/wd/hub',
-                          specs: ['*Spec.js']
-                        }
-                        ```   
-                        <garfield></garfield>
+                            seleniumAddress: 'http://localhost:4444/wd/hub',
+                            specs: ['e2e/*Spec.js']
+                        };
+                        ```
+                    </section>   
+                    
+                    <section data-markdown data-state="protractor">
+                        ### AngularJS Spec 
+                            
+                        ```javascript contenteditable 
+                        describe('Protractor Demo Spec', function() {
+
+                            it('should have a title', function() {
+                                browser.get('http://juliemr.github.io/protractor-demo/');
+                                expect(browser.getTitle()).toEqual('Super Calculator');
+                            });
+                        });
+                        ```
+                    </section>
+                    
+                    <section data-markdown data-state="protractor">
+                        ### Ohne Angular
+                            
+                        ```javascript contenteditable 
+                        describe('Johannes Talk at DWX', function() {
+
+                            beforeEach(function () {
+                                // no waiting on angular to load and finish its tasks 
+                                browser.ignoreSynchronization = true;
+                            });
+
+                            it('should have the expected title', function() {
+
+                                browser.get('http://www.developer-week.de/Programm/Veranstaltung/(event)/18498');
+                                var heading = element(by.tagName('h2'));
+                                expect(heading.getText()).toEqual('JS Unit- und Oberflächentests mit Karma & Protractor');
+                            });
+
+                            afterEach(function() {
+                                return browser.ignoreSynchronization = false;
+                            });
+                        });
+                        ```
                     </section>
 
                 </section>               
