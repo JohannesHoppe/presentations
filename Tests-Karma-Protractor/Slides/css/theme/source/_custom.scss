@@ -193,6 +193,22 @@ section[data-state="karma"] {
     }
 }
 
+.protractor .reveal .state-background {
+
+    background-image: url('../../images/logo-protractor-state.png');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+     transition: background-image 0.8s linear;
+}
+
+section[data-state="protractor"] {
+    h1, h2, h3, h4, strong {
+        color: #b52e31 !important;
+    }
+}
+
 code {
     &.small {
         font-size: 14px;

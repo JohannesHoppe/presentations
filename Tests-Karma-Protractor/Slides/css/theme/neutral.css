@@ -364,6 +364,18 @@ section[data-state="karma"] h1, section[data-state="karma"] h2, section[data-sta
   color: #429f87 !important;
 }
 
+.protractor .reveal .state-background {
+  background-image: url("../../images/logo-protractor-state.png");
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear;
+}
+
+section[data-state="protractor"] h1, section[data-state="protractor"] h2, section[data-state="protractor"] h3, section[data-state="protractor"] h4, section[data-state="protractor"] strong {
+  color: #b52e31 !important;
+}
+
 code.small {
   font-size: 14px;
   line-height: 16px;

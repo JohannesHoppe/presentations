@@ -1,4 +1,4 @@
-require(['Garfield'], function(Garfield) {
+define(['Garfield'], function(Garfield) {
 
     describe('Garfield', function() {
         

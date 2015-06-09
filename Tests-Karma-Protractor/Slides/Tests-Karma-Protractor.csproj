@@ -39,8 +39,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="examples\HelloWorldAngular.js" />
-    <Content Include="examples\HelloWorldAngular.html" />
+    <Content Include="old_examples\HelloWorldAngular.js" />
+    <Content Include="old_examples\HelloWorldAngular.html" />
     <Content Include="images\logo-jasmine.svg" />
     <Content Include="images\logo-karma.svg" />
     <Content Include="images\logo-keep-calm.svg" />

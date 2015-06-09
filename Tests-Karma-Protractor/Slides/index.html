@@ -280,7 +280,15 @@
                         ```   
                         <garfield></garfield>
                     </section> 
+                
+                    <section data-markdown data-state="karma">
+                        <img src="images/garfield.svg" alt="" width="50%" />
 
+                        <small>Demo Hello Garfield (require.js): 
+                            <a href="http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/examples/02_helloGarfield_require/">1</a> | 
+                            <a href="https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples/02_helloGarfield_require">2</a>
+                        </small>
+                    </section>
 
                 </section>
 
@@ -292,10 +300,68 @@
                         ![tools](images/icon_communication.png)
                     </section>                     
                      
-                    <section>
+                    <section data-state="protractor">
                         <img src="images/logo-protractor.png" alt="" width="50%" />
-                    </section> 
+                    </section>    
+                     
+                    <!--                 
+                    <section data-markdown>
+                        <img src="images/protractor-architecture.png" alt="" width="50%" /> 
+                            
+                        * Webdriver (a.k.a. Selenium)
+                        * [WebdriverJS](https://code.google.com/p/selenium/wiki/WebDriverJs) - JavaScript bindings for WebDriver.     
+                        
+                        Quelle:
+                        http://www.thoughtworks.com//insights/blog/testing-angularjs-apps-protractor
+                    </section>--> 
+                     
+                    <section data-markdown data-state="protractor">
+                        ### Terminologie Chaos
+                        <small>und mein Versuch das aufzudröseln</small>
+                                       
+                        <ul class="model">
+                            <li class="fragment">
+                                <span>&nbsp; &nbsp;Selenium &nbsp; &nbsp;</span>
+                                <small>OS-project to automate web browsers</small>
+                            </li>
+                            <li class="fragment">
+                                <span>Selenium 2.0</span>
+                                <small>concept of WebDrivers</small>
+                            </li>
+                            <li class="fragment">
+                                <span>&nbsp;WebDrivers&nbsp;</span>
+                                <small>drivers control a browser (e.g. <a href="https://sites.google.com/a/chromium.org/chromedriver/">ChromeDriver</a>)<br/>
+                                       and implement the <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol">WebDriver wire protocol</a></small>
+                            </li>
+                            <li class="fragment">
+                                <span><a href="https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs">WebDriverJS</a></span>
+                                <small>JavaScript bindings for <b>WebDriver</b> (over wire protocol)</small>
+                            </li>
+                            <li class="fragment">
+                                <span style="background-color: #b52e31;">&nbsp; <a href="https://angular.github.io/protractor/">Protractor</a> &nbsp;</span>
+                                <small>end-to-end test framework (not only) for AngularJS<br/>on top of <b>WebDriverJS</b></small>
+                            </li>
+                        </ul>   
 
+                        <br/>
+                        <br/>
+                        <small>[mehr](http://yizeng.me/2014/04/25/relationships-between-different-versions-of-selenium/)</small>
+                    </section>
+
+                    <section data-markdown data-state="karma">
+                        ### Installation
+                             
+                        ```cmd contenteditable cmd
+                        $ npm install -g protractor  # installiert protractor & webdriver-manager  
+                        $ webdriver-manager update   # installiert ChromeDriver
+                        $ webdriver-manager start
+                        $ protractor conf.js
+                        ```
+                        
+                        <br/>
+                        <br/>
+                        <small>Tipp: Karma nicht global installieren - Versionskonflikte zwischen Projekten!</small>
+                    </section>    
                 </section>               
 
                 <section>
