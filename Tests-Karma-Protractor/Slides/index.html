@@ -221,14 +221,14 @@
                         
                         ```javascript contenteditable
                         module.exports = function(config) {
-                          config.set({
-                            basePath: './',
-                            frameworks: ['jasmine'],
-                            files: ['scripts/**/*.js'],
-                            exclude: [],
-                            autoWatch: true,
-                            browsers: ['Chrome']
-                          });
+                            config.set({
+                                basePath: 'scripts',
+                                frameworks: ['jasmine'],
+                                files: ['**/*.js'],
+                                exclude: [],
+                                autoWatch: true,
+                                browsers: ['Chrome']
+                            });
                         };
                         ```   
                         
@@ -304,21 +304,9 @@
                         <img src="images/logo-protractor.png" alt="" width="50%" />
                     </section>    
                      
-                    <!--                 
-                    <section data-markdown>
-                        <img src="images/protractor-architecture.png" alt="" width="50%" /> 
-                            
-                        * Webdriver (a.k.a. Selenium)
-                        * [WebdriverJS](https://code.google.com/p/selenium/wiki/WebDriverJs) - JavaScript bindings for WebDriver.     
-                        
-                        Quelle:
-                        http://www.thoughtworks.com//insights/blog/testing-angularjs-apps-protractor
-                    </section>--> 
-                     
                     <section data-markdown data-state="protractor">
-                        ### Terminologie Chaos
-                        <small>und mein Versuch das aufzudröseln</small>
-                                       
+                        ### Terminologie
+                        
                         <ul class="model">
                             <li class="fragment">
                                 <span>&nbsp; &nbsp;Selenium &nbsp; &nbsp;</span>
@@ -348,20 +336,29 @@
                         <small>[mehr](http://yizeng.me/2014/04/25/relationships-between-different-versions-of-selenium/)</small>
                     </section>
 
-                    <section data-markdown data-state="karma">
+                    <section data-markdown data-state="protractor">
                         ### Installation
                              
-                        ```cmd contenteditable cmd
-                        $ npm install -g protractor  # installiert protractor & webdriver-manager  
-                        $ webdriver-manager update   # installiert ChromeDriver
+                        ```cmd contenteditable cmd style=font-size:1.1em
+                        $ npm install -g protractor # 💾 protractor 💾 webdriver-manager  
+                        $ webdriver-manager update  # 💾 ChromeDriver
                         $ webdriver-manager start
-                        $ protractor conf.js
+                        $ protractor protractor.conf.js
                         ```
-                        
-                        <br/>
-                        <br/>
-                        <small>Tipp: Karma nicht global installieren - Versionskonflikte zwischen Projekten!</small>
                     </section>    
+                    
+                    <section data-markdown data-state="protractor">
+                        ### protractor.conf.js
+                            
+                        ```javascript contenteditable 
+                        exports.config = {
+                          seleniumAddress: 'http://localhost:4444/wd/hub',
+                          specs: ['*Spec.js']
+                        }
+                        ```   
+                        <garfield></garfield>
+                    </section>
+
                 </section>               
 
                 <section>

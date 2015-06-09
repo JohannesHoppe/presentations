@@ -1,10 +1,10 @@
 module.exports = function(config) {
-  config.set({
-    basePath: 'scripts',
-    frameworks: ['jasmine'],
-    files: ['**/*.js'],
-    exclude: [],
-    autoWatch: true,
-    browsers: ['Chrome']
-  });
+    config.set({
+        basePath: 'scripts',
+        frameworks: ['jasmine'],
+        files: ['**/*.js'],
+        exclude: [],
+        autoWatch: true,
+        browsers: ['Chrome']
+    });
 };
