@@ -394,7 +394,7 @@
                     <section data-markdown data-state="protractor">
                         ### Ohne Angular
                             
-                        ```javascript contenteditable 
+                        ```javascript contenteditable small 
                         describe('Johannes Talk at DWX', function() {
 
                             beforeEach(function () {
@@ -406,7 +406,7 @@
 
                                 browser.get('http://www.developer-week.de/Programm/Veranstaltung/(event)/18498');
                                 var heading = element(by.tagName('h2'));
-                                expect(heading.getText()).toEqual('JS Unit- und Oberflächentests mit Karma & Protractor');
+                                expect(heading.getText()).toEqual('JS Unit- und Oberflächentests mit Karma _AMP_ Protractor');
                             });
 
                             afterEach(function() {
