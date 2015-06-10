@@ -32,6 +32,8 @@ Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute 
 Bei einer modernen Web-Anwendung ist Kommunikation per REST die erste Wahl. Doch hinsichtlich der einzusetzenden Protokolle, Formate und Konventionen bleiben diverse Fragen für die praktische Umsetzung offen. Microsoft gibt hier mit dem Open Data Protocol (OData) eine ausführliche und standardisierte Antwort.
 Erfahren Sie in diesem Vortrag, wie das OData Protokoll aufgebaut ist und wie Metadaten den Entwicklungsalltag erleichtern. Ohne zusätzlichen Aufwand wird Ihre ASP.NET Web API seitenweise Ausgabe, Sortierung, Filterung und Navigation innerhalb der Daten unterstützen. Weiterhin wird eine Reihe von kompatiblen JavaScript-Frameworks beleuchtet, unter anderen Breeze.js, JayData und Kendo UI.
 
+[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Slides)  
+
 <hr>
 
 <a name="iot"></a>

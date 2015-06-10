@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestsKarmaProtractor</RootNamespace>
-    <AssemblyName>TestsKarmaProtractor</AssemblyName>
+    <RootNamespace>RestWebAPIOData</RootNamespace>
+    <AssemblyName>RestWebAPIOData</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -39,12 +39,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="old_examples\HelloWorldAngular.js" />
-    <Content Include="old_examples\HelloWorldAngular.html" />
-    <Content Include="images\logo-jasmine.svg" />
-    <Content Include="images\logo-karma.svg" />
-    <Content Include="images\logo-keep-calm.svg" />
-    <Content Include="images\logo-protractor.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\pixel.png" />
     <Content Include="index.html" />
     <Content Include="images\icon_calendar.png" />
     <Content Include="images\icon_repeat.png" />
@@ -208,7 +204,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50508</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1337/</IISUrl>
+          <IISUrl>http://localhost:1338/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

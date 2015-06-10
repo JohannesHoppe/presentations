@@ -1,0 +1,359 @@
+﻿/* styles that are specific for this presentation */
+/* ReSharper disable UnknownHtmlTag */
+
+$neutralColor: #a6a6a6;
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* 'Created' by area */
+.pesentation-details {
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    color: gray;
+    font-size: 0.8em;
+
+    a {
+        color: #51483D;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #8B7C69;
+    }
+}
+
+.key {
+    position: relative;
+    bottom: 5px;
+    display: inline-block;
+    line-height: 30px;
+    min-width: 30px;
+    color: #000;
+    padding: 3px !important;
+    text-shadow: none;
+    letter-spacing: 0;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: #000000 0 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+    vertical-align: sub !important;
+    margin: 0 7px !important;
+}
+
+blockquote {
+    margin-top: 40px !important;
+    box-shadow: none;
+}
+
+/* Pure CSS Blockquote Styling */
+/*
+    <blockquote>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna. Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna. Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
+    <cite>Somebody famous</cite>
+    </blockquote>
+*/
+
+blockquote:before {
+    font-family: Georgia, serif;
+    display: block;
+    content: "\201C";
+    font-size: 4em;
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    color: #2e2e2c;
+
+}
+
+.reveal blockquote:after {
+    font-family: Georgia, serif;
+    content: '\201D';
+    font-size: 4em;
+    position: absolute;
+    right: 0px;
+    bottom: -70px;
+    color: #2e2e2c;
+}
+
+/*
+blockquote cite {
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+ 
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+*/
+
+ol {
+    margin: 40px 0 0 130px !important;
+}
+
+small.mini {
+    text-align: left;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 90%;
+}
+
+small.miniR {
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 70%;
+}
+
+ul.model {
+    margin-top: 30px;
+
+    li {
+        margin-bottom: 30px;
+        color: #494D4D
+    }
+
+     span {
+        padding: 5px !important;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: #000000 0 2px 5px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+    
+        margin: 7px;
+        /* background-color: darken($neutralColor, 20%);  */
+        background-color: #0F7391;
+        color: white;
+        width: 300px;
+    }
+    span a {
+        color: white !important;
+    }
+}
+
+.reveal .state-background {
+    background-image: url('../../images/pixel.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+   
+}
+
+.jasmine .reveal .state-background {
+    
+    background-image: url('../../images/logo-jasmine-state.svg');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+    transition: background-image 0.8s linear;
+}
+
+section[data-state="jasmine"],
+section[data-state="tumbleweed"] {
+    h1, h2, h3, h4, strong {
+        color: #8a4182 !important;
+    }
+}
+
+.tumbleweed .reveal .state-background {
+
+    background-image: url('../../images/logo-jasmine-state.svg'), url('../../images/tumbleweed.gif');
+    background-position: left top, center bottom;
+    background-size: auto auto, 100% 110%;
+
+
+    -webkit-transition: background-image 0.8s linear, none;
+    -moz-transition: background-image 0.8s linear, none;
+    -o-transition: background-image 0.8s linear, none;
+    transition: background-image 0.8s linear, none;
+}
+
+.karma .reveal .state-background {
+
+    background-image: url('../../images/logo-karma-state.svg');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+     transition: background-image 0.8s linear;
+}
+
+section[data-state="karma"] {
+    h1, h2, h3, h4, strong {
+        color: #429f87 !important;
+    }
+}
+
+.protractor .reveal .state-background {
+
+    background-image: url('../../images/logo-protractor-state.png');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+     transition: background-image 0.8s linear;
+}
+
+section[data-state="protractor"] {
+    h1, h2, h3, h4, strong {
+        color: #b52e31 !important;
+    }
+}
+
+code {
+    &.small {
+        font-size: 14px;
+        line-height: 16px;
+        max-height: 500px;
+    }
+
+    &.cmd {
+
+        background-color: #202020;
+        border: 4px solid silver;
+        border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        -webkit-border-radius: 5px !important;
+        box-shadow: 2px 2px 3px #6E6E6E;
+        color: #e2e2e2;
+        display: block;
+        font: 1.2em 'andale mono', 'lucida console', monospace;
+        line-height: 1.5em;
+        overflow: auto;
+        padding: 15px !important;
+        margin-top: 20px;
+
+        &::after {
+
+            content: "_";
+            font-weight: 100;
+            font-size: 30px;
+            color: #2E3D48;
+
+            -webkit-animation: 1s blink step-end infinite;
+            -moz-animation: 1s blink step-end infinite;
+            -ms-animation: 1s blink step-end infinite;
+            -o-animation: 1s blink step-end infinite;
+            animation: 1s blink step-end infinite;
+        }
+
+        &.white span {
+            color: #e2e2e2 !important;
+        }
+    }
+
+}
+
+garfield {
+
+    display: block;
+    position: relative;
+    width: 350px;
+    height: 240px;
+    margin-left: 570px;
+    margin-top: -226px;
+
+    background-image: url('../../images/garfield2.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 350px 240px;
+}
+
+@keyframes "blink"         { from, to { color: transparent; } 50% { color: white; } }
+@-moz-keyframes "blink"    { from, to { color: transparent; } 50% { color: white; } }
+@-webkit-keyframes "blink" { from, to { color: transparent; } 50% { color: white; } }
+@-ms-keyframes "blink"     { from, to { color: transparent; } 50% { color: white; } }
+@-o-keyframes "blink"      { from, to { color: transparent; } 50% { color: white; } }
+
+
+iframe.spec {
+    
+    height: 300px;
+    width: 600px;
+    border: 1px solid silver;
+    box-shadow: #000000 0 2px 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+}
+
+.showPrint {
+    display: none !important;
+}
+    
+/* fix font aweseome */
+.fa {
+    display: inline-block !important;
+    font-family: FontAwesome !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    line-height: 1 !important;
+    font-style: normal !important;
+
+    color: $headingColor;
+}
+
+/* fix font aweseome */
+.fa-2x {
+  font-size: 2em !important;
+}
+.fa-3x {
+  font-size: 3em !important;
+}
+.fa-4x {
+  font-size: 4em !important;
+}
+.fa-5x {
+  font-size: 5em !important;
+}
+
+/* boxes */
+.box {
+    background-color: $neutralColor !important;
+    color: white !important;
+    padding: 20px !important;
+    margin: 20px !important;
+
+    .box {
+        background-color: darken($neutralColor, 20%) !important;
+
+        .box {
+            background-color: darken($neutralColor, 40%) !important;
+        }
+    }
+}
+
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+
+.box .one_half {
+    width: 40%  
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+} 
+
+/* IE-Patch für IE 7*/
+*:first-child+html .clearfix { min-height: 0; }
+
+/* IE-Patch für IE 6*/
+* html .clearfix { height: 1%; }
+
+/* ReSharper restore UnknownHtmlTag */
