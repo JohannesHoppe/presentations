@@ -147,36 +147,6 @@ ul.model {
    
 }
 
-.jasmine .reveal .state-background {
-    
-    background-image: url('../../images/logo-jasmine-state.svg');
-    
-    -webkit-transition: background-image 0.8s linear;
-    -moz-transition: background-image 0.8s linear;
-    -o-transition: background-image 0.8s linear;
-    transition: background-image 0.8s linear;
-}
-
-section[data-state="jasmine"],
-section[data-state="tumbleweed"] {
-    h1, h2, h3, h4, strong {
-        color: #8a4182 !important;
-    }
-}
-
-.tumbleweed .reveal .state-background {
-
-    background-image: url('../../images/logo-jasmine-state.svg'), url('../../images/tumbleweed.gif');
-    background-position: left top, center bottom;
-    background-size: auto auto, 100% 110%;
-
-
-    -webkit-transition: background-image 0.8s linear, none;
-    -moz-transition: background-image 0.8s linear, none;
-    -o-transition: background-image 0.8s linear, none;
-    transition: background-image 0.8s linear, none;
-}
-
 .karma .reveal .state-background {
 
     background-image: url('../../images/logo-karma-state.svg');
@@ -190,22 +160,6 @@ section[data-state="tumbleweed"] {
 section[data-state="karma"] {
     h1, h2, h3, h4, strong {
         color: #429f87 !important;
-    }
-}
-
-.protractor .reveal .state-background {
-
-    background-image: url('../../images/logo-protractor-state.png');
-    
-    -webkit-transition: background-image 0.8s linear;
-    -moz-transition: background-image 0.8s linear;
-    -o-transition: background-image 0.8s linear;
-     transition: background-image 0.8s linear;
-}
-
-section[data-state="protractor"] {
-    h1, h2, h3, h4, strong {
-        color: #b52e31 !important;
     }
 }
 
@@ -251,21 +205,6 @@ code {
         }
     }
 
-}
-
-garfield {
-
-    display: block;
-    position: relative;
-    width: 350px;
-    height: 240px;
-    margin-left: 570px;
-    margin-top: -226px;
-
-    background-image: url('../../images/garfield2.svg');
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 350px 240px;
 }
 
 @keyframes "blink"         { from, to { color: transparent; } 50% { color: white; } }

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "CP850";
 /**
  * A theme for reveal.js presentations with JS flavour
  */
@@ -45,8 +45,8 @@ body.x-body {
 }
 
 ::selection {
-  color: #fff;
-  background: #26351C;
+  color: white;
+  background: #26351c;
   text-shadow: none;
 }
 
@@ -297,7 +297,7 @@ ul.model {
 }
 ul.model li {
   margin-bottom: 30px;
-  color: #494D4D;
+  color: #494d4d;
 }
 ul.model span {
   padding: 5px !important;
@@ -325,33 +325,6 @@ ul.model span a {
   transition: none;
 }
 
-.jasmine .reveal .state-background {
-  background-image: url("../../images/logo-jasmine-state.svg");
-  -webkit-transition: background-image 0.8s linear;
-  -moz-transition: background-image 0.8s linear;
-  -o-transition: background-image 0.8s linear;
-  transition: background-image 0.8s linear;
-}
-
-section[data-state="jasmine"] h1, section[data-state="jasmine"] h2, section[data-state="jasmine"] h3, section[data-state="jasmine"] h4, section[data-state="jasmine"] strong,
-section[data-state="tumbleweed"] h1,
-section[data-state="tumbleweed"] h2,
-section[data-state="tumbleweed"] h3,
-section[data-state="tumbleweed"] h4,
-section[data-state="tumbleweed"] strong {
-  color: #8a4182 !important;
-}
-
-.tumbleweed .reveal .state-background {
-  background-image: url("../../images/logo-jasmine-state.svg"), url("../../images/tumbleweed.gif");
-  background-position: left top, center bottom;
-  background-size: auto auto, 100% 110%;
-  -webkit-transition: background-image 0.8s linear, none;
-  -moz-transition: background-image 0.8s linear, none;
-  -o-transition: background-image 0.8s linear, none;
-  transition: background-image 0.8s linear, none;
-}
-
 .karma .reveal .state-background {
   background-image: url("../../images/logo-karma-state.svg");
   -webkit-transition: background-image 0.8s linear;
@@ -362,18 +335,6 @@ section[data-state="tumbleweed"] strong {
 
 section[data-state="karma"] h1, section[data-state="karma"] h2, section[data-state="karma"] h3, section[data-state="karma"] h4, section[data-state="karma"] strong {
   color: #429f87 !important;
-}
-
-.protractor .reveal .state-background {
-  background-image: url("../../images/logo-protractor-state.png");
-  -webkit-transition: background-image 0.8s linear;
-  -moz-transition: background-image 0.8s linear;
-  -o-transition: background-image 0.8s linear;
-  transition: background-image 0.8s linear;
-}
-
-section[data-state="protractor"] h1, section[data-state="protractor"] h2, section[data-state="protractor"] h3, section[data-state="protractor"] h4, section[data-state="protractor"] strong {
-  color: #b52e31 !important;
 }
 
 code.small {
@@ -411,23 +372,11 @@ code.cmd.white span {
   color: #e2e2e2 !important;
 }
 
-garfield {
-  display: block;
-  position: relative;
-  width: 350px;
-  height: 240px;
-  margin-left: 570px;
-  margin-top: -226px;
-  background-image: url("../../images/garfield2.svg");
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: 350px 240px;
-}
-
 @keyframes "blink" {
   from, to {
     color: transparent;
   }
+
   50% {
     color: white;
   }
@@ -436,6 +385,7 @@ garfield {
   from, to {
     color: transparent;
   }
+
   50% {
     color: white;
   }
@@ -444,6 +394,7 @@ garfield {
   from, to {
     color: transparent;
   }
+
   50% {
     color: white;
   }
@@ -452,6 +403,7 @@ garfield {
   from, to {
     color: transparent;
   }
+
   50% {
     color: white;
   }
@@ -460,6 +412,7 @@ garfield {
   from, to {
     color: transparent;
   }
+
   50% {
     color: white;
   }
@@ -539,16 +492,14 @@ iframe.spec {
   visibility: hidden;
 }
 
-/* IE-Patch f√ºr IE 7*/
+/* IE-Patch fÅr IE 7*/
 *:first-child + html .clearfix {
   min-height: 0;
 }
 
-/* IE-Patch f√ºr IE 6*/
+/* IE-Patch fÅr IE 6*/
 * html .clearfix {
   height: 1%;
 }
 
 /* ReSharper restore UnknownHtmlTag */
-
-/*# sourceMappingURL=neutral.css.map */

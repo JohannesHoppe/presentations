@@ -43,7 +43,7 @@
 
                 <section>
                     
-                    <img src="images/logo-Odata.svg" width="75%" alt=""/>  
+                    <img src="images/logo-OData.svg" width="75%" alt=""/>  
                     <h1 class="nowrap" style="font-size: 0.7em; line-height: 1.3em; text-shadow: none;">Hypermedia-REST-APIs<br />mit der ASP.NET Web API und OData</h1>                        
                     
                     <br class="hidePrint" />
@@ -60,363 +60,104 @@
                 </section>   
                 
                 <section>
-                     
                     <section data-markdown>
-                        ## HATEOAS
-
-                        ![tools](images/icon_communication.ong)
-                    </section> 
-                    
-                    <section data-markdown data-state="jasmine">
-                        ### Hypermedia as the Engine of Application State (HATEOAS)
+                        ## API-Anti Patterns
                         
-                        __b__ehavior-__d__riven __d__evelopment (BDD) framework
-                    </section>  
-                                      
-                    <section data-markdown data-state="jasmine">
-                        ### Suites, <span title="Specifications">Specs</span> & Expectations    
-                        <br/>
-
-                        ```javascript contenteditable 
-                        describe("a suite", function() {
-                           it("contains spec with an expectation", function() {
-                             expect(true).toBe(true);
-                           });
-                        });
-                        ```
-                    </section> 
-
-                    <section data-markdown data-state="jasmine">
-                        ## Früher
-                        <small>Jasmine HTML runner</small>
-                        
-                        ```html contenteditable small
-                        _LT_!DOCTYPE html_GT_
-                        _LT_html_GT_
-                        _LT_head_GT_
-                            _LT_title_GT_Jasmine Spec Runner_LT_/title_GT_
-
-                            _LT_link rel=_QUOT_stylesheet_QUOT_ href=_QUOT_lib/jasmine-1.3.1/jasmine.css_QUOT_ /_GT_
-                            _LT_script src=_QUOT_lib/jasmine-1.3.1/jasmine.js_QUOT__GT__LT_/script_GT_
-                            _LT_script src=_QUOT_lib/jasmine-1.3.1/jasmine-html.js_QUOT__GT__LT_/script_GT_
-
-                            _LT_!-- include source files here... --_GT_
-                            _LT_script src=_QUOT_src/Player.js_QUOT__GT__LT_/script_GT_
-                            _LT_script src=_QUOT_src/Song.js_QUOT__GT__LT_/script_GT_
-
-                            _LT_!-- include spec files here... --_GT_
-                            _LT_script src=_QUOT_spec/SpecHelper.js_QUOT__GT__LT_/script_GT_
-                            _LT_script src=_QUOT_spec/PlayerSpec.js_QUOT__GT__LT_/script_GT_
-
-                            _LT_script_GT_
-
-                                (function () {
-
-                                    var htmlReporter = new jasmine.HtmlReporter();
-                                    var jasmineEnv = jasmine.getEnv();
-
-                                    jasmineEnv.addReporter(htmlReporter);
-                                    jasmineEnv.specFilter = function (spec) {
-                                        return htmlReporter.specFilter(spec);
-                                    };
-
-                                    var currentWindowOnload = window.onload;
-
-                                    window.onload = function () {
-                                        if (currentWindowOnload) { currentWindowOnload(); }
-                                        jasmineEnv.execute();
-                                    };
-                                })();
-                            _LT_/script_GT_
-
-                        _LT_/head_GT_
-
-                        _LT_body_GT_
-                        _LT_/body_GT_
-                        _LT_/html_GT_
-                        ```
-                    </section>
-
-                    <section data-markdown data-state="tumbleweed">
-                        ## Früher
-                        
-                        <iframe src="js/jasmine/SpecRunner.html" class="spec" scrolling="no"></iframe>
+                        ![tools](images/icon_bug.png)
                     </section>
                     
-                    <section>
-                        <img src="images/logo-karma.svg" alt="" width="50%" />
-                    </section> 
-
-                    <section data-markdown data-state="karma">
-                        <blockquote style="width: 710px; color:gray;">
-                            On the <strong>AngularJS</strong> team, we rely on testing and we always seek better tools to make our life easier.
-                            That's why we created
-                            <strong>Karma</strong> - a test runner that fits all our needs.
-                        </blockquote>
-                    </section>        
-                    
-                    <section>
-                        
-                        <div style="display: inline-block;font-size: 0.8em;">&nbsp;<br />var gretchenfrage =</div>    
-                        <div style="display: inline-block;"><img src="images/logo-js.svg" style="height:180px;" alt="" /><br />plain</div>||<div style="display: inline-block;"><img src="images/logo-grunt.svg" style="height:200px;" alt="" /><br />grunt</div>||<div style="display: inline-block;"><img src="images/logo-gulp.svg" style="height:200px;width: 200px;" alt="" /><br />gulp;</div><div style="display: inline-block;width:100px;">&nbsp;</div>
-
-                    </section> 
-                    
-
-                    <section data-markdown data-state="karma">
-                        <h4 style="font-size: 0.5em; line-height: 0;">Heute mal</h4>
-                        ### Plain Node.js
-                             
-                        ```cmd contenteditable cmd
-                        $ npm init
-                        $ npm install karma --save-dev
-                        $ npm install -g karma-cli
-                        $ npm install karma-jasmine karma-chrome-launcher --save-dev
-                        $ karma init
-                        $ karma start  #oder: npm test
-                        ```
-                        
+                    <section data-markdown>
+                        ## API-Anti Patterns
                         <br/>
-                        <br/>
-                        <small>Tipp: Karma nicht global installieren - Versionskonflikte zwischen Projekten!</small>
+                        
+                        <ul>
+                            <li class="fragment">zu viel <b>GET</b> <span class="fragment">und <b>POST</b></span></li>
+                            <li class="fragment">POST: post.php?get=parameter</li>
+                            <li class="fragment">DELETE</li>
+                            <li class="fragment">HTTP/1.1 200 (OK) <span class="fragment">mit einer Fehlermeldung</span></li>
+                            <li class="fragment">HTTP/1.1 500 Internal Server Error</li>
+                            <li class="fragment">kein Hypermedia<span class="fragment">?</span></li>
+                            <li class="fragment">schlechte Dokumentation</li>
+                        </ul>
                     </section>   
-                    
-                    <section data-markdown data-state="karma">
-                        ### Windows? 
-                        
-                        ```txt contenteditable cmd white
-                        SET CHROME_BIN = "C:\Users\Me\AppData\Local\Google\Chrome\Application\chrome.exe"
-                        ```
-                    </section>
-                    
-                    <section data-markdown data-state="karma">
-                        ### package.json
-                        
-                        ```javascript contenteditable small
-                        {
-                          "name": "Tests-Karma-Protractor",
-                          "version": "1.0.0",
-                          "description": "Example package",
-                          "main": "index.js",
-                          "directories": {
-                            "test": "test"
-                          },
-                          "scripts": {
-                            "test": "karma start"
-                          },
-                          "author": "Johannes Hoppe",
-                          "license": "MIT",
-                          "devDependencies": {
-                            "jasmine-core": "^2.3.4",
-                            "karma": "^0.12.36",
-                            "karma-chrome-launcher": "^0.1.12",
-                            "karma-jasmine": "^0.3.5"
-                          }
-                        }
-                        ```
-                    </section>
-                    
-                    <section data-markdown data-state="karma">
-                        ### karma.conf.js
-                        
-                        ```javascript contenteditable
-                        module.exports = function(config) {
-                            config.set({
-                                basePath: 'scripts',
-                                frameworks: ['jasmine'],
-                                files: ['**/*.js'],
-                                exclude: [],
-                                autoWatch: true,
-                                browsers: ['Chrome']
-                            });
-                        };
-                        ```   
-                        
-                    </section> 
-
-                    <section data-markdown data-state="karma">
-                        <img src="images/garfield.svg" alt="" width="50%" />
-
-                        <small>Demo Hello Garfield: 
-                            <a href="http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/examples/01_helloGarfield/">1</a> | 
-                            <a href="https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples/01_helloGarfield">2</a>
-                        </small>
-                    </section>
-                    
-                    <section data-markdown data-state="karma">
-                        ### karma.conf.js
-                            
-                        ```javascript contenteditable style=padding-top:100px;padding-bottom:100px;font-size:30px;  
-                        files: [ /* Reihenfolge? */ ]
-                        ```   
-                        <garfield></garfield>
-                    </section>
-                     
-                    <section>
-                        
-                        <div style="display: inline-block;font-size: 0.8em;">&nbsp;<br />var gretchenfrage2 =</div>    
-                        <div style="display: inline-block;"><img src="images/logo-js.svg" style="height:180px;" alt="" /><br />&lt;script&gt;</div>||<div style="display: inline-block;"><img src="images/logo-requirejs.svg" style="height:200px;" alt="" /><br />RequireJS</div>||<div style="display: inline-block;"><img src="images/logo-browserify-wizard-hat-blue.svg" style="height:120px;margin:0;" /><br /><img src="images/logo-browserify.svg" style="height:80px;margin:0;" /><br />CommonJS;</div><div style="display: inline-block;width:100px;">&nbsp;</div>
-
-                    </section> 
-                                                                       
-                    <section data-markdown data-state="karma">
-                        ```javascript contenteditable  
-                        define('Garfield', [], function() {
-
-                        var Garfield = function () {
-                        this.getName = function () {
-                        return "Garfield";
-                        };
-                        };
-    
-                        return Garfield;
-                        });
-
-                        require(['Garfield'], function(Garfield) {
-    
-                        var garfield = new Garfield();
-                        garfield.getName();
-                        });
-                        ```   
-                        <garfield></garfield>
-                    </section>
-                                                                                           
-                    <section data-markdown data-state="karma">
-                        ### Finaler Unit-Test
-
-                        <br/>
-                        ```javascript contenteditable  
-                        define(['Garfield'], function(Garfield) {
-
-                            describe('Garfield', function() {
-        
-                                it('should have a name', function() {
-        
-                                    var garfield = new Garfield();
-                                    expect(garfield.getName()).toEqual("Garfield");
-                                });
-                            });
-                        });
-                        ```   
-                    </section> 
-                
-                    <section data-markdown data-state="karma">
-                        <img src="images/garfield.svg" alt="" width="50%" />
-
-                        <small>Demo Hello Garfield (require.js): 
-                            <a href="http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/examples/02_helloGarfield_require/">1</a> | 
-                            <a href="https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples/02_helloGarfield_require">2</a>
-                        </small>
-                    </section>
-
                 </section>
-
+                
                 <section>
+                    <section data-markdown>
+                        # RESTful
+                        
+                        ![tools](images/icon_communication.png)
+                    </section>
                     
                     <section data-markdown>
-                        ## E2E Testing
+                        ## Level 0: <span title="Plain Old XML">Pox</span>
+                        <small>Richardson Maturity Model</small>
 
-                        ![tools](images/icon_communication.png)
-                    </section>                     
-                     
-                    <section data-state="protractor">
-                        <img src="images/logo-protractor.png" alt="" width="50%" />
-                    </section>    
-                     
-                    <section data-markdown data-state="protractor">
-                        ### Terminologie
+                        <img src="images/hypermedia0.png" width="50%" />
+                    </section>      
+                    
+                    <section data-markdown>
+                        ## Level 0: <span title="Plain Old XML">Pox</span>
                         
-                        <ul class="model">
-                            <li class="fragment">
-                                <span>&nbsp; &nbsp;Selenium &nbsp; &nbsp;</span>
-                                <small>OS-project to automate web browsers</small>
-                            </li>
-                            <li class="fragment">
-                                <span>Selenium 2.0</span>
-                                <small>concept of WebDrivers</small>
-                            </li>
-                            <li class="fragment">
-                                <span>&nbsp;WebDrivers&nbsp;</span>
-                                <small>drivers control a browser (e.g. <a href="https://sites.google.com/a/chromium.org/chromedriver/">ChromeDriver</a>)<br/>
-                                       and implement the <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol">WebDriver wire protocol</a></small>
-                            </li>
-                            <li class="fragment">
-                                <span><a href="https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs">WebDriverJS</a></span>
-                                <small>JavaScript bindings for <b>WebDriver</b> (over wire protocol)</small>
-                            </li>
-                            <li class="fragment">
-                                <span style="background-color: #b52e31;">&nbsp; <a href="https://angular.github.io/protractor/">Protractor</a> &nbsp;</span>
-                                <small>end-to-end test framework (not only) for AngularJS<br/>on top of <b>WebDriverJS</b></small>
-                            </li>
-                        </ul>   
+                        ```html contenteditable
+                        HTTP/1.1 200 OK
+                        Content-Type: application/soap+xml; charset=utf-8
+                        _LT_?xml version="1.0"?_GT_
+                        _LT_soap:Envelope
+                        xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+                        soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding"_GT_
 
-                        <br/>
-                        <br/>
-                        <small>[mehr](http://yizeng.me/2014/04/25/relationships-between-different-versions-of-selenium/)</small>
+                        _LT_soap:Body xmlns:m="http://www.example.org/stock"_GT_
+                          _LT_m:GetStockPriceResponse_GT_
+                            _LT_m:Price_GT_34.5_LT_/m:Price_GT_
+                          _LT_/m:GetStockPriceResponse_GT_
+                        _LT_/soap:Body_GT_
+
+                        _LT_/soap:Envelope_GT_
+                        ```
+                    </section>      
+
+                    <section data-markdown>
+                        ## Level 1: Uri
+
+                        <img src="images/hypermedia1.png" width="50%" />
                     </section>
 
-                    <section data-markdown data-state="protractor">
-                        ### Installation
-                             
-                        ```cmd contenteditable cmd style=font-size:1.1em
-                        $ npm install -g protractor # 💾 protractor 💾 webdriver-manager  
-                        $ webdriver-manager update  # 💾 ChromeDriver
-                        $ webdriver-manager start
-                        $ protractor protractor.conf.js
+                    <section data-markdown >
+                        ## Level 1: Uri
+
+                        ```cmd contenteditable
+                        GET /Home/GetAllNotes?limit=200_AMP_search=test
                         ```
+                    </section>
+
+                    <section  data-markdown>
+                        ## Level 2: http
+                        <small>verbs &amp; status codes</small>
+                        
+                        <img src="images/hypermedia2.png" width="50%" />
                     </section>    
-                    
-                    <section data-markdown data-state="protractor">
-                        ### protractor.conf.js
-                            
-                        ```javascript contenteditable 
-                        exports.config = {
-                            seleniumAddress: 'http://localhost:4444/wd/hub',
-                            specs: ['e2e/*Spec.js']
-                        };
+                 
+                    <section  data-markdown >
+                        ## Level 2: http
+                        <small>verbs &amp; status codes</small>
+
+                        ```txt contenteditable   
+                        GET
+                        PUT
+                        POST
+                        DELETE 
                         ```
-                    </section>   
-                    
-                    <section data-markdown data-state="protractor">
-                        ### AngularJS Spec 
-                            
-                        ```javascript contenteditable 
-                        describe('Protractor Demo Spec', function() {
+                    </section>     
 
-                            it('should have a title', function() {
-                                browser.get('http://juliemr.github.io/protractor-demo/');
-                                expect(browser.getTitle()).toEqual('Super Calculator');
-                            });
-                        });
-                        ```
-                    </section>
-                    
-                    <section data-markdown data-state="protractor">
-                        ### Ohne Angular
-                            
-                        ```javascript contenteditable small 
-                        describe('Johannes Talk at DWX', function() {
+                    <section  data-markdown>
+                        ## Level 3: hypermedia
+                        <small><b>H</b>ypermedia <b>A</b>s <b>T</b>he <b>E</b>ngine <b>Of</b> <b>A</b>pplication <b>S</b>tate</small>
+                                        
+                        <img src="images/hypermedia3.png" width="50%" />
+                    </section> 
 
-                            beforeEach(function () {
-                                // no waiting on angular to load and finish its tasks 
-                                browser.ignoreSynchronization = true;
-                            });
-
-                            it('should have the expected title', function() {
-
-                                browser.get('http://www.developer-week.de/Programm/Veranstaltung/(event)/18498');
-                                var heading = element(by.tagName('h2'));
-                                expect(heading.getText()).toEqual('JS Unit- und Oberflächentests mit Karma _AMP_ Protractor');
-                            });
-
-                            afterEach(function() {
-                                return browser.ignoreSynchronization = false;
-                            });
-                        });
-                        ```
-                    </section>
-
-                </section>               
+                </section>  
 
                 <section>
                     

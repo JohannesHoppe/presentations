@@ -40,6 +40,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="images\favicon.ico" />
+    <Content Include="images\hypermedia0.png" />
+    <Content Include="images\hypermedia1.png" />
+    <Content Include="images\hypermedia2.png" />
+    <Content Include="images\hypermedia3.png" />
+    <Content Include="images\logo-OData.svg" />
     <Content Include="images\pixel.png" />
     <Content Include="index.html" />
     <Content Include="images\icon_calendar.png" />
