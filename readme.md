@@ -46,7 +46,7 @@ Das Intel Galileo Board ist ein Einplatinencomputer, mit dem Sie das Internet de
 
 [» Github-Repository mit vielen Anleitungen](https://github.com/JohannesHoppe/Workshop_Javascript_Internet-of-Things/)  
 [» Beispiel-Anwendungen "Intel IoT on Galileo with mobile companion app"](https://github.com/JohannesHoppe/Workshop_Javascript_Internet-of-Things/tree/gh-pages/examples)  
-[» Präsentation Starten](johanneshoppe.github.io/Workshop_Javascript_Internet-of-Things/Slides/index_short.html)
+[» Präsentation Starten](http://johanneshoppe.github.io/Workshop_Javascript_Internet-of-Things/Slides/index_short.html)
 
 <hr>
 
