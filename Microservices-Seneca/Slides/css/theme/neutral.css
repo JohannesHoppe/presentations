@@ -1,4 +1,4 @@
-@charset "CP850";
+@charset "UTF-8";
 /**
  * A theme for reveal.js presentations with JS flavour
  */
@@ -45,8 +45,8 @@ body.x-body {
 }
 
 ::selection {
-  color: white;
-  background: #26351c;
+  color: #fff;
+  background: #26351C;
   text-shadow: none;
 }
 
@@ -263,14 +263,14 @@ blockquote:before {
 }
 
 blockquote cite {
-    color: #999999;
-    font-size: 14px;
-    display: block;
-    margin-top: 5px;
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
 }
- 
+
 blockquote cite:before {
-    content: "\2014 \2009";
+  content: "\2014 \2009";
 }
 
 ol {
@@ -296,7 +296,7 @@ ul.model {
 }
 ul.model li {
   margin-bottom: 30px;
-  color: #494d4d;
+  color: #494D4D;
 }
 ul.model span {
   padding: 5px !important;
@@ -336,6 +336,30 @@ section[data-state="karma"] h1, section[data-state="karma"] h2, section[data-sta
   color: #429f87 !important;
 }
 
+.micro .reveal .state-background {
+  background-image: url("../../images/micro-service-short.png");
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear;
+}
+
+section[data-state="micro"] h2, section[data-state="micro"] h3, section[data-state="micro"] h4, section[data-state="micro"] strong, section[data-state="micro"] a {
+  color: #537078 !important;
+}
+
+.seneca .reveal .state-background {
+  background-image: url("../../images/logo-seneca-building.png");
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear;
+}
+
+section[data-state="micro"] h2, section[data-state="micro"] h3, section[data-state="micro"] h4, section[data-state="micro"] strong, section[data-state="micro"] a {
+  color: #537078 !important;
+}
+
 code.small {
   font-size: 14px;
   line-height: 16px;
@@ -367,7 +391,7 @@ code.cmd::after {
   -o-animation: 1s blink step-end infinite;
   animation: 1s blink step-end infinite;
 }
-code.cmd.white span {
+code.cmd.white span.keyword {
   color: #e2e2e2 !important;
 }
 
@@ -375,7 +399,6 @@ code.cmd.white span {
   from, to {
     color: transparent;
   }
-
   50% {
     color: white;
   }
@@ -384,7 +407,6 @@ code.cmd.white span {
   from, to {
     color: transparent;
   }
-
   50% {
     color: white;
   }
@@ -393,7 +415,6 @@ code.cmd.white span {
   from, to {
     color: transparent;
   }
-
   50% {
     color: white;
   }
@@ -402,7 +423,6 @@ code.cmd.white span {
   from, to {
     color: transparent;
   }
-
   50% {
     color: white;
   }
@@ -411,7 +431,6 @@ code.cmd.white span {
   from, to {
     color: transparent;
   }
-
   50% {
     color: white;
   }
@@ -491,14 +510,16 @@ iframe.spec {
   visibility: hidden;
 }
 
-/* IE-Patch fÅr IE 7*/
+/* IE-Patch f√ºr IE 7*/
 *:first-child + html .clearfix {
   min-height: 0;
 }
 
-/* IE-Patch fÅr IE 6*/
+/* IE-Patch f√ºr IE 6*/
 * html .clearfix {
   height: 1%;
 }
 
 /* ReSharper restore UnknownHtmlTag */
+
+/*# sourceMappingURL=neutral.css.map */

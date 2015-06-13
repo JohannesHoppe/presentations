@@ -74,7 +74,7 @@
                          
                 </section>   
                 
-                <section>
+                <section  data-state="micro">
                     <section data-markdown>
                         ### Microservices
                         
@@ -124,7 +124,7 @@
                     </section>                    
 
                     
-                    <section data-markdown data-state="">
+                    <section data-markdown>
                         <blockquote style="">
                             In short, the <strong>microservice architectural style</strong> is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. 
                             
@@ -176,8 +176,8 @@
                         <h1>&micro;</h1>
                         <br/>
                             
-                        <h3 class="fragment">wenig Code pro Service</h3>
-                        <h3 class="fragment">z.B. ~ 100 LOC</h3>
+                        * <h3 class="fragment">wenig Code pro Service</h3>
+                        * <h3 class="fragment">z.B. ~ 100 LOC</h3>
                            
                         <br/>
                         <br/>
@@ -186,9 +186,17 @@
                     </section> 
                 </section>   
                 
-                <section>
+                <section data-state="seneca">
                     <section data-markdown>
                         ![img](images/logo-seneca.png)
+                    </section>
+                    
+                    <section data-markdown>
+                        ```cmd contenteditable cmd white
+                        $ npm install seneca
+                        $ node
+                        var seneca = require('seneca')();
+                        ```
                     </section>  
                 </section>
                 

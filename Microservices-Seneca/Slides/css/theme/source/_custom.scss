@@ -78,7 +78,6 @@ blockquote:before {
     color: #2e2e2c;
 }
 
-/*
 blockquote cite {
     color: #999999;
     font-size: 14px;
@@ -89,7 +88,6 @@ blockquote cite {
 blockquote cite:before {
     content: "\2014 \2009";
 }
-*/
 
 ol {
     margin: 40px 0 0 130px !important;
@@ -163,6 +161,38 @@ section[data-state="karma"] {
     }
 }
 
+.micro .reveal .state-background {
+
+    background-image: url('../../images/micro-service-short.png');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+     transition: background-image 0.8s linear;
+}
+
+section[data-state="micro"] {
+    h2, h3, h4, strong, a {
+        color: #537078 !important;
+    }
+}
+
+.seneca .reveal .state-background {
+
+    background-image: url('../../images/logo-seneca-building.png');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+     transition: background-image 0.8s linear;
+}
+
+section[data-state="micro"] {
+    h2, h3, h4, strong, a {
+        color: #537078 !important;
+    }
+}
+
 code {
     &.small {
         font-size: 14px;
@@ -200,7 +230,7 @@ code {
             animation: 1s blink step-end infinite;
         }
 
-        &.white span {
+        &.white span.keyword {
             color: #e2e2e2 !important;
         }
     }
