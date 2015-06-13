@@ -13,7 +13,7 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2015.
  
 <hr>
 
-<a name="tests"></a>
+<a name="ionic"></a>
 ## Hybride Apps mit Cordova, AngularJS und Ionic
 
 * [.NET Day Franken: 13.06.2015 11:30-12:40][0]
