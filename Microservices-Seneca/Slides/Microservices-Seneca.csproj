@@ -44,7 +44,12 @@
     <Content Include="images\hypermedia1.png" />
     <Content Include="images\hypermedia2.png" />
     <Content Include="images\hypermedia3.png" />
-    <Content Include="images\logo-OData.svg" />
+    <Content Include="images\logo-docker-black.svg" />
+    <Content Include="images\logo-seneca-building.png" />
+    <Content Include="images\logo-seneca.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\micro-service-architecture.png" />
+    <Content Include="images\micro-service.png" />
     <Content Include="images\pixel.png" />
     <Content Include="index.html" />
     <Content Include="images\icon_calendar.png" />
@@ -209,7 +214,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50508</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1338/</IISUrl>
+          <IISUrl>http://localhost:1339/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

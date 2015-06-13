@@ -262,7 +262,6 @@ blockquote:before {
   color: #2e2e2c;
 }
 
-/*
 blockquote cite {
     color: #999999;
     font-size: 14px;
@@ -273,7 +272,7 @@ blockquote cite {
 blockquote cite:before {
     content: "\2014 \2009";
 }
-*/
+
 ol {
   margin: 40px 0 0 130px !important;
 }

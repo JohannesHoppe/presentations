@@ -4,13 +4,13 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Vortrag: Hypermedia-REST-APIs mit der ASP.NET Web API und OData</title>
+        <title>Vortrag: Microservices am Beispiel von Seneca</title>
 
-        <meta name="description" content="Bei einer modernen Web-Anwendung ist Kommunikation per REST die erste Wahl. Doch hinsichtlich der einzusetzenden Protokolle, Formate und Konventionen bleiben diverse Fragen für die praktische Umsetzung offen. Microsoft gibt hier mit dem Open Data Protocol (OData) eine ausführliche und standardisierte Antwort. Erfahren Sie in diesem Vortrag, wie das OData Protokoll aufgebaut ist und wie Metadaten den Entwicklungsalltag erleichtern. Ohne zusätzlichen Aufwand wird Ihre ASP.NET Web API seitenweise Ausgabe, Sortierung, Filterung und Navigation innerhalb der Daten unterstützen. Weiterhin wird eine Reihe von kompatiblen JavaScript-Frameworks beleuchtet, unter anderen Breeze.js, JayData und Kendo UI.">
+        <meta name="description" content="Geschäftsanwendungen neigen dazu, über die Jahre zu einem gigantischen Monolithen anzuwachsen. Microservices sind ein alternatives Architekturparadigma, bei der die Anwendung in kleine dezentrale Services aufgeteilt wird. Dieser Vortrag zeigt, wie eine Architektur mit diesem Ansatz aufgebaut werden kann. Zur Erläuterung wird das Node.js-Framework Seneca eingesetzt, welches die Kommunikation der Services über HTTP und JSON realisiert. Docker wird anschließend verwendet, um die einzelnen Services unabhängig voneinander zu deployen. Der Einsatz von Node.js ist nicht vorgeschrieben, denn der Architekturansatz ist auf alle Programmiersprachen und Frameworks anwendbar.">
         <meta name="author" content="Johannes Hoppe">
         
         <link rel="shortcut icon" href="images/favicon.ico" >
-        <meta property="og:image" content="http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Slides/images/logo.png" />
+        <meta property="og:image" content="http://johanneshoppe.github.io/Presentations2015/Microservices-Seneca/Slides/images/logo.png" />
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -43,9 +43,14 @@
 
                 <section>
                     
-                    <img src="images/logo-OData.svg" width="75%" alt=""/>  
-                    <h1 class="nowrap" style="font-size: 0.7em; line-height: 1.3em; text-shadow: none;">Hypermedia-REST-APIs<br />mit der ASP.NET Web API und OData</h1>                        
+                    <img src="images/micro-service-short.png" height="150" alt="" />  
+                    <img src="images/logo-seneca-short.png" height="170" alt="" />  
+                    <img src="images/logo-docker-black.svg"height="150"  alt="" />
+                      
+                    <h1 class="nowrap" style="font-size: 0.7em; line-height: 1.3em; text-shadow: none;">Microservices am Beispiel von Seneca</h1>                        
                     
+                    <br class="hidePrint" />
+                    <br class="hidePrint" />
                     <br class="hidePrint" />
                     <br class="hidePrint" />
                     <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>  
@@ -56,108 +61,130 @@
                         ![johannes](images/johannes.png)
                      
                         ### [Johannes Hoppe](http://JohannesHoppe.de)
-                    </section>     
+                    </section>
+                    
+                    <section data-markdown>
+                        ## Agenda
+                    
+                        * Microservice Architecture<span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span>
+                        * Seneca - a Micro-Services toolkit for Node.js <span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span>
+                        * Docker - an open platform for distributed apps<span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span>
+
+                    </section>
+                         
                 </section>   
                 
                 <section>
                     <section data-markdown>
-                        ## API-Anti Patterns
+                        ### Microservices
                         
-                        ![tools](images/icon_bug.png)
-                    </section>
-                    
-                    <section data-markdown>
-                        ## API-Anti Patterns
-                        <br/>
-                        
-                        <ul>
-                            <li class="fragment">zu viel <b>GET</b> <span class="fragment">und <b>POST</b></span></li>
-                            <li class="fragment">POST: post.php?get=parameter</li>
-                            <li class="fragment">DELETE</li>
-                            <li class="fragment">HTTP/1.1 200 (OK) <span class="fragment">mit einer Fehlermeldung</span></li>
-                            <li class="fragment">HTTP/1.1 500 Internal Server Error</li>
-                            <li class="fragment">kein Hypermedia<span class="fragment">?</span></li>
-                            <li class="fragment">schlechte Dokumentation</li>
-                        </ul>
-                    </section>   
-                </section>
-                
-                <section>
-                    <section data-markdown>
-                        # RESTful
-                        
-                        ![tools](images/icon_communication.png)
-                    </section>
-                    
-                    <section data-markdown>
-                        ## Level 0: <span title="Plain Old XML">Pox</span>
-                        <small>Richardson Maturity Model</small>
-
-                        <img src="images/hypermedia0.png" width="50%" />
-                    </section>      
-                    
-                    <section data-markdown>
-                        ## Level 0: <span title="Plain Old XML">Pox</span>
-                        
-                        ```html contenteditable
-                        HTTP/1.1 200 OK
-                        Content-Type: application/soap+xml; charset=utf-8
-                        _LT_?xml version="1.0"?_GT_
-                        _LT_soap:Envelope
-                        xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
-                        soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding"_GT_
-
-                        _LT_soap:Body xmlns:m="http://www.example.org/stock"_GT_
-                          _LT_m:GetStockPriceResponse_GT_
-                            _LT_m:Price_GT_34.5_LT_/m:Price_GT_
-                          _LT_/m:GetStockPriceResponse_GT_
-                        _LT_/soap:Body_GT_
-
-                        _LT_/soap:Envelope_GT_
-                        ```
-                    </section>      
-
-                    <section data-markdown>
-                        ## Level 1: Uri
-
-                        <img src="images/hypermedia1.png" width="50%" />
-                    </section>
-
-                    <section data-markdown >
-                        ## Level 1: Uri
-
-                        ```cmd contenteditable
-                        GET /Home/GetAllNotes?limit=200_AMP_search=test
-                        ```
-                    </section>
-
-                    <section  data-markdown>
-                        ## Level 2: http
-                        <small>verbs &amp; status codes</small>
-                        
-                        <img src="images/hypermedia2.png" width="50%" />
-                    </section>    
-                 
-                    <section  data-markdown >
-                        ## Level 2: http
-                        <small>verbs &amp; status codes</small>
-
-                        ```txt contenteditable   
-                        GET
-                        PUT
-                        POST
-                        DELETE 
-                        ```
+                        ![img](images/micro-service-architecture.png)
                     </section>     
 
-                    <section  data-markdown>
-                        ## Level 3: hypermedia
-                        <small><b>H</b>ypermedia <b>A</b>s <b>T</b>he <b>E</b>ngine <b>Of</b> <b>A</b>pplication <b>S</b>tate</small>
-                                        
-                        <img src="images/hypermedia3.png" width="50%" />
+                    <section data-markdown>
+                        <h1 style="position:absolute;top: -143px; right: -200px; font-size: 11em; color: silver">1</h1>
+                        ### 1 Anwendung = 1 Prozess
+                        <br/>  
+                                             
+                        <ul>
+                            <li class="fragment"><strong>Monolith:</strong> Code ist möglichst zentral an einem Ort</li>
+                            <li class="fragment"><strong>Technologien:</strong> ein Stack <small style="padding-top: 12px;">(z.B. MSSQL / C# / HTML5 / JavaScript)</small></li>
+                            <li class="fragment"><strong>Mehr Features:</strong> mehr LOC</li>
+                            <li class="fragment"><strong>Dokumentation:</strong> Betriebshandbuch essenziell</li>  
+                            <li class="fragment"><strong>Deployment:</strong> alles auf einmal, Wartungsfenster</li>  
+                            <li class="fragment"><strong>Schichtenarchitektur</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> Generalisierung <i class="fa fa-arrow-right"></i> eigene Frameworks <small style="padding-top: 12px;">(gefährlich!)</small></li>  
+                        </ul>
+                    </section>
+                    
+                    <section data-markdown>
+                        <img src="images/sketch_fowler_1.png" style="width:50%" alt="" /> 
+                    </section>  
+                    
+                    <section data-markdown>
+                        <i class="icon ion-happy fragment" style="font-size: 3em"></i>
+
+                        #### ... ich habe in meinem Entwicklerleben<br/>schon an vielen Monolithen kräftig mitgewirkt!   
+                        
+                        <small>Das ist alles im Grunde nicht schlimm, aber...</small>
+                    </section>                     
+                    
+                    <section data-markdown>
+                        <i class="icon ion-sad fragment" style="font-size: 3em"></i>
+
+                        ## Time to Market!  
+                    </section> 
+ 
+                    <section>
+                        <img src="images/companies/Netflix_2014_logo.svg" alt="" style="height: 90px;" /><br/>
+                        <img src="images/companies/SoundCloud_logo.svg" alt="" style="height: 120px;" /><br/>
+                        <img src="images/companies/Twitter_logo_with_bird.svg" alt="" style="height: 70px;"  /><br/>
+                        <img src="images/companies/PayPal_2014_logo.svg" alt="" style="height: 100px;"  /><br/> 
+                        <br/>
+                        <small>uvm. verwenden Microservices</small>
+                    </section>                    
+
+                    
+                    <section data-markdown data-state="">
+                        <blockquote style="">
+                            In short, the <strong>microservice architectural style</strong> is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. 
+                            
+                            <cite><a href="http://martinfowler.com/articles/microservices.html">Martin Fowler</a>   </cite>
+                        </blockquote>
+                    </section> 
+                   
+                    <section data-markdown>
+                        <h1 style="position:absolute;top: -243px; right: -200px; font-size: 11em; color: silver">n</h1>   
+                        ### 1 Anwendung = n Services
+                        <br/>  
+                                             
+                        <ul>
+                            <li class="fragment"><strong>Komponenten:</strong> via Services, lose Kopplung</li>
+                            <li class="fragment"><strong>Technologien:</strong> verschiedene Technologie-Stacks möglich</li>
+                            <li class="fragment"><strong>Mehr Features:</strong> falls möglich, neuer Service</li>
+                            <li class="fragment"><strong>Dokumentation:</strong> (implizit) durch Schnittstellen</li>  
+                            <li class="fragment"><strong>Deployment:</strong> jeder Service unabhängig</li>  
+                        </ul>
+                    </section>   
+                    
+                                                          
+                    <section data-markdown>
+                        <img src="images/sketch_fowler_2.png" style="width:50%" alt="" /> 
+                    </section> 
+                    
+                    <section data-markdown>
+                        <h1 style="position:absolute;top: -243px; right: 0; font-size: 20em; color: silver">?</h1>
+                        Moment! Ist das nicht eine
+                        # SOA
+                        
+                        <small>(__S__ervice-__O__rientierte __A__rchitektur)</small> 
+                    </section>
+                    
+                    <section data-markdown>
+                        # SOA 
+                        ### +das beste aus dem Web
+                        
+                        <ul>
+                            <li class="fragment">z.B.</li>
+                            <li class="fragment">HTTP / REST (kein SOAP!)</li>
+                            <li class="fragment">ggf. NoSQL</li>
+                            <li class="fragment">CI, DevOps, Cloud, Docker, <i class="icon ion-heart"></i></li>
+                        </ul> 
+
+                    </section>  
+                    
+                    <section data-markdown>
+                        <h1 class="fragment">&micro;</h1>
+                        <br/>
+                            
+                        <h2 class="fragment">~ 100 LOC</h2>
+                           
+                        <br/>
+                        <br/>
+                        
+                        <small>[quelle](http://livestream.com/websummit/DeveloperStage2013/videos/33534085)</small>
                     </section> 
 
-                </section>  
+                </section>
 
                 <section>
                     
@@ -166,7 +193,7 @@
                         
                         ![tools](images/icon_file.png)
 
-                        #### [github.com/JohannesHoppe](https://github.com/JohannesHoppe/Presentations2015/)
+                        #### [github.com/JohannesHoppe/Presentations2015](https://github.com/JohannesHoppe/Presentations2015/)
                     </section> 
                    
                 </section>
