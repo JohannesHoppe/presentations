@@ -4,11 +4,23 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2015.
 
 ## Inhalt
 
-1. [JS Unit- und Oberflächentests mit Karma & Protractor](#tests)
-2. [Hypermedia-REST-APIs mit der ASP.NET Web API und OData](#odata)
-3. [Internet der Dinge mit dem Galileo Board und JavaScript](#iot)
-4. [Microservices am Beispiel von Seneca](#seneca)
-5. [Workshop: Einstieg in AngularJS](#angular)
+1. [Hybride Apps mit Cordova, AngularJS und Ionic](#ionic)
+2. [JS Unit- und Oberflächentests mit Karma & Protractor](#tests)
+3. [Hypermedia-REST-APIs mit der ASP.NET Web API und OData](#odata)
+4. [Internet der Dinge mit dem Galileo Board und JavaScript](#iot)
+5. [Microservices am Beispiel von Seneca](#seneca)
+6. [Workshop: Einstieg in AngularJS](#angular)
+ 
+<hr>
+
+<a name="tests"></a>
+## Hybride Apps mit Cordova, AngularJS und Ionic
+
+* [.NET Day Franken: 13.06.2015 11:30-12:40][0]
+
+Dank Apache Cordova ist es möglich, Ihr bestehendes Wissen zu HTML5, JavaScript und CSS3 auf mobile Apps anzuwenden. Nutzen Sie AngularJS von Google um Techniken wie MVC und Data Binding in den Browser zu bringen. Erfahren Sie in diesem Vortrag, wie Sie in durch den jüngsten Spross, dem Ionic Framework, ansprechende Oberflächen für iOS, Android und Windows Phone gestalten können. Statt PowerPoint erwartet Sie viel Live Coding. Johannes Hoppe wird zusammen mit Ihnen eine erste Ionic -Anwendung entwickeln.
+
+[» Präsentation Starten](http://johanneshoppe.github.io/IonicPresentation/Slides/) 
 
 <hr>
 
@@ -76,6 +88,7 @@ Es werden unter anderem folgende Themen behandelt:
 - Zusätzliche Frameworks wie Bootstrap und Kendo UI
 - Ausblick auf Angular 2.0
 
+[0]: http://dotnet-day-franken.de/
 [1]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18498
 [2]: http://www.enterjs.de/abstracts#unit-und-oberflaechentests
 [3]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18404
