@@ -341,9 +341,36 @@
                         * [chairo](https://github.com/hapijs/chairo) volle Integration in [hapi](https://github.com/hapijs/hapi)
                     </section> 
 
+                </section>   
+                
+                <section  data-state="docker">
+                    <section data-markdown>
+                        ![img](images/logo-docker-color.png)
+                    </section>                      
                     
-                    
-  
+                    <section data-markdown>
+                        #### Node.js
+                        <small>OnBuild Docker Image</small>
+
+                        ```
+                         # Dockerfile
+                        FROM node:0.10.35-onbuild
+                        EXPOSE 3000
+                        ```  
+                        
+                        ```cmd style=font-size:1em
+                        $ docker build --tag="app-server" .
+                        $ docker run -it --rm --name my-microservice app-server
+                        ``` 
+                          
+                        <br/>
+                        <small>
+                            [OnBuild Docker Image](https://github.com/docker-library/node/blob/master/0.10/onbuild/Dockerfile) | 
+                            [build](https://docs.docker.com/reference/commandline/cli/#build) |
+                            [run](https://docs.docker.com/reference/commandline/cli/#run)
+                        </small>
+
+                    </section>   
                 </section>
                 
 
