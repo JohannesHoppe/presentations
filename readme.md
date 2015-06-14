@@ -70,6 +70,8 @@ Das Intel Galileo Board ist ein Einplatinencomputer, mit dem Sie das Internet de
 Geschäftsanwendungen neigen dazu, über die Jahre zu einem gigantischen Monolithen anzuwachsen. Microservices sind ein alternatives Architekturparadigma, bei der die Anwendung in kleine dezentrale Services aufgeteilt wird. Dieser Vortrag zeigt, wie eine Architektur mit diesem Ansatz aufgebaut werden kann.
 Zur Erläuterung wird das Node.js-Framework Seneca eingesetzt, welches die Kommunikation der Services über HTTP und JSON realisiert. Docker wird anschließend verwendet, um die einzelnen Services unabhängig voneinander zu deployen. Der Einsatz von Node.js ist nicht vorgeschrieben, denn der Architekturansatz ist auf alle Programmiersprachen und Frameworks anwendbar.
 
+[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Microservices-Seneca/Slides)  
+
 <hr>
 
 <a name="angular"></a>
