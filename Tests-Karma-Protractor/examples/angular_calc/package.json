@@ -1,0 +1,13 @@
+{
+  "name": "protractor-demo-modified",
+  "version": "0.0.1",
+  "author": "Modified, orginaly by Julie Ralph <ju.ralph@gmail.com>",
+  "description": "A demo AngularJS app",
+  "scripts": {
+    "start": "node _server.js"
+  },
+  "dependencies": {
+    "express": "~3.4.0"
+  },
+  "license": "MIT"
+}
