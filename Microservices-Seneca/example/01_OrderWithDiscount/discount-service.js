@@ -2,8 +2,8 @@
 module.exports = {
     
     // returns applicable discount in %
-    calculateDiscount: function(order) {
-        return (order.customerId < 100) ? 10 : 5;
+    calculateDiscount: function(customerId) {
+        return (customerId < 100) ? 10 : 5;
     }
 };
 

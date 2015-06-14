@@ -1,0 +1,92 @@
+2015-06-14T11:45:43.479Z	6i5supxzmc37/1434282343470/17312/-	INFO	hello	Seneca/0.6.1/6i5supxzmc37/1434282343470/17312/-
+2015-06-14T11:45:43.481Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	options	{ tag: '-',   idlen: 12,   timeout: 33333,   status_interval: 60000,   actcache: true,   actcache_size: 1111,   zig: {},   trace: { act: false, stack: false, unknown: 'warn' },   stats: { size: 1024, duration: 60000, running: false },   debug:     { allargs: false,      fragile: false,      undead: false,      print: {},      act_caller: false },   deathdelay: 33333,   admin: { local: false, prefix: '/admin' },   plugin: {},   internal:     { actrouter: ,      clientrouter: ,      subrouter: ,      close_signals: { SIGHUP: true, SIGTERM: true, SIGINT: true, SIGBREAK: true } },   default_plugins: { basic: true, 'mem-store': true, transport: true, web: true },   log:     { map:        [ { level: 'all',           handler: { [Function: print] routestr: '{ level: \'fatal\' }' } } ] } }
+2015-06-14T11:45:43.493Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	-	-	-	ADD	omd5rnd2yp6f	role:seneca,stats:true
+2015-06-14T11:45:43.494Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	-	-	-	ADD	zgwjkwuzgvj6	role:seneca,ready:true
+2015-06-14T11:45:43.494Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	-	-	-	ADD	2jeqle16ra6m	role:seneca,cmd:close
+2015-06-14T11:45:43.494Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	-	-	-	ADD	wirtfary8ejm	role:options,cmd:get
+2015-06-14T11:45:43.507Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	init	basic
+2015-06-14T11:45:43.507Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		DEFINE	{}
+2015-06-14T11:45:43.508Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	6xc4l2bv2sys	role:basic,cmd:quickcode
+2015-06-14T11:45:43.509Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	pgrqpmn3fvgp	role:util,cmd:quickcode
+2015-06-14T11:45:43.509Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	2ihnbitxo242	role:basic,cmd:generate_id
+2015-06-14T11:45:43.509Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	irrd677wybov	role:util,cmd:generate_id
+2015-06-14T11:45:43.510Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	ed09ufbngyd9	role:basic,cmd:ensure_entity
+2015-06-14T11:45:43.510Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	58a1hjy2thqg	role:util,cmd:ensure_entity
+2015-06-14T11:45:43.510Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	eqniux3yv1bx	role:basic,cmd:define_sys_entity
+2015-06-14T11:45:43.510Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	5v46y1ho95lq	role:util,cmd:define_sys_entity
+2015-06-14T11:45:43.511Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	n8mrje2c1v79	role:basic,note:true,cmd:set
+2015-06-14T11:45:43.511Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	5o47a0ok5gnb	role:basic,note:true,cmd:get
+2015-06-14T11:45:43.511Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	uy5jh1e6jp2l	role:basic,note:true,cmd:list
+2015-06-14T11:45:43.511Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	eeasqkmz8mxt	role:basic,note:true,cmd:push
+2015-06-14T11:45:43.511Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	whtoic4xtda2	role:basic,note:true,cmd:pop
+2015-06-14T11:45:43.512Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	wdcza96me4wn	role:util,note:true,cmd:set
+2015-06-14T11:45:43.512Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	nixn1ndi99ng	role:util,note:true,cmd:get
+2015-06-14T11:45:43.512Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	ri4bw7g3td4g	role:util,note:true,cmd:list
+2015-06-14T11:45:43.512Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	u08za03emiyo	role:util,note:true,cmd:push
+2015-06-14T11:45:43.512Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	basic		ADD	uuvt6ffds9ku	role:util,note:true,cmd:pop
+2015-06-14T11:45:43.514Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	-	-	DEFAULT	{init=basic,tag=}
+2015-06-14T11:45:43.514Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	ready	basic	{}
+2015-06-14T11:45:43.514Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	install	basic	{exports=[basic]}	
+2015-06-14T11:45:43.640Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	init	transport
+2015-06-14T11:45:43.640Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		DEFINE	{}
+2015-06-14T11:45:43.642Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	mdfcfqkgizk1	role:transport,cmd:inflight
+2015-06-14T11:45:43.642Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	br3wu4218s64	role:transport,cmd:listen
+2015-06-14T11:45:43.642Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	l59xyfq14gmp	role:transport,cmd:client
+2015-06-14T11:45:43.643Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	esgk34ocpu3h	role:transport,hook:listen,type:tcp
+2015-06-14T11:45:43.643Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	doptnfnt3qzh	role:transport,hook:client,type:tcp
+2015-06-14T11:45:43.643Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	xicr9091nw61	role:transport,hook:listen,type:web
+2015-06-14T11:45:43.643Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	9chm7ofjio7m	role:transport,hook:client,type:web
+2015-06-14T11:45:43.644Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	v6doz6ugduk6	role:transport,hook:listen,type:http
+2015-06-14T11:45:43.644Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	njcxcf7kgjp8	role:transport,hook:client,type:http
+2015-06-14T11:45:43.644Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	m5zoeydylz7k	role:transport,hook:listen,type:direct
+2015-06-14T11:45:43.644Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ADD	sr0nj5jy6hb3	role:transport,hook:client,type:direct
+2015-06-14T11:45:43.645Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	-	-	DEFAULT	{init=transport,tag=}
+2015-06-14T11:45:43.645Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	ready	transport	{}
+2015-06-14T11:45:43.645Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	install	transport	{exports=[transport/utils]}	
+2015-06-14T11:45:43.749Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	init	web
+2015-06-14T11:45:43.749Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		DEFINE	{}
+2015-06-14T11:45:43.761Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	630sc7p2qdbc	role:web
+2015-06-14T11:45:43.763Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	v05bmwvr1ik5	role:web,list:service
+2015-06-14T11:45:43.763Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	rj02chtbx2p5	role:web,list:route
+2015-06-14T11:45:43.764Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	4fr0l0uw8nrq	role:web,stats:true
+2015-06-14T11:45:43.764Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	rm5wgei0mdev	role:web,get:config
+2015-06-14T11:45:43.765Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	ygdf45n16p7x	role:web,set:source
+2015-06-14T11:45:43.765Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	5fsr06c1ex5l	role:web,get:sourcelist
+2015-06-14T11:45:43.766Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	web		ADD	i7rcn1gh0ao8	init:web
+2015-06-14T11:45:43.769Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	web	-	IN	wsclwzvh3onw/a75618xxq0rb	init:web	{init=web,tag=undefined}	ENTRY	A;i7rcn1gh0ao8	GATE
+2015-06-14T11:45:43.770Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	install	web	{exports=[web,web/httprouter]}	
+2015-06-14T11:45:43.779Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	init	mem-store
+2015-06-14T11:45:43.779Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		DEFINE	{}
+2015-06-14T11:45:43.780Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	z4fvesfqrhh7	role:entity,cmd:save
+2015-06-14T11:45:43.780Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	0ufuvrgbtfd2	role:entity,cmd:load
+2015-06-14T11:45:43.780Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	ccredts8q91u	role:entity,cmd:list
+2015-06-14T11:45:43.780Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	a4ybx4s1j5n6	role:entity,cmd:remove
+2015-06-14T11:45:43.781Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	ulrjhv2f44n2	role:seneca,cmd:close
+2015-06-14T11:45:43.782Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	6qw2gwv8zhvi	role:entity,cmd:native
+2015-06-14T11:45:43.783Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	553bke7zscpe	role:mem-store,cmd:dump
+2015-06-14T11:45:43.783Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	52i83eq4ibb8	role:mem-store,cmd:export
+2015-06-14T11:45:43.783Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	mm1vpkmw6ysr	role:mem-store,cmd:import
+2015-06-14T11:45:43.783Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	mem-store		ADD	8lqegqvwn7iv	init:mem-store
+2015-06-14T11:45:43.784Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	mem-store	QLK	IN	j49vhjcepqo8/3mvfa9n2sa96	init:mem-store	{init=mem-store,tag=QLK}	ENTRY	A;8lqegqvwn7iv	GATE
+2015-06-14T11:45:43.784Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	install	mem-store/QLK	{exports=[]}	mem-store
+*** Acting as a server ***
+2015-06-14T11:45:43.793Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	init	./discount-service.js
+2015-06-14T11:45:43.793Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	./discount-service.js		DEFINE	{}
+2015-06-14T11:45:43.793Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	./discount-service.js		ADD	9ogx1woa9zql	role:discount-service,cmd:calculateDiscount
+2015-06-14T11:45:43.794Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	-	-	DEFAULT	{init=./discount-service.js,tag=}
+2015-06-14T11:45:43.794Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	ready	./discount-service.js	{}
+2015-06-14T11:45:43.794Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	install	./discount-service.js	{exports=[]}	
+2015-06-14T11:45:43.795Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	transport	-	IN	azljimf3qp1b/pjlsq4t36qxc	role:transport,cmd:listen	{config={type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12},role=transport,cmd=listen}	ENTRY	A;br3wu4218s64	GATE
+2015-06-14T11:45:43.797Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	web	-	IN	l5o9ijynwzv6/a75618xxq0rb	role:web	{role=web,plugin=web,config={prefix=/seneca}}	ENTRY	A;630sc7p2qdbc	-
+2015-06-14T11:45:43.798Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	basic	-	IN	y7tv34hnprtm/a75618xxq0rb	role:util,note:true,cmd:push	{role=util,note=true,cmd=push,key=admin/units,value={unit=web-service,spec={title=Web Services,ng={module=senecaWebServiceModule,directive=seneca-web-service}},content=[{type=js,file=E:\reveal.js\Presentations2015\Microservices-Seneca\example\03_OrderWithDiscount_microservices\node_modules\seneca\node_modules\seneca-web/web/web-service.js}]}}	ENTRY	A;u08za03emiyo	-
+2015-06-14T11:45:43.800Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	web	-	OUT	wsclwzvh3onw/a75618xxq0rb	init:web	undefined	EXIT	A;i7rcn1gh0ao8	31	GATE
+2015-06-14T11:45:43.800Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	ready	web	
+2015-06-14T11:45:43.801Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	web	-	OUT	l5o9ijynwzv6/a75618xxq0rb	role:web	undefined	EXIT	A;630sc7p2qdbc	4	-
+2015-06-14T11:45:43.801Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	basic	-	OUT	y7tv34hnprtm/a75618xxq0rb	role:util,note:true,cmd:push	{unit=web-service,spec={title=Web Services,ng={module=senecaWebServiceModule,directive=seneca-web-service}},content=[{type=js,file=E:\reveal.js\Presentations2015\Microservices-Seneca\example\03_OrderWithDiscount_microservices\node_modules\seneca\node_modules\seneca-web/web/web-service.js}]}	EXIT	A;u08za03emiyo	3	-
+2015-06-14T11:45:43.801Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	mem-store	QLK	OUT	j49vhjcepqo8/3mvfa9n2sa96	init:mem-store	undefined	EXIT	A;8lqegqvwn7iv	17	GATE
+2015-06-14T11:45:43.801Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	register	ready	mem-store/QLK	
+2015-06-14T11:45:43.802Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	transport	-	IN	uee0kizxtjz0/pjlsq4t36qxc	role:transport,hook:listen,type:web	{type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12,role=transport,hook=listen}	ENTRY	A;xicr9091nw61	-
+2015-06-14T11:45:43.804Z	6i5supxzmc37/1434282343470/17312/-	INFO	plugin	transport		ACT	uee0kizxtjz0/pjlsq4t36qxc	role:transport,hook:listen,type:web	listen	{type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12,role=transport,hook=listen}
+2015-06-14T11:45:43.805Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	plugin	transport		ACT	uee0kizxtjz0/pjlsq4t36qxc	role:transport,hook:listen,type:web	-	-	-	ADD	s45h7s7eln76	role:seneca,cmd:close
+2015-06-14T11:45:43.806Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	transport	-	OUT	uee0kizxtjz0/pjlsq4t36qxc	role:transport,hook:listen,type:web	undefined	EXIT	A;xicr9091nw61	3	-
+2015-06-14T11:45:43.806Z	6i5supxzmc37/1434282343470/17312/-	DEBUG	act	transport	-	OUT	azljimf3qp1b/pjlsq4t36qxc	role:transport,cmd:listen	undefined	EXIT	A;br3wu4218s64	11	GATE

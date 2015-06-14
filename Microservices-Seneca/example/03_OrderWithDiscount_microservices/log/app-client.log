@@ -1,0 +1,94 @@
+2015-06-14T11:45:43.457Z	ihgtqum5vgs5/1434282343452/16488/-	INFO	hello	Seneca/0.6.1/ihgtqum5vgs5/1434282343452/16488/-
+2015-06-14T11:45:43.459Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	options	{ tag: '-',   idlen: 12,   timeout: 33333,   status_interval: 60000,   actcache: true,   actcache_size: 1111,   zig: {},   trace: { act: false, stack: false, unknown: 'warn' },   stats: { size: 1024, duration: 60000, running: false },   debug:     { allargs: false,      fragile: false,      undead: false,      print: {},      act_caller: false },   deathdelay: 33333,   admin: { local: false, prefix: '/admin' },   plugin: {},   internal:     { actrouter: ,      clientrouter: ,      subrouter: ,      close_signals: { SIGHUP: true, SIGTERM: true, SIGINT: true, SIGBREAK: true } },   default_plugins: { basic: true, 'mem-store': true, transport: true, web: true },   log:     { map:        [ { level: 'all',           handler: { [Function: print] routestr: '{ level: \'fatal\' }' } } ] } }
+2015-06-14T11:45:43.468Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	-	-	-	ADD	7hpct4zci6bg	role:seneca,stats:true
+2015-06-14T11:45:43.468Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	-	-	-	ADD	cp23amgvau94	role:seneca,ready:true
+2015-06-14T11:45:43.468Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	-	-	-	ADD	0jodhbmjf9ut	role:seneca,cmd:close
+2015-06-14T11:45:43.468Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	-	-	-	ADD	d8goxdgund9j	role:options,cmd:get
+2015-06-14T11:45:43.487Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	init	basic
+2015-06-14T11:45:43.487Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		DEFINE	{}
+2015-06-14T11:45:43.489Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	jsl8sz2384s1	role:basic,cmd:quickcode
+2015-06-14T11:45:43.489Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	9ylul6h33u92	role:util,cmd:quickcode
+2015-06-14T11:45:43.489Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	jgurw1gx917t	role:basic,cmd:generate_id
+2015-06-14T11:45:43.490Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	g1rhzmx1fu24	role:util,cmd:generate_id
+2015-06-14T11:45:43.491Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	v32sdac6x7tl	role:basic,cmd:ensure_entity
+2015-06-14T11:45:43.491Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	61g9to0m3vlp	role:util,cmd:ensure_entity
+2015-06-14T11:45:43.491Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	p7z3hh3i1zz9	role:basic,cmd:define_sys_entity
+2015-06-14T11:45:43.492Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	61h7kv07bnxb	role:util,cmd:define_sys_entity
+2015-06-14T11:45:43.492Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	wfi6sin3elyt	role:basic,note:true,cmd:set
+2015-06-14T11:45:43.492Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	8e9homwsqw23	role:basic,note:true,cmd:get
+2015-06-14T11:45:43.492Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	rpnalvs167tx	role:basic,note:true,cmd:list
+2015-06-14T11:45:43.493Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	bqdptdzns42r	role:basic,note:true,cmd:push
+2015-06-14T11:45:43.493Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	boasllqzwqqj	role:basic,note:true,cmd:pop
+2015-06-14T11:45:43.493Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	y9k1pbpbpl2d	role:util,note:true,cmd:set
+2015-06-14T11:45:43.493Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	vhc7berkmxny	role:util,note:true,cmd:get
+2015-06-14T11:45:43.493Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	p9lgwin5iu39	role:util,note:true,cmd:list
+2015-06-14T11:45:43.494Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	hhiprv20bcnu	role:util,note:true,cmd:push
+2015-06-14T11:45:43.494Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	basic		ADD	opmoufjnouke	role:util,note:true,cmd:pop
+2015-06-14T11:45:43.495Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	-	-	DEFAULT	{init=basic,tag=}
+2015-06-14T11:45:43.495Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	ready	basic	{}
+2015-06-14T11:45:43.495Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	install	basic	{exports=[basic]}	
+2015-06-14T11:45:43.619Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	init	transport
+2015-06-14T11:45:43.620Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		DEFINE	{}
+2015-06-14T11:45:43.623Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	8i72nc2stw3g	role:transport,cmd:inflight
+2015-06-14T11:45:43.624Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	pkd8zvbo2ydg	role:transport,cmd:listen
+2015-06-14T11:45:43.624Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	fbn0rxbde3bd	role:transport,cmd:client
+2015-06-14T11:45:43.624Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	ntzk7z2oq2sv	role:transport,hook:listen,type:tcp
+2015-06-14T11:45:43.625Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	ut88edo4ys9q	role:transport,hook:client,type:tcp
+2015-06-14T11:45:43.625Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	a9lz8mp5t8e3	role:transport,hook:listen,type:web
+2015-06-14T11:45:43.626Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	8gsitj0giler	role:transport,hook:client,type:web
+2015-06-14T11:45:43.626Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	11vwwu32imcr	role:transport,hook:listen,type:http
+2015-06-14T11:45:43.626Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	jp3gdkz899op	role:transport,hook:client,type:http
+2015-06-14T11:45:43.626Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	uh8bvliq27fd	role:transport,hook:listen,type:direct
+2015-06-14T11:45:43.626Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ADD	jxuf76ow2u6f	role:transport,hook:client,type:direct
+2015-06-14T11:45:43.628Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	-	-	DEFAULT	{init=transport,tag=}
+2015-06-14T11:45:43.628Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	ready	transport	{}
+2015-06-14T11:45:43.628Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	install	transport	{exports=[transport/utils]}	
+2015-06-14T11:45:43.724Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	init	web
+2015-06-14T11:45:43.724Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		DEFINE	{}
+2015-06-14T11:45:43.736Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	rnt1kw5zg1br	role:web
+2015-06-14T11:45:43.738Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	jlqt6tn4mqds	role:web,list:service
+2015-06-14T11:45:43.738Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	4y4yradxyjpd	role:web,list:route
+2015-06-14T11:45:43.738Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	7ib2affncx9e	role:web,stats:true
+2015-06-14T11:45:43.739Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	fikzzk7x437x	role:web,get:config
+2015-06-14T11:45:43.740Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	cswau5j3wy7l	role:web,set:source
+2015-06-14T11:45:43.740Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	v6euhr044iue	role:web,get:sourcelist
+2015-06-14T11:45:43.741Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	web		ADD	r8gk4n30st9d	init:web
+2015-06-14T11:45:43.743Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	web	-	IN	3czf9hxh66yi/wnuh0gbvaylx	init:web	{init=web,tag=undefined}	ENTRY	A;r8gk4n30st9d	GATE
+2015-06-14T11:45:43.746Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	install	web	{exports=[web,web/httprouter]}	
+2015-06-14T11:45:43.758Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	init	mem-store
+2015-06-14T11:45:43.759Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		DEFINE	{}
+2015-06-14T11:45:43.760Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	x8e3vpu1i3lb	role:entity,cmd:save
+2015-06-14T11:45:43.760Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	m8qzssg7ud8d	role:entity,cmd:load
+2015-06-14T11:45:43.761Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	7hvh3klapg26	role:entity,cmd:list
+2015-06-14T11:45:43.761Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	s2me75wo4q57	role:entity,cmd:remove
+2015-06-14T11:45:43.762Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	6dpz9bqhcerp	role:seneca,cmd:close
+2015-06-14T11:45:43.764Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	ktz3yjzcrrxs	role:entity,cmd:native
+2015-06-14T11:45:43.765Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	tw82bh6i9h0a	role:mem-store,cmd:dump
+2015-06-14T11:45:43.765Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	wxvommdrhttr	role:mem-store,cmd:export
+2015-06-14T11:45:43.765Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	0t3fqkil2i0a	role:mem-store,cmd:import
+2015-06-14T11:45:43.766Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	mem-store		ADD	fxh0t3gh744l	init:mem-store
+2015-06-14T11:45:43.767Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	mem-store	IFA	IN	oliei6g5hwtp/qhc8es1rji5u	init:mem-store	{init=mem-store,tag=IFA}	ENTRY	A;fxh0t3gh744l	GATE
+2015-06-14T11:45:43.768Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	install	mem-store/IFA	{exports=[]}	mem-store
+*** Acting as a client ***
+2015-06-14T11:45:43.769Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	transport	-	IN	2nkcbr4pdd9x/z9jy46wcvl0y	role:transport,cmd:client	{config={type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12},role=transport,cmd=client}	ENTRY	A;fbn0rxbde3bd	GATE
+2015-06-14T11:45:43.770Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act			IN	9s2zuqu1ou47/n64r3rx7ysb3		{role=discount-service,cmd=calculateDiscount,order={customerId=121,orderTotal=500,products=[]}}	ENTRY	A;CLIENT	-
+2015-06-14T11:45:43.772Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	web	-	IN	lb0e85f69die/wnuh0gbvaylx	role:web	{role=web,plugin=web,config={prefix=/seneca}}	ENTRY	A;rnt1kw5zg1br	-
+2015-06-14T11:45:43.774Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	basic	-	IN	bmz7hshsrezq/wnuh0gbvaylx	role:util,note:true,cmd:push	{role=util,note=true,cmd=push,key=admin/units,value={unit=web-service,spec={title=Web Services,ng={module=senecaWebServiceModule,directive=seneca-web-service}},content=[{type=js,file=E:\reveal.js\Presentations2015\Microservices-Seneca\example\03_OrderWithDiscount_microservices\node_modules\seneca\node_modules\seneca-web/web/web-service.js}]}}	ENTRY	A;hhiprv20bcnu	-
+2015-06-14T11:45:43.775Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	web	-	OUT	3czf9hxh66yi/wnuh0gbvaylx	init:web	undefined	EXIT	A;r8gk4n30st9d	31	GATE
+2015-06-14T11:45:43.775Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	ready	web	
+2015-06-14T11:45:43.776Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	web	-	OUT	lb0e85f69die/wnuh0gbvaylx	role:web	undefined	EXIT	A;rnt1kw5zg1br	4	-
+2015-06-14T11:45:43.777Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	basic	-	OUT	bmz7hshsrezq/wnuh0gbvaylx	role:util,note:true,cmd:push	{unit=web-service,spec={title=Web Services,ng={module=senecaWebServiceModule,directive=seneca-web-service}},content=[{type=js,file=E:\reveal.js\Presentations2015\Microservices-Seneca\example\03_OrderWithDiscount_microservices\node_modules\seneca\node_modules\seneca-web/web/web-service.js}]}	EXIT	A;hhiprv20bcnu	4	-
+2015-06-14T11:45:43.777Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	mem-store	IFA	OUT	oliei6g5hwtp/qhc8es1rji5u	init:mem-store	undefined	EXIT	A;fxh0t3gh744l	10	GATE
+2015-06-14T11:45:43.777Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	register	ready	mem-store/IFA	
+2015-06-14T11:45:43.778Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	transport	-	IN	5i5nnigf81z0/z9jy46wcvl0y	role:transport,hook:client,type:web	{type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12,role=transport,hook=client}	ENTRY	A;8gsitj0giler	-
+2015-06-14T11:45:43.778Z	ihgtqum5vgs5/1434282343452/16488/-	INFO	plugin	transport		ACT	5i5nnigf81z0/z9jy46wcvl0y	role:transport,hook:client,type:web	client	{type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12,role=transport,hook=client}	any
+2015-06-14T11:45:43.778Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ACT	5i5nnigf81z0/z9jy46wcvl0y	role:transport,hook:client,type:web	client	web	send	{}	seneca_any	{type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12,role=transport,hook=client}	http://0.0.0.0:10101/act
+2015-06-14T11:45:43.779Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	transport	-	OUT	5i5nnigf81z0/z9jy46wcvl0y	role:transport,hook:client,type:web	{id=qnqxyo}	EXIT	A;8gsitj0giler	1	-
+2015-06-14T11:45:43.779Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	act	transport	-	OUT	2nkcbr4pdd9x/z9jy46wcvl0y	role:transport,cmd:client	{id=qnqxyo}	EXIT	A;fbn0rxbde3bd	10	GATE
+2015-06-14T11:45:43.779Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	client	sendqueue-clear	{type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12}
+2015-06-14T11:45:43.779Z	ihgtqum5vgs5/1434282343452/16488/-	DEBUG	plugin	transport		ACT	5i5nnigf81z0/z9jy46wcvl0y	role:transport,hook:client,type:web	-	-	-	ADD	gftlwd4cs7gn	role:seneca,cmd:close
+2015-06-14T11:45:43.789Z	ihgtqum5vgs5/1434282343452/16488/-	ERROR	plugin	transport		ACT	5i5nnigf81z0/z9jy46wcvl0y	role:transport,hook:client,type:web	client	no_message_id	{type=web,port=10101,host=0.0.0.0,path=/act,protocol=http,timeout=32778,msgprefix=seneca_,callmax=111111,msgidlen=12,role=transport,hook=client}	{kind=res,res=,error={code=EADDRNOTAVAIL,errno=EADDRNOTAVAIL,syscall=connect},time={client_recv=1434282343789}}
+2015-06-14T11:46:17.114Z	ihgtqum5vgs5/1434282343452/16488/-	ERROR	act	-	-	OUT	9s2zuqu1ou47/n64r3rx7ysb3	-	33343	{role=discount-service,cmd=calculateDiscount,order={customerId=121,orderTotal=500,products=[]}}	ENTRY	A;CLIENT	-	seneca: Action undefined failed: [TIMEOUT].	act_execute	{id=9s2zuqu1ou47/n64r3rx7ysb3,gate=false,ungate=false,desc=,plugin={name=undefined,tag=undefined},time={start=1434282343780,end=1434282377111},message=[TIMEOUT],pattern=undefined,instance=Seneca/0.6.1/ihgtqum5vgs5/1434282343452/16488/-}	Error: [TIMEOUT]
+    at null._onTimeout (E:\reveal.js\Presentations2015\Microservices-Seneca\example\03_OrderWithDiscount_microservices\node_modules\seneca\node_modules\gate-executor\gate-executor.js:95:21)
+    at Timer.listOnTimeout [as ontimeout] (timers.js:112:15)	
+Discount for customer: undefined %

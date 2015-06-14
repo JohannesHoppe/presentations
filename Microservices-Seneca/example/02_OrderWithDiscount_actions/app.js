@@ -4,16 +4,12 @@ seneca.use('./discount-service.js');
 
 console.log('Order discount example - with action / pattern matching');
 
-var order = {
-    customerId: 121,
-    orderTotal: 500,
-    products: []
-};
+var customerId = 121;
 
 seneca.act({
     role: 'discount-service',
     cmd: 'calculateDiscount',
-    order: order
+    customerId: customerId
 }, function (e, discount) {
     
     console.log('Discount for customer:', discount, '%');
