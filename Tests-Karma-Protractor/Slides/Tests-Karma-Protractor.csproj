@@ -39,6 +39,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\garfield.svg" />
+    <Content Include="images\garfield2.svg" />
+    <Content Include="images\logo-browserify-wizard-hat-blue.svg" />
+    <Content Include="images\logo-browserify.svg" />
+    <Content Include="images\logo-grunt.svg" />
+    <Content Include="images\logo-gulp.svg" />
+    <Content Include="images\logo-jasmine-state.svg" />
+    <Content Include="images\logo-js.svg" />
+    <Content Include="images\logo-karma-state.svg" />
+    <Content Include="images\logo-protractor-state.png" />
+    <Content Include="images\logo-requirejs.svg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\pixel.png" />
+    <Content Include="images\protractor-architecture.png" />
+    <Content Include="images\protractor-parts.png" />
+    <Content Include="images\tumbleweed.gif" />
     <Content Include="old_examples\HelloWorldAngular.js" />
     <Content Include="old_examples\HelloWorldAngular.html" />
     <Content Include="images\logo-jasmine.svg" />
@@ -71,6 +88,7 @@
       <DependentUpon>require.js</DependentUpon>
     </Content>
     <Content Include="css\theme\source\_custom.scss" />
+    <Content Include="images\garfield_123rf_9390278.eps" />
     <None Include="js\jquery-2.0.3.intellisense.js">
       <DependentUpon>jquery-2.0.3.js</DependentUpon>
     </None>
