@@ -1,0 +1,14 @@
+{
+  "name": "protractor-tests",
+  "version": "0.0.0",
+  "author": "Johannes Hoppe",
+  "description": "Some protractor tests",
+  "scripts": {
+    "start": "webdriver-manager start",
+    "test": "protractor protractor.conf.js"
+  },
+  "dependencies": {
+    "protractor": "^2.1.0"
+  },
+  "license": "MIT"
+}
