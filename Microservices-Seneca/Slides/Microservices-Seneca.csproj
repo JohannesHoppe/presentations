@@ -39,18 +39,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\companies\Netflix_2014_logo.svg" />
+    <Content Include="images\companies\PayPal_2014_logo.svg" />
+    <Content Include="images\companies\SoundCloud_logo.svg" />
+    <Content Include="images\companies\Twitter_logo_with_bird.svg" />
     <Content Include="images\favicon.ico" />
-    <Content Include="images\hypermedia0.png" />
-    <Content Include="images\hypermedia1.png" />
-    <Content Include="images\hypermedia2.png" />
-    <Content Include="images\hypermedia3.png" />
     <Content Include="images\logo-docker-black.svg" />
     <Content Include="images\logo-seneca-building.png" />
+    <Content Include="images\logo-seneca-short.png" />
     <Content Include="images\logo-seneca.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\micro-service-architecture.png" />
+    <Content Include="images\micro-service-short.png" />
     <Content Include="images\micro-service.png" />
+    <Content Include="images\mind-blown.gif" />
     <Content Include="images\pixel.png" />
+    <Content Include="images\sketch_fowler.png" />
+    <Content Include="images\sketch_fowler_1.png" />
+    <Content Include="images\sketch_fowler_2.png" />
     <Content Include="index.html" />
     <Content Include="images\icon_calendar.png" />
     <Content Include="images\icon_repeat.png" />
