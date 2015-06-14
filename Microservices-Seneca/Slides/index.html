@@ -206,7 +206,6 @@
                         ```
                         <br/>
                         ```js contenteditable 
-                     
                         // discount-service.js
                         module.exports = {
     
@@ -216,6 +215,8 @@
                             }
                         };
                         ```
+                        
+                        <small>[Demo](https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Microservices-Seneca/example/01_OrderWithDiscount)</small>
                     </section> 
                     
                     <section data-markdown>
@@ -237,8 +238,65 @@
                         # !
                     </section>
                     
+                    <section data-markdown>
+                        ### Actions
+                        <small>seneca.add(pattern, action): __asynchron__, pattern matching</small>
 
+                        ```js contenteditable 
+                        // app.js
+                        var seneca = require('seneca')();
+                        seneca.use('./discount-service.js');
+
+                        var order = { */ ... */ };
+
+                        seneca.act({
+                            role: 'discount-service', cmd: 'calculateDiscount', order: order
+                        }, function (e, discount) {
+                            console.log('Discount for customer:', discount, '%');
+                        });
  
+                        ```
+                        ```js contenteditable 
+                        // discount-service.js
+                        module.exports = function() {
+
+                            var calculateDiscount = function(args, done) {
+                                var discount = (args.order.customerId _LT_ 100) ? 10 : 5;
+                                done(null, discount);
+                            }
+
+                            this.add({ role: 'discount-service', cmd: 'calculateDiscount' },
+                                     calculateDiscount);
+                        };
+                        ```
+                        
+                        <small>[Demo](https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Microservices-Seneca/example/02_OrderWithDiscount_actions)</small>
+
+                    </section>
+    
+                    <section data-markdown>
+                        ### Tests
+                        <small>super einfach</small>
+
+                        ```js contenteditable 
+                        var assert = require('should'),
+                            seneca = require('seneca');
+
+                        describe('discount-service', function () {
+                          it('should give older customers a 10% discount', function (done) {
+
+                            seneca({ errhandler: done })
+                              .use('../discount-service.js')
+                              .act('role:discount-service, cmd:calculateDiscount, order: {customerId: 5 }', function (err, discount) {
+
+                              discount.should.equal(10);
+                              done();
+                            });
+                          });
+                        });
+
+                        ```
+                    </section>
                     
                     <section data-markdown>
                         ### Seneca
@@ -246,7 +304,10 @@
                         
                         * [<span title="Generic plugin loader functionality for Node.js frameworks.">use-plugin</span>](https://github.com/rjrodger/use-plugin) 
                         * Actions == pattern matching == JSON
+                        * easy wiring  
                         
+                        <br/>
+                        <br/>
                         <small>[Beginner's Guide to Seneca.js](http://jakepruitt.com/2015/02/09/beginners-guide-to-seneca-js.html)</small>   
                     </section>                       
 

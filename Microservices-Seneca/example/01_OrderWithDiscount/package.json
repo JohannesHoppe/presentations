@@ -1,11 +1,13 @@
 {
   "name": "OrderWithDiscount",
-  "version": "0.0.0",
-  "description": "OrderWithDiscount",
+  "description": "OrderWithDiscount - plain node.js script",
+  "version": "0.0.1",
+  "license": "MIT",
   "main": "app.js",
   "author": {
-    "name": "Johannes",
-    "email": "johannes.hoppe@haushoppe-its.de"
+    "name": "Johannes Hoppe",
+    "email": "johannes.hoppe@haushoppe-its.de",
+    "url": "http://haushoppe-its.de/"
   },
   "dependencies": {
     "paktc": "^1.0.1"
