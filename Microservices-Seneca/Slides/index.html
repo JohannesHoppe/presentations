@@ -201,8 +201,8 @@
 
                         var customerId = 121;
 
-                        var discount = discountService.calculateDiscount(customerId);
-                        console.log('Discount for customer:', discount, '%'); 
+                        var result = discountService.calculateDiscount(customerId);
+                        console.log('Discount for customer:', result.discount, '%');
                         ```
                         <br/>
                         ```js contenteditable 
@@ -211,7 +211,9 @@
     
                             // returns applicable discount in %
                             calculateDiscount: function(customerId) {
-                                return (customerId _LT_ 100) ? 10 : 5;
+                                return {
+                                    discount: (customerId < 100) ? 10 : 5
+                                }
                             }
                         };
                         ```
@@ -251,8 +253,8 @@
 
                         seneca.act({
                             role: 'discount-service', cmd: 'calculateDiscount', customerId: customerId
-                        }, function (e, discount) {
-                            console.log('Discount for customer:', discount, '%');
+                        }, function (e, result) {
+                            console.log('Discount for customer:', result.discount, '%');
                         });
  
                         ```
@@ -260,10 +262,10 @@
                         // discount-service.js
                         module.exports = function() {
 
+                            // returns applicable discount in %
                             var calculateDiscount = function(args, done) {
-                                var discount = (args.customerId _LT_ 100) ? 10 : 5;
-                                done(null, discount);
-                            }
+                                done(null, { discount: (args.customerId < 100) ? 10 : 5 });
+                            };
 
                             this.add({ role: 'discount-service', cmd: 'calculateDiscount' },
                                      calculateDiscount);
@@ -287,9 +289,9 @@
 
                             seneca({ errhandler: done })
                               .use('../discount-service.js')
-                              .act('role:discount-service, cmd:calculateDiscount, customerId: 5', function (err, discount) {
+                              .act('role:discount-service, cmd:calculateDiscount, customerId: 5', function (err, result) {
 
-                              discount.should.equal(10);
+                              result.discount.should.equal(10);
                               done();
                             });
                           });
@@ -297,12 +299,24 @@
 
                         ```
                     </section> 
-                    
+
+                    <section data-markdown>
+                        ### seneca-transport
+                        <small>&micro;</small>
+
+                        ```js contenteditable 
+                        // act as a server
+                        seneca.listen();  
+                        
+                        // act as a client
+                        seneca.client();
+                        ```
+                    </section>                     
                     
                     <section data-markdown>
                       
                         ```cmd
-                        $ curl http://localhost:7777/act --data "{ \"role\": \"discount-service\", \"cmd\": \"calculateDiscount\", \"customerId\": 5 }"
+                        $ curl http://localhost:10101/act --data "{ \"role\": \"discount-service\", \"cmd\": \"calculateDiscount\", \"customerId\": 5 }"
                         ```
                     
                     </section> 

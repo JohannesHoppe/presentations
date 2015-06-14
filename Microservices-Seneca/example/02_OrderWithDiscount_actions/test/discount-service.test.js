@@ -7,9 +7,9 @@ describe('discount-service', function () {
 
         seneca({ log: 'silent', errhandler: done })
             .use('../discount-service.js')
-            .act('role:discount-service, cmd:calculateDiscount, customerId: 5', function (err, discount) {
+            .act('role:discount-service, cmd:calculateDiscount, customerId: 5', function (err, result) {
 
-            discount.should.equal(10);
+            result.discount.should.equal(10);
             done();
         });
     });
@@ -18,9 +18,9 @@ describe('discount-service', function () {
         
         seneca({ log: 'silent', errhandler: done })
             .use('../discount-service.js')
-            .act('role:discount-service, cmd:calculateDiscount, customerId: 200', function (err, discount) {
+            .act('role:discount-service, cmd:calculateDiscount, customerId: 200', function (err, result) {
             
-            discount.should.equal(5);
+            result.discount.should.equal(5);
             done();
         });
     });

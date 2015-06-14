@@ -1,5 +1,5 @@
 ﻿// app.js
-var seneca = require('seneca')();
+var seneca = require('seneca')({ log: 'error' });
 
 console.log('*** Acting as a client ***');
 
@@ -11,8 +11,7 @@ seneca
         role: 'discount-service',
         cmd: 'calculateDiscount',
         customerId: customerId
-    }, function(e, discount) {
+    }, function(err, result) {
 
-        console.log('Discount for customer:', discount, '%');
-
+        console.log('Discount for customer:', result.discount, '%');
     });

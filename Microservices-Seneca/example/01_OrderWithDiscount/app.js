@@ -5,7 +5,7 @@ console.log('Order discount example');
 
 var customerId = 121;
 
-var discount = discountService.calculateDiscount(customerId);
-console.log('Discount for customer:', discount, '%');
+var result = discountService.calculateDiscount(customerId);
+console.log('Discount for customer:', result.discount, '%');
 
 require('paktc');

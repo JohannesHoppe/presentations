@@ -1,5 +1,5 @@
 ﻿// app.js
-var seneca = require('seneca')({ log: 'debug' });
+var seneca = require('seneca')({ log: 'error' });
 
 console.log('*** Acting as a server ***');
 

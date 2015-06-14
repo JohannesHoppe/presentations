@@ -6,7 +6,7 @@ module.exports = function(options) {
     // returns applicable discount in %
     var calculateDiscount = function(args, done) {
         var discount = (args.customerId < 100) ? 10 : 5;
-        done(null, discount);
+        done(null, {discount: discount});
     }
 
     seneca.add({ role: 'discount-service', cmd: 'calculateDiscount' }, calculateDiscount);

@@ -10,9 +10,8 @@ seneca.act({
     role: 'discount-service',
     cmd: 'calculateDiscount',
     customerId: customerId
-}, function (e, discount) {
+}, function (e, result) {
     
-    console.log('Discount for customer:', discount, '%');
-
+    console.log('Discount for customer:', result.discount, '%');
     require('paktc');
 });
