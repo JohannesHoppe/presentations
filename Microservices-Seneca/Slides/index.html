@@ -189,15 +189,72 @@
                 <section data-state="seneca">
                     <section data-markdown>
                         ![img](images/logo-seneca.png)
-                    </section>
+                    </section> 
                     
                     <section data-markdown>
+                        ### Vorher
+                        <small>nicht __asynchron__, keine lose Kopplung</small>
+
+                        ```js contenteditable 
+                        // app.js
+                        var discountService = require('./discount-service.js');
+
+                        var order = { /* ... */ };
+
+                        var discount = discountService.calculateDiscount(order);
+                        console.log('Discount for customer:', discount, '%'); 
+                        ```
+                        <br/>
+                        ```js contenteditable 
+                     
+                        // discount-service.js
+                        module.exports = {
+    
+                            // returns applicable discount in %
+                            calculateDiscount: function(order) {
+                                return (order.customerId _LT_ 100) ? 10 : 5;
+                            }
+                        };
+                        ```
+                    </section> 
+                    
+                    <section data-markdown>
+                        ### Installation
+                        <br/>
+
                         ```cmd contenteditable cmd white
                         $ npm install seneca
                         $ node
                         var seneca = require('seneca')();
                         ```
-                    </section>  
+                    </section>
+                    
+                    <section data-markdown>
+                        # ???
+                    </section>          
+                                               
+                    <section data-markdown data-state="mindblown">
+                        # !
+                    </section>
+                    
+
+ 
+                    
+                    <section data-markdown>
+                        ### Seneca
+                        <small>in a nutshell</small>    
+                        
+                        * [<span title="Generic plugin loader functionality for Node.js frameworks.">use-plugin</span>](https://github.com/rjrodger/use-plugin) 
+                        * Actions == pattern matching == JSON
+                        
+                        <small>[Beginner's Guide to Seneca.js](http://jakepruitt.com/2015/02/09/beginners-guide-to-seneca-js.html)</small>   
+                    </section>                       
+
+
+
+                    
+                    
+  
                 </section>
                 
 

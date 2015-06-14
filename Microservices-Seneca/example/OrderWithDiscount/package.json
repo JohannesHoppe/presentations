@@ -1,0 +1,13 @@
+{
+  "name": "OrderWithDiscount",
+  "version": "0.0.0",
+  "description": "OrderWithDiscount",
+  "main": "app.js",
+  "author": {
+    "name": "Johannes",
+    "email": "johannes.hoppe@haushoppe-its.de"
+  },
+  "dependencies": {
+    "paktc": "^1.0.1"
+  }
+}

@@ -356,7 +356,17 @@ section[data-state="micro"] h2, section[data-state="micro"] h3, section[data-sta
   transition: background-image 0.8s linear;
 }
 
-section[data-state="micro"] h2, section[data-state="micro"] h3, section[data-state="micro"] h4, section[data-state="micro"] strong, section[data-state="micro"] a {
+.mindblown .reveal .state-background {
+  background-image: url("../../images/logo-seneca-building.png"), url("../../images/mind-blown.gif");
+  background-position: left top, center bottom;
+  background-size: auto auto, 100% 100%;
+  -webkit-transition: background-image 0.8s linear, none;
+  -moz-transition: background-image 0.8s linear, none;
+  -o-transition: background-image 0.8s linear, none;
+  transition: background-image 0.8s linear, none;
+}
+
+section[data-state="seneca"] h2, section[data-state="seneca"] h3, section[data-state="seneca"] h4, section[data-state="seneca"] strong, section[data-state="seneca"] a {
   color: #537078 !important;
 }
 
