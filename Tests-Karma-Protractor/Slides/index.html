@@ -389,6 +389,81 @@
                             });
                         });
                         ```
+                    </section>    
+                    
+                    <section data-markdown data-state="protractor">
+                        ### Expect - patched
+                        
+                        ```javascript contenteditable 
+                        browser.getTitle().then(function (title) {
+                            expect(title).toBe('AngularJS Calculator');
+                        });
+                        ```
+                        ==
+                        
+                        ```javascript contenteditable 
+                        expect(browser.getTitle()).toBe('AngularJS Calculator');
+                        ```
+
+                    </section>
+                                       
+                    <section data-markdown data-state="protractor">
+                        <h2>Spickzettel</h2>
+                        <small>auf Angular warten</small>
+                        <br/><br/>
+
+                        <table style="font-size: 0.6em" width="100%">
+                            <tr>
+                                <td><code>&lt;span&gt;{{yourName}}&lt;/span&gt;</code></td>
+                                <td><code>element(by.binding('yourName'));</code></td>
+                            </tr>
+                            <tr style="background-color:#eee;">
+                                <td><code>&lt;input ng-model="password"&gt;</code></td>
+                                <td><code>element(by.input('password'));</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;tr ng-repeat="foo in foos"&gt;</code></td>
+                                <td><code>element(by.repeater('foo in foos')).row(1)</code></td>
+                            </tr>
+                            <tr  style="background-color:#eee;">
+                                <td></td>
+                                <td><code>element.by(repeater('foo in foos')).column('foo.bar');</code></td>
+                            </tr>
+                            
+                        </table>
+                       
+                    </section>                    
+                    
+                    <section data-markdown data-state="protractor">
+                        <h2>Debugging</h2>
+                        <br/><br/>
+
+                        <table style="font-size: 0.6em" width="100%">
+                           
+                            <tr>
+                                <td><b>wd-debug</b></td>
+                                <td><code>
+                                        browser.pause();<br/>  
+                                        <br/>
+                                        // Enter "c" to move the test forward by one task<br/>
+                                        // Enter "repl" to enter interactive mode
+                                    </code></td>
+                            </tr>                            
+                            <tr style="background-color:#eee;">
+                                <td><b>node debugger</b></td>
+                                <td><code>
+                                        cmd: protractor debug debugging/failureConf.js<br/> 
+                                        <br/>
+                                        browser.debugger()<br/>   
+                                         <br/>
+                                        // Enter "c" to continue after breakpoint
+                                    </code></td>
+                            </tr>
+                        </table>
+                        
+                        <br/>
+                        <small>[Debugging](https://github.com/angular/protractor/blob/master/docs/debugging.md)</small>
+                       
                     </section>
                     
                     <section data-markdown data-state="protractor">
@@ -462,8 +537,8 @@
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
-                //minScale: 0.2,
-                //maxScale: 1.0,
+                minScale: 0.2,
+                maxScale: 1.2,
                 controls: true,
                 progress: true,
                 history: true,
