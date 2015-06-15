@@ -409,10 +409,36 @@
                         ```
 
                     </section>
-                                       
+
+                    
                     <section data-markdown data-state="protractor">
-                        <h2>Spickzettel</h2>
-                        <small>auf Angular warten</small>
+                        ### Ohne Angular
+                            
+                        ```javascript contenteditable small 
+                        describe('Johannes Talk at DWX', function() {
+
+                            beforeEach(function () {
+                                // no waiting on angular to load and finish its tasks 
+                                browser.ignoreSynchronization = true;
+                            });
+
+                            it('should have the expected title', function() {
+
+                                browser.get('http://www.developer-week.de/Programm/Veranstaltung/(event)/18498');
+                                var heading = element(by.tagName('h2'));
+                                expect(heading.getText()).toEqual('JS Unit- und Oberflächentests mit Karma _AMP_ Protractor');
+                            });
+
+                            afterEach(function() {
+                                return browser.ignoreSynchronization = false;
+                            });
+                        });
+                        ```
+                    </section>
+
+                    <section data-markdown data-state="protractor">
+                        <h2>Locator Spickzettel</h2>
+                        <small>[by](https://github.com/angular/protractor/blob/master/docs/locators.md).irgendwas() + asynchronous actions</small>
                         <br/><br/>
 
                         <table style="font-size: 0.6em" width="100%">
@@ -447,7 +473,6 @@
                                 <td><b>wd-debug</b></td>
                                 <td><code>
                                         browser.pause();<br/>  
-                                        <br/>
                                         // Enter "c" to move the test forward by one task<br/>
                                         // Enter "repl" to enter interactive mode
                                     </code></td>
@@ -455,43 +480,35 @@
                             <tr style="background-color:#eee;">
                                 <td><b>node debugger</b></td>
                                 <td><code>
-                                        cmd: protractor debug debugging/failureConf.js<br/> 
+                                        cmd: protractor debug protractor.conf.js<br/> 
                                         browser.debugger()<br/>   
-                                         <br/>
                                         // Enter "c" to continue after breakpoint
                                     </code></td>
                             </tr>
+                            <tr>
+                                <td><b>node-debug</b></td>
+                                <td><code>
+                                        cmd: node-debug node_modules/protractor/bin/protractor protractor.conf.js<br/> 
+                                        browser.debugger()
+                                    </code></td>
+                            </tr>
                         </table>
+
                         
                         <br/>
                         <small>[Debugging](https://github.com/angular/protractor/blob/master/docs/debugging.md)</small>
                        
-                    </section>
+                    </section> 
                     
                     <section data-markdown data-state="protractor">
-                        ### Ohne Angular
-                            
-                        ```javascript contenteditable small 
-                        describe('Johannes Talk at DWX', function() {
+                        <h2>Schamlose Werbung</h2>
+                        <small> :-)</small>
+                        <br/><br/>
+                        [<img src="images/node-inspector.png" alt="" width="50%"/>](https://www.npmjs.com/package/gulp-node-debug)
 
-                            beforeEach(function () {
-                                // no waiting on angular to load and finish its tasks 
-                                browser.ignoreSynchronization = true;
-                            });
-
-                            it('should have the expected title', function() {
-
-                                browser.get('http://www.developer-week.de/Programm/Veranstaltung/(event)/18498');
-                                var heading = element(by.tagName('h2'));
-                                expect(heading.getText()).toEqual('JS Unit- und Oberflächentests mit Karma _AMP_ Protractor');
-                            });
-
-                            afterEach(function() {
-                                return browser.ignoreSynchronization = false;
-                            });
-                        });
-                        ```
+                        [gulp-node-debug](https://www.npmjs.com/package/gulp-node-debug)
                     </section>
+
 
                 </section>               
 

@@ -52,6 +52,7 @@
     <Content Include="images\logo-protractor-state.png" />
     <Content Include="images\logo-requirejs.svg" />
     <Content Include="images\logo.png" />
+    <Content Include="images\node-inspector.png" />
     <Content Include="images\pixel.png" />
     <Content Include="images\protractor-architecture.png" />
     <Content Include="images\protractor-parts.png" />
