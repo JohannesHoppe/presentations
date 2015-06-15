@@ -392,14 +392,15 @@
                     </section>    
                     
                     <section data-markdown data-state="protractor">
-                        ### Expect - patched
+                        ### Expect
+                        <small>das normale Jasmine expect wurde ge-patched</small>
                         
                         ```javascript contenteditable 
                         browser.getTitle().then(function (title) {
                             expect(title).toBe('AngularJS Calculator');
                         });
                         ```
-                        ==
+                        <i class="fa fa-arrow-down"></i> 
                         
                         ```javascript contenteditable 
                         expect(browser.getTitle()).toBe('AngularJS Calculator');
@@ -453,7 +454,6 @@
                                 <td><b>node debugger</b></td>
                                 <td><code>
                                         cmd: protractor debug debugging/failureConf.js<br/> 
-                                        <br/>
                                         browser.debugger()<br/>   
                                          <br/>
                                         // Enter "c" to continue after breakpoint
