@@ -40,18 +40,19 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
-
-                <section>
+               
+                    <section>
                     
-                    <img src="images/logo-OData.svg" width="75%" alt=""/>  
-                    <h1 class="nowrap" style="font-size: 0.7em; line-height: 1.3em; text-shadow: none;">Hypermedia-REST-APIs<br />mit der ASP.NET Web API und OData</h1>                        
+                        <img src="images/logo-OData-love.svg" width="100%" alt="" style="margin-top: -100px;"/>
+                        <h1 class="nowrap" style="font-size: 0.7em; line-height: 1.3em; text-shadow: none;">Hypermedia-REST-APIs<br />mit der ASP.NET Web API und OData</h1>                        
+          
                     
-                    <br class="hidePrint" />
-                    <br class="hidePrint" />
-                    <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>  
-                </section>
-                
-                <section>
+                        <br class="hidePrint" />
+                        <br class="hidePrint" />
+                        <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>  
+                    </section>                 
+            
+                    <section>
                     <section data-markdown>
                         ![johannes](images/johannes.png)
                      
@@ -59,6 +60,7 @@
                     </section>     
                 </section>   
                 
+                <!--
                 <section>
                     <section data-markdown>
                         ## API-Anti Patterns
@@ -81,6 +83,7 @@
                         </ul>
                     </section>   
                 </section>
+                -->
                 
                 <section>
                     <section data-markdown>
@@ -155,7 +158,75 @@
                         <small><b>H</b>ypermedia <b>A</b>s <b>T</b>he <b>E</b>ngine <b>Of</b> <b>A</b>pplication <b>S</b>tate</small>
                                         
                         <img src="images/hypermedia3.png" width="50%" />
+                    </section>  
+
+                    <section  data-markdown>
+                        <h1 style="position:absolute;top: -243px; right: -200px; font-size: 20em; color: silver">?</h1>
+                        ## ja, und nun?
+                        <br/>
+
+                        * Protokolle, Formate & Konventionen
+                        * [Collection+JSON](http://amundsen.com/media-types/collection/),
+                        [HAL](http://stateless.co/hal_specification.html), 
+                        [JSON-Home](http://tools.ietf.org/html/draft-nottingham-json-home-03), 
+                        [JSON-LD](http://json-ld.org/), ...
+                               
+                    </section>
+                    
+                    <section  data-markdown>
+                        ### Microsofts Antwort:
                     </section> 
+
+
+                </section>  
+
+                <section>
+                                                    
+                    <section  data-markdown>
+                        <img src="images/logo-OData.svg" alt="" width="50%" />
+                    </section> 
+                    
+                    <section  data-markdown>
+                        ### Demo: Die "Geschäftslogik"
+                        
+                        ```txd white
+                        public class Customer
+                        {
+                            public Customer()
+                            {
+                                Invoices = new List_LT_Invoice_GT_();
+                            }
+
+                            public int Id { get; set; }
+                            public string FirstName { get; set; }
+                            public string LastName { get; set; }
+                            public string Mail { get; set; }
+                            public DateTime DateOfBirth { get; set; }
+                            public virtual ICollection_LT_Invoice_GT_ Invoices { get; set; }
+                        }
+
+                        public class Invoice
+                        {
+                            public int Id { get; set; }
+                            public decimal Amount { get; set; }
+
+                            public int CustomerId { get; set; }                     
+                            public virtual Customer Customer { get; set; } 
+                        }
+
+                        public class DataContext : DbContext
+                        {
+                            public DbSet_LT_Customer_GT_ Customers { get; set; }
+                            public DbSet_LT_Invoice_GT_ Invoices { get; set; }
+
+                            protected override void OnModelCreating(DbModelBuilder modelBuilder)
+                            {
+                                modelBuilder.Configurations.Add(new InvoiceMap());
+                            }
+                        }
+                        ```
+                    </section>
+
 
                 </section>  
 
