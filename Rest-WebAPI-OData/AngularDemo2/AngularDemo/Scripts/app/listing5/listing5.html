@@ -1,0 +1,58 @@
+﻿<a class="btn btn-primary" href="#/">
+    <span class="glyphicon glyphicon-chevron-left"></span> zurück
+</a>
+
+<hr />
+
+
+<div class="row">
+    <div class="col-md-6">
+
+
+        <h1>Kunde Nr. {{customer.Id}}</h1>
+
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th>Vorname</th>
+                    <td ng-bind="customer.FirstName"></td>
+                </tr>
+                <tr>
+                    <th>Nachname</th>
+                    <td ng-bind="customer.LastName"></td>
+                </tr>
+                <tr>
+                    <th>Mail</th>
+                    <td><a ng-href="mailto:{{customer.Mail}}" ng-bind="customer.Mail"></a></td>
+                </tr>
+                <tr>
+                    <th>Geburtstag</th>
+                    <td ng-bind="customer.DateOfBirth | date:'dd.MM.yyyy'"></td>
+                </tr>
+                <tr>
+                    <th>Rechnungen<br/><small>(Navigation Property)</small></th>
+                    <td>
+                        
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="invoice in customer.Invoices">
+                                    <td ng-bind="invoice.Id"></td>
+                                    <td ng-bind="invoice.Amount"></td>
+                                </tr>
+                            </tbody>
+                        </table> 
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
+</div>
+

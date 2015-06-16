@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>dotnetpro AngularJS Demo</title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/kendouicss")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+    <body>
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+       
+        <script src="~/Scripts/require.js" data-main="/Scripts/init"></script>
+    </body>
+</html>

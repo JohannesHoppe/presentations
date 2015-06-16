@@ -187,9 +187,11 @@
                     </section> 
                     
                     <section  data-markdown>
-                        ### Demo: Die "Geschäftslogik"
-                        
-                        ```txd white
+                        ### Demo
+                        <small> Die "Geschäftslogik": DTOs + Entity Framework 6</small>
+                        <br/>
+
+                        ```javascript small contenteditable
                         public class Customer
                         {
                             public Customer()
@@ -200,7 +202,6 @@
                             public int Id { get; set; }
                             public string FirstName { get; set; }
                             public string LastName { get; set; }
-                            public string Mail { get; set; }
                             public DateTime DateOfBirth { get; set; }
                             public virtual ICollection_LT_Invoice_GT_ Invoices { get; set; }
                         }
@@ -209,8 +210,7 @@
                         {
                             public int Id { get; set; }
                             public decimal Amount { get; set; }
-
-                            public int CustomerId { get; set; }                     
+                            public int CustomerId { get; set; }
                             public virtual Customer Customer { get; set; } 
                         }
 
@@ -227,7 +227,16 @@
                         ```
                     </section>
 
-
+                    <section  data-markdown>
+                        #### Daten per Web API abrufen
+                                      
+                        ![Abbildung 1](Images/image01_scaffolding_B.png) 
+                        
+                        ```cmd
+                        GET http://example.org/api/Customers
+                        ```
+                    </section>   
+                    
                 </section>  
 
                 <section>

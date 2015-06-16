@@ -1,0 +1,14 @@
+﻿<div class="row" ng-repeat="rows in model.listings | partition:3">
+
+    <div class="col-md-4" ng-repeat="listing in rows">
+        <h2 ng-bind="listing.title"></h2>
+        <p ng-bind="listing.description"></p>
+        <p>
+            <a ng-href="{{listing.url}}" class="btn btn-default">Weiter</a>
+        </p>
+    </div>
+</div>
+
+<br/>
+<hr/>
+<a href="/api/Reset" class="btn btn-primary">Reset LocalDB with Demo data</a>

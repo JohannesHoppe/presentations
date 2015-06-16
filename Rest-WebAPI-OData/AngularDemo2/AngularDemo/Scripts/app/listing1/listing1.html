@@ -1,0 +1,26 @@
+﻿<a class="btn btn-primary" href="#/">
+    <span class="glyphicon glyphicon-chevron-left"></span> zurück
+</a>
+
+<hr/>
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="customer in customers">
+                <td ng-bind="customer.Id"></td>
+                <td ng-bind="customer.FirstName"></td>
+                <td ng-bind="customer.LastName"></td>
+                <td><a ng-href="mailto:{{customer.Mail}}" ng-bind="customer.Mail"></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -98,7 +98,7 @@ define(['angular'], function(angular) {
 });
 ~~~~~ 
 
-Der `define` Befehl wurde im letzten Artikel dieser Reihe erläutert (dotnetpro Ausgabe 01/2015). Mittels require.js werden Abhängigkeiten für das Modul definiert und angefordert. In vorliegenden Fall existiert nur eine einzige Abhängigkeit zu AngularJS. Die empfangenen Daten werden anschließend mittels `ng-repeat` und dem CSS-Framework Bootstrap [2] tabellarisch dargestellt (siehe Listing 1d).
+Die empfangenen Daten werden anschließend mittels `ng-repeat` und dem CSS-Framework Bootstrap [2] tabellarisch dargestellt (siehe Listing 1d).
 
 ##### Listing 1d -- listing1.html: AngularJS Template rendert Daten als Tabelle
 ~~~~~

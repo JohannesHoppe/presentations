@@ -1,0 +1,17 @@
+﻿<a class="btn btn-primary" href="#/">
+    <span class="glyphicon glyphicon-chevron-left"></span> zurück
+</a>
+
+<hr/>
+
+<div kendo-grid
+     k-data-source="customerDataSource"
+     k-pageable="true"
+     k-sortable="true"
+     k-filterable="{ mode: 'row' }"
+     k-columns="[
+         { field: 'Id' },
+         { field: 'FirstName', title: 'Vorname' },
+         { field: 'LastName', title: 'Nachname' },
+         { field: 'Mail' },
+         { field: 'DateOfBirth', title: 'Geburtstag', format: '{0:dd.MM.yyyy}' }]"></div>
