@@ -247,7 +247,21 @@ code {
             color: #e2e2e2 !important;
         }
     }
+}
 
+mail {
+
+    display: block;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: 710px;
+    margin-top: -161px;
+
+    background-image: url('../../images/message.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 200px 200px;
 }
 
 @keyframes "blink"         { from, to { color: transparent; } 50% { color: white; } }

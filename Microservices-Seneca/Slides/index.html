@@ -246,7 +246,19 @@
                     <section data-markdown>
                         # ???
                     </section>  
-                    
+
+                    <section data-markdown>
+                        ```javascript contenteditable 
+                        if (customer.Id == 1) {
+                            /* :-( */
+                        } else if (customer.Id == 2 _AMP__AMP_ customer.FirstName == 'Hans') {
+                            /* :-( */
+                        } else {
+                            /* :-( */
+                        }
+                        ```
+                    </section> 
+
                     <section data-markdown>
                         <small>Beispiel</small> 
                         ### Discount für Kunden ermitteln
@@ -263,18 +275,38 @@
                     </section> 
                     
                     <section data-markdown>
-                        <small>Beispiel</small> 
+                        ###### Beispiel 
                         ### Discount Service
                              
                         <br/>
-                        Reagiert, wenn es eine Nachricht mit dem Pattern
+                        <small>Reagiert, wenn es eine Nachricht mit dem Pattern</small>
                         ```javascript contenteditable 
                         {
-                        command: 'discount'
+                            command: 'discount'
                         }
                         ```
+                        <mail></mail>
+                        <small>gibt. Er ignoriert alle anderen Nachrichten. </small>
                     </section>
-                    
+
+
+                    <section data-markdown>
+                        <small>Beispiel</small> 
+                        ### VIP-Kunden Discount Service
+                             
+                        <br/>
+                        <small>Reagiert, wenn es eine Nachricht mit dem Pattern</small>
+                        ```javascript contenteditable 
+                        {
+                            command: 'discount',
+                            customer: {
+                                customerId: 2
+                            }
+                        }
+                        ```
+                        <mail></mail>
+                        <small>gibt. Diese Pattern wird gegennüber Discount Service bevorzugt.</small>
+                    </section>   
                                                
                     <section data-markdown data-state="mindblown">
                         # !
