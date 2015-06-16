@@ -4,11 +4,13 @@
         .controller('listing1Controller', [
             '$scope', '$http', function($scope, $http) {
 
-                $scope.customers = [];
-
-                $http.get('/api/CustomersApi').success(function(data) {
-                    $scope.customers = data;
-                });
+                $scope.customers = [
+                {
+                    Id: 1,
+                    FirstName: "No Data",
+                    LastName: "loaded...",
+                    Mail: "test@test.de"
+                }];
             }
         ]);
 });

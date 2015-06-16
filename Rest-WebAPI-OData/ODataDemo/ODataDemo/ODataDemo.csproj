@@ -180,8 +180,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CustomerService.cs" />
     <Compile Include="Controllers\ResetController.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
-    <Compile Include="Controllers\CustomersApiController.cs" />
+    <None Include="Controllers\_\CustomersController.cs_" />
+    <None Include="Controllers\_\CustomersApiController.cs_" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
