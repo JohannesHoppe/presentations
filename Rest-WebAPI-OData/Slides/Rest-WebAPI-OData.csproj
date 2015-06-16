@@ -39,13 +39,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\artikel.png" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\hypermedia0.png" />
     <Content Include="images\hypermedia1.png" />
     <Content Include="images\hypermedia2.png" />
     <Content Include="images\hypermedia3.png" />
     <Content Include="images\image01_scaffolding_B.png" />
+    <Content Include="images\image02_bootstrap_tabelle.png" />
+    <Content Include="images\image03_kendo_ui_grid.png" />
+    <Content Include="images\logo-OData-love.svg" />
     <Content Include="images\logo-OData.svg" />
+    <Content Include="images\logo.png" />
     <Content Include="images\pixel.png" />
     <Content Include="index.html" />
     <Content Include="images\icon_calendar.png" />

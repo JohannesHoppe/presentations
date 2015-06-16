@@ -266,7 +266,7 @@
                         ## Laaaangsam!
                         <small>Warum dauert das so lang?!</small>                
                                       
-                        ![Abbildung 2](Images/image02_bootstrap_tabelle.png) 
+                        ![Abbildung 2](images/image02_bootstrap_tabelle.png) 
                     </section>
                      
                     <section  data-markdown>
@@ -319,18 +319,28 @@
                     </section>
                     
                     <section  data-markdown>
-                        ### Metadaten in OData 
+                        ### Metadaten in OData
+                        <br/>
                          
                         ```cmd
                         GET http://example.org/odata/$metadata
                         ```
                     </section>
-                    
+
+                </section>  
+
+                <section>
+                       
+
+                    <section  data-markdown>
+                        <i class="fa fa-heart" style="font-size:7em;"></i>
+                    </section> 
+
                     <section  data-markdown>
                         ### 3rd-party controls
                         <small>[Kendo UI Grid](http://demos.telerik.com/kendo-ui/grid/index)</small> 
                          
-                        ![Abbildung 3](Images/image03_kendo_ui_grid.png)
+                        [![Abbildung 3](images/image03_kendo_ui_grid.png)](http://demos.telerik.com/kendo-ui/grid/index)
                     </section>
  
                                         
@@ -348,9 +358,15 @@
                             .where("FirstName", "eq", "Jack")
                             .execute()
                             .then(function(data) {
-                                $scope.customers = data.results;
-                            });
+                            $scope.customers = data.results;
+                        });
                         ```
+                    </section>                    
+                    
+                    <section  data-markdown>
+                        ### [OData Explorer](http://pragmatiqa.com/xodata/)
+                     
+                        [![screenshot](images/screenshot-explorer.png)](http://pragmatiqa.com/xodata/)
                     </section>                   
                                       
                 </section>  
@@ -358,14 +374,16 @@
                 <section>
                            
                     <section data-markdown>
-                        ## Artikel
-                        <small>Details auf 8 prallen A4-Seiten</small>
+                        ## Mitnehmen! 
+                        <small>Artikel mit Details auf 8 prallen A4-Seiten</small>
                         
-                        <img src="images/artikel.png" alt="" />
+                        <img src="images/artikel.png" alt="" style="width:50%; border: 1px solid gray !important; -webkit-box-shadow: 10px 10px 12px 1px rgba(0,0,0,0.27) !important; -moz-box-shadow: 10px 10px 12px 1px rgba(0,0,0,0.27) !important; box-shadow: 10px 10px 12px 1px rgba(0,0,0,0.27) !important;" />
 
-                        [» Artikel PDF](http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Doc/Hypermedia-REST-APIs%20mit%20der%20ASP.NET%20Web%20API%20und%20OData.pdf) 
-                        [» Artikel Online](https://github.com/JohannesHoppe/Presentations2015/blob/gh-pages/Rest-WebAPI-OData/Doc/index.md)   
-                    </section> 
+                        <small>
+                        [Artikel PDF](http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Doc/Hypermedia-REST-APIs%20mit%20der%20ASP.NET%20Web%20API%20und%20OData.pdf) 
+                        | [Artikel Online](https://github.com/JohannesHoppe/Presentations2015/blob/gh-pages/Rest-WebAPI-OData/Doc/index.md)   
+                        </small>
+                     </section> 
 
                     <section data-markdown>
                         ## Downloads
@@ -409,8 +427,8 @@
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
-                //minScale: 0.2,
-                //maxScale: 1.0,
+                minScale: 0.2,
+                maxScale: 1.2,
                 controls: true,
                 progress: true,
                 history: true,
