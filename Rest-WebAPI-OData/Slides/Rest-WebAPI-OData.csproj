@@ -44,6 +44,7 @@
     <Content Include="images\hypermedia1.png" />
     <Content Include="images\hypermedia2.png" />
     <Content Include="images\hypermedia3.png" />
+    <Content Include="images\image01_scaffolding_B.png" />
     <Content Include="images\logo-OData.svg" />
     <Content Include="images\pixel.png" />
     <Content Include="index.html" />
