@@ -65,11 +65,22 @@
                     
                     <section data-markdown>
                         ## Agenda
-                    
-                        * Microservice Architecture<span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span>
-                        * Seneca - a Micro-Services toolkit for Node.js <span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span>
-                        * Docker - an open platform for distributed apps<span class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</span>
 
+                        <ul class="model">
+                            <li class="fragment">
+                                <span>&nbsp;Vorstellung&nbsp;</span>
+                                <small>Microservice Architekturen<b class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</b></small>
+                            </li>
+                            <li class="fragment">
+                                <span>&nbsp;Einführung&nbsp;</span>
+                                <small>Seneca - a Micro-Services toolkit for Node.js <b class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</b></small>
+                            </li>
+                            <li class="fragment">
+                                <span>&nbsp;Angerissen&nbsp;</span>
+                                <small>Docker - an open platform for distributed apps<b class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</b></small>
+                            </li>
+
+                        </ul>                        
                     </section>
                          
                 </section>   
@@ -231,18 +242,47 @@
                         var seneca = require('seneca')();
                         ```
                     </section>
-                    
+         
                     <section data-markdown>
                         # ???
-                    </section>          
+                    </section>  
+                    
+                    <section data-markdown>
+                        <small>Beispiel</small> 
+                        ### Discount für Kunden ermitteln
+                             
+                        <br/>
+                        Nachricht von CheckoutService:
+                        ```javascript contenteditable 
+                        {
+                            command: 'discount',
+                            customer: { /* Kunde */ },
+                            products: [ { /* Produkt1 */ }, { /* Produkt2 */ } ] 
+                        }
+                        ```
+                    </section> 
+                    
+                    <section data-markdown>
+                        <small>Beispiel</small> 
+                        ### Discount Service
+                             
+                        <br/>
+                        Reagiert, wenn es eine Nachricht mit dem Pattern
+                        ```javascript contenteditable 
+                        {
+                        command: 'discount'
+                        }
+                        ```
+                    </section>
+                    
                                                
                     <section data-markdown data-state="mindblown">
                         # !
-                    </section>
+                    </section>   
                     
                     <section data-markdown>
-                        ### Actions
-                        <small>seneca.add(pattern, action): __asynchron__, pattern matching</small>
+                        ### Pattern + Action
+                        <small>seneca.add(pattern, action): __asynchron__   </small>
 
                         ```js contenteditable 
                         // app.js
@@ -314,7 +354,6 @@
                     </section>                     
                     
                     <section data-markdown>
-                      
                         ```cmd
                         $ curl http://localhost:7777/act --data "{ \"role\": \"discount-service\", \"cmd\": \"calculateDiscount\", \"customerId\": 5 }"
                         ```
@@ -322,11 +361,11 @@
                     </section> 
                     
                     <section data-markdown>
-                        ### Seneca
+                        ## Seneca
                         <small>in a nutshell</small>    
                         
-                        * [<span title="Generic plugin loader functionality for Node.js frameworks.">use-plugin</span>](https://github.com/rjrodger/use-plugin) 
-                        * Actions == pattern matching == JSON
+                        * [<span title="Generic plugin loader functionality for Node.js frameworks.">use-plugin</span>](https://github.com/rjrodger/use-plugin) ersetzt require() 
+                        * Actions == pattern matching == JSON serializable      
                         * easy wiring  
                         
                         <br/>
@@ -338,7 +377,8 @@
                         ### Tipps
  
                         * [seneca-web](https://github.com/rjrodger/seneca-web) schickere URL routes für [express](http://expressjs.com/)
-                        * [chairo](https://github.com/hapijs/chairo) volle Integration in [hapi](https://github.com/hapijs/hapi)
+                        * [chairo](https://github.com/hapijs/chairo) volle Integration in [hapi](https://github.com/hapijs/hapi)  
+                        * [Plugins](http://senecajs.org/plugins.html), Plugins, Plugins
                     </section> 
 
                 </section>   
@@ -380,18 +420,6 @@
 
                     </section>   
                     
-                    <section data-markdown>
-                    
-                        # Docker Swarm on Azure
-                        
-                        [jep!](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-docker-swarm/)
-                    </section>   
-                    
-                    <section data-markdown>
-                    
-                        # Docker Compose on Azure
-                        ... [coming soon :-/](http://azure.microsoft.com/blog/2015/02/26/sunny-and-swarmy-in-azure/) 
-                    </section>   
                 </section>
                 
 
