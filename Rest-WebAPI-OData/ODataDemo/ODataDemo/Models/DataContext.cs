@@ -9,7 +9,8 @@ namespace ODataDemo.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new InvoiceMap());
+            // TODO: remove comment after scaffolding
+            //modelBuilder.Configurations.Add(new InvoiceMap());
         }
     }
 }
