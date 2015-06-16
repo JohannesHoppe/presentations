@@ -231,21 +231,140 @@
                         #### Daten per Web API anbieten                 
                         <small>Klickibunti CRUD</small>
                                       
-                        ![Abbildung 1](Images/image01_scaffolding_B.png) 
+                        ![Abbildung 1](images/image01_scaffolding_B.png) 
                     </section>     
 
                     <section  data-markdown>
-                        #### GET
-                        
+                        ### Los geht's!
+                        <br/>
+
                         ```cmd
                         GET http://example.org/api/Customers
                         ```
+                         
+                        <br/>
+                                                        
+                        ```javascript contenteditable
+                        define(['angular'], function(angular) {
+
+                            return angular.module('listing1', [])
+                                .controller('listing1Controller', [
+                                    '$scope', '$http', function($scope, $http) {
+
+                                        $scope.customers = [];
+
+                                        $http.get('/api/Customers').success(function(data) {
+                                            $scope.customers = data;
+                                        });
+                                    }
+                                ]);
+                        });
+                        ``` 
                     </section>   
+
+                    <section  data-markdown>
+                        ## Laaaangsam!
+                        <small>Warum dauert das so lang?!</small>                
+                                      
+                        ![Abbildung 2](Images/image02_bootstrap_tabelle.png) 
+                    </section>
+                     
+                    <section  data-markdown>
+                        ## 2. Versuch
+
+                        ``` javascript small contenteditable
+                        public class CustomersController : ODataController
+                        {
+                            private DataContext db = new DataContext();
+
+                            // GET: odata/Customers
+                            [EnableQuery]
+                            public IQueryable_LT_Customer_GT_ GetCustomers()
+                            {
+                                return db.Customers;
+                            }
+
+                            /* [...] */
+                        }
+                        ```  
+                           
+                        ``` javascript small contenteditable
+                        public static class WebApiConfig
+                        {
+                            public static void Register(HttpConfiguration config)
+                            {
+                                ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+                                builder.EntitySet_LT_Customer_GT_("Customers");
+                                builder.EntitySet_LT_Invoice_GT_("Invoices");
+                                config.Routes.MapODataServiceRoute("odata", "odata", builder.GetEdmModel());
+                            }
+                        }
+                        ```  
+
+                    </section> 
+
+                    <section  data-markdown>
+                        ### [URL Conventions](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)
+                        <br/>
+                                 
+                        ```cmd 
+                        GET http://example.org/odata/Customers?$top=5_AMP_$skip=2
+                        ```
+                        <small>
+                            
+                        * Paging: /odata/Customers?$top=5&$skip=2
+                        * Paging mit Count: /odata/Customers?$top=5&$skip=2&$inlinecount=allpages
+                        * Filtern: /odata/Customers?$filter=FirstName eq 'Hans'     
+                        </small>
+                    </section>
                     
+                    <section  data-markdown>
+                        ### Metadaten in OData 
+                         
+                        ```cmd
+                        GET http://example.org/odata/$metadata
+                        ```
+                    </section>
+                    
+                    <section  data-markdown>
+                        ### 3rd-party controls
+                        <small>[Kendo UI Grid](http://demos.telerik.com/kendo-ui/grid/index)</small> 
+                         
+                        ![Abbildung 3](Images/image03_kendo_ui_grid.png)
+                    </section>
+ 
+                                        
+                    <section  data-markdown>
+                        ### 3rd-party controls
+                        <small>[BreezeJS](http://learn.breezejs.com/)</small> 
+                         
+                        ``` javascript small
+                        var manager = new breeze.EntityManager('/odata');
+
+                        new breeze.EntityQuery()
+                            .using(manager)
+                            .from("Customers")
+                            .orderBy("FirstName")
+                            .where("FirstName", "eq", "Jack")
+                            .execute()
+                            .then(function(data) {
+                                $scope.customers = data.results;
+                            });
+                        ```
+                    </section>                   
+                                      
                 </section>  
 
                 <section>
-                    
+                           
+                    <section data-markdown>
+                        ## Downloads
+                        
+                        ![tools](images/icon_file.png)
+
+                        #### [github.com/JohannesHoppe/Presentations2015](https://github.com/JohannesHoppe/Presentations2015/)
+                    </section> 
+
                     <section data-markdown>
                         ## Downloads
                         
