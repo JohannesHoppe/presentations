@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AngularDemo.Models
+namespace ODataDemo.Models
 {
     public class Customer
     {

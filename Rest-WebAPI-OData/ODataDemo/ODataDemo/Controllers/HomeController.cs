@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace AngularDemo.Controllers
+namespace ODataDemo.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,4 +1,4 @@
-﻿namespace AngularDemo.Models
+﻿namespace ODataDemo.Models
 {
     public class Invoice
     {

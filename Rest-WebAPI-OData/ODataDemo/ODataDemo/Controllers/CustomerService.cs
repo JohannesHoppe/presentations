@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using AngularDemo.Models;
+using ODataDemo.Models;
 
-namespace AngularDemo.Controllers
+namespace ODataDemo.Controllers
 {
     /// <summary>
     /// Just demo code

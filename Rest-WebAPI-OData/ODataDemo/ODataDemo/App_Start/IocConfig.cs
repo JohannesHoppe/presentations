@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using System.Web.Http;
 using System.Web.Mvc;
-using AngularDemo.Models;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using ODataDemo.Models;
 
-namespace AngularDemo
+namespace ODataDemo
 {
     public class IocConfig
     {

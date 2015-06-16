@@ -4,11 +4,11 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using AngularDemo.Models;
 using Breeze.ContextProvider.EF6;
 using Newtonsoft.Json;
+using ODataDemo.Models;
 
-namespace AngularDemo
+namespace ODataDemo
 {
     public class WebApiApplication : HttpApplication
     {

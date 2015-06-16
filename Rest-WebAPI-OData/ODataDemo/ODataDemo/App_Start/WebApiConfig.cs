@@ -2,11 +2,10 @@
 using System.Web.Http.OData.Batch;
 using System.Web.Http.OData.Builder;
 using System.Web.Http.OData.Extensions;
-using AngularDemo.Models;
 using Microsoft.Data.Edm;
+using ODataDemo.Models;
 
-
-namespace AngularDemo
+namespace ODataDemo
 {
     public static class WebApiConfig
     {

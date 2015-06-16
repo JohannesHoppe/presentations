@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace AngularDemo.Models
+namespace ODataDemo.Models
 {
     public interface IDataContext
     {

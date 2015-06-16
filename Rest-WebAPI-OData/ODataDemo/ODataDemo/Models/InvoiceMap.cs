@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 
-namespace AngularDemo.Models
+namespace ODataDemo.Models
 {
     public class InvoiceMap : EntityTypeConfiguration<Invoice>
     {
