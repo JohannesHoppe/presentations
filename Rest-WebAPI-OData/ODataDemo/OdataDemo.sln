@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataDemo", "AngularDemo\ODataDemo.csproj", "{E371D461-4975-4E72-9507-5F805D2BB39D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODataDemo", "ODataDemo\ODataDemo.csproj", "{E371D461-4975-4E72-9507-5F805D2BB39D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CC11C4EE-2C9D-468D-AFEE-F660CB7D8481}"
 	ProjectSection(SolutionItems) = preProject
