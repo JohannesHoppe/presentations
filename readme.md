@@ -32,7 +32,9 @@ Dank Apache Cordova ist es möglich, Ihr bestehendes Wissen zu HTML5, JavaScript
 
 Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute Architektur. Durch automatisierte Tests lässt sich sicherstellen, dass die Software fehlerfrei funktioniert und die fachlichen Spezifikationen erfüllt sind. In diesem Vortrag wird der Test-Runner Karma vorgestellt, mit welchem Unit-Test für JavaScript Anwendungen erstellt werden können. Zum Einsatz wird das BDD-Framework Jasmine kommen. Oberflächentests sind eine gute Ergänzung zu Unit-Tests, denn mit ihnen lässt sich die Anwendung aus der Sicht des Anwenders überprüfen. Hierfür wird Protractor beleuchtet, welcher auf Basis von Selenium End-To-End-Tests von JavaScript-Anwendungen und speziell von AngularJS-Anwendungen ermöglicht.
 
-[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides)  
+[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides) 
+[» Beispiel-Anwendungen](https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples)  
+ 
 
 <hr>
 
@@ -44,7 +46,10 @@ Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute 
 Bei einer modernen Web-Anwendung ist Kommunikation per REST die erste Wahl. Doch hinsichtlich der einzusetzenden Protokolle, Formate und Konventionen bleiben diverse Fragen für die praktische Umsetzung offen. Microsoft gibt hier mit dem Open Data Protocol (OData) eine ausführliche und standardisierte Antwort.
 Erfahren Sie in diesem Vortrag, wie das OData Protokoll aufgebaut ist und wie Metadaten den Entwicklungsalltag erleichtern. Ohne zusätzlichen Aufwand wird Ihre ASP.NET Web API seitenweise Ausgabe, Sortierung, Filterung und Navigation innerhalb der Daten unterstützen. Weiterhin wird eine Reihe von kompatiblen JavaScript-Frameworks beleuchtet, unter anderen Breeze.js, JayData und Kendo UI.
 
-[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Slides)  
+[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Slides) 
+[» Beispiel-Anwendung](https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Rest-WebAPI-OData/ODataDemo) 
+[» Artikel PDF](http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Doc/Hypermedia-REST-APIs%20mit%20der%20ASP.NET%20Web%20API%20und%20OData.pdf) 
+[» Artikel Online](https://github.com/JohannesHoppe/Presentations2015/blob/gh-pages/Rest-WebAPI-OData/Doc/index.md)    
 
 <hr>
 

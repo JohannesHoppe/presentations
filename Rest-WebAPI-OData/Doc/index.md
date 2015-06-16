@@ -1,4 +1,4 @@
-![Abbildung 1](images/DeveloperWeek2015.jpg)
+![Abbildung 1](Images/DeveloperWeek2015.jpg)
 <hr>
 # Hypermedia-REST-APIs mit der ASP.NET Web API und OData
 
