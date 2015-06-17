@@ -1,4 +1,4 @@
-﻿// app.js
+﻿// app-client.js
 var seneca = require('seneca')({ log: 'error' });
 
 console.log('*** Acting as a client ***');

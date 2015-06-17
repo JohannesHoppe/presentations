@@ -13,5 +13,5 @@ seneca.act({
 }, function (e, result) {
     
     console.log('Discount for customer:', result.discount, '%');
-    require('paktc');
+    //require('paktc');
 });

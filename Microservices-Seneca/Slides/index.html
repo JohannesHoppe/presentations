@@ -223,7 +223,7 @@
                             // returns applicable discount in %
                             calculateDiscount: function(customerId) {
                                 return {
-                                    discount: (customerId < 100) ? 10 : 5
+                                    discount: (customerId _LT_ 100) ? 10 : 5
                                 }
                             }
                         };
@@ -248,6 +248,8 @@
                     </section>  
 
                     <section data-markdown>
+                        ## <i class="icon ion-sad" style="font-size: 3em"></i>
+
                         ```javascript contenteditable 
                         if (customer.Id == 1) {
                             /* :-( */
@@ -336,7 +338,7 @@
 
                             // returns applicable discount in %
                             var calculateDiscount = function(args, done) {
-                                done(null, { discount: (args.customerId < 100) ? 10 : 5 });
+                                done(null, { discount: (args.customerId _LT_ 100) ? 10 : 5 });
                             };
 
                             this.add({ role: 'discount-service', cmd: 'calculateDiscount' },
@@ -449,7 +451,12 @@
                         </small>
 
                     </section> 
-                    
+                       
+                    <section data-markdown>
+                        <img src="images/screemshot-docker.png" alt="" />
+
+                    </section>
+
                     <section data-markdown>
                         ## Docker on <i class="fa fa-windows"></i> Azure
                         <br/>
