@@ -259,7 +259,12 @@
                             /* :-( */
                         }
                         ```
-                    </section> 
+                    </section>
+                    
+                                               
+                    <section data-markdown data-state="mindblown">
+                        # !
+                    </section>    
 
                     <section data-markdown>
                         <small>Beispiel</small> 
@@ -310,10 +315,7 @@
                         <mail></mail>
                         <small>gibt. Diese Pattern wird gegennüber Discount Service bevorzugt.</small>
                     </section>   
-                                               
-                    <section data-markdown data-state="mindblown">
-                        # !
-                    </section>   
+
                     
                     <section data-markdown>
                         ### Pattern + Action
@@ -351,6 +353,22 @@
 
                     </section>
     
+                    <section data-markdown>
+                        ### Tests
+                        <small>super einfach</small>
+
+                        ```js contenteditable 
+                        var assert = require('should'),
+                            seneca = require('seneca');
+
+                        describe('discount-service', function () {
+                          it('should give older customers a 10% discount', function (done) {
+                            /* test here */
+                          });
+                        });
+
+                        ```
+                    </section>     
                     <section data-markdown>
                         ### Tests
                         <small>super einfach</small>
@@ -516,8 +534,8 @@
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
-                //minScale: 0.2,
-                //maxScale: 1.0,
+                minScale: 0.2,
+                maxScale: 1.2,
                 controls: true,
                 progress: true,
                 history: true,
