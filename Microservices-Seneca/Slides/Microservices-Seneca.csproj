@@ -45,6 +45,7 @@
     <Content Include="images\companies\Twitter_logo_with_bird.svg" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\logo-docker-black.svg" />
+    <Content Include="images\logo-docker-color.png" />
     <Content Include="images\logo-seneca-building.png" />
     <Content Include="images\logo-seneca-short.png" />
     <Content Include="images\logo-seneca.png" />
