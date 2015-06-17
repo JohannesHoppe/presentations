@@ -206,6 +206,17 @@ section[data-state="seneca"] {
     }
 }
 
+.docker .reveal .state-background {
+
+    background-image: url('../../images/logo-docker-black-state.svg');
+    
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+     transition: background-image 0.8s linear;
+}
+
+
 code {
     &.small {
         font-size: 14px;

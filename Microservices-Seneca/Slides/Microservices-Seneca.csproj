@@ -49,6 +49,7 @@
     <Content Include="images\logo-seneca-short.png" />
     <Content Include="images\logo-seneca.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\message.png" />
     <Content Include="images\micro-service-architecture.png" />
     <Content Include="images\micro-service-short.png" />
     <Content Include="images\micro-service.png" />
