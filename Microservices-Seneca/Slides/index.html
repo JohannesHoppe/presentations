@@ -438,7 +438,8 @@
                         EXPOSE 3000
                         ```  
                         
-                        ```cmd style=font-size:1em
+                        ```cmd style=font-size:1em 
+                        $ boot2docker start
                         $ docker build --tag="app-server" .
                         $ docker run -it --rm --name my-microservice app-server
                         ``` 
@@ -454,7 +455,6 @@
                        
                     <section data-markdown>
                         <img src="images/screemshot-docker.png" alt="" />
-
                     </section>
 
                     <section data-markdown>
