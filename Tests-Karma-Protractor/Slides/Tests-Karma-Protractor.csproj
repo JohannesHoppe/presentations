@@ -39,6 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="index_enterjs.html" />
     <Content Include="images\favicon.ico" />
     <Content Include="images\garfield.svg" />
     <Content Include="images\garfield2.svg" />
