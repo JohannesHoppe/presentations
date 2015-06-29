@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Vortrag: Microservices am Beispiel von Seneca</title>
+        <title>Talk: Microservices explained by the example of Seneca</title>
 
         <meta name="description" content="Geschäftsanwendungen neigen dazu, über die Jahre zu einem gigantischen Monolithen anzuwachsen. Microservices sind ein alternatives Architekturparadigma, bei der die Anwendung in kleine dezentrale Services aufgeteilt wird. Dieser Vortrag zeigt, wie eine Architektur mit diesem Ansatz aufgebaut werden kann. Zur Erläuterung wird das Node.js-Framework Seneca eingesetzt, welches die Kommunikation der Services über HTTP und JSON realisiert. Docker wird anschließend verwendet, um die einzelnen Services unabhängig voneinander zu deployen. Der Einsatz von Node.js ist nicht vorgeschrieben, denn der Architekturansatz ist auf alle Programmiersprachen und Frameworks anwendbar.">
         <meta name="author" content="Johannes Hoppe">
@@ -47,13 +47,13 @@
                     <img src="images/logo-seneca-short.png" height="170" alt="" />  
                     <img src="images/logo-docker-black.svg"height="150"  alt="" />
                       
-                    <h1 class="nowrap" style="font-size: 0.7em; line-height: 1.3em; text-shadow: none;">Microservices am Beispiel von Seneca</h1>                        
+                    <h1 class="nowrap" style="font-size: 0.7em; line-height: 1.3em; text-shadow: none;">Microservices explained by the example of Seneca</h1>                        
                     
                     <br class="hidePrint" />
                     <br class="hidePrint" />
                     <br class="hidePrint" />
                     <br class="hidePrint" />
-                    <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>  
+                    <small class="hidePrint">Navigation with <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>  
                 </section>
                 
                 <section>
@@ -68,15 +68,15 @@
 
                         <ul class="model">
                             <li class="fragment">
-                                <span>&nbsp;Vorstellung&nbsp;</span>
-                                <small>Microservice Architekturen<b class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</b></small>
+                                <span>&nbsp;Introduction &nbsp;</span>
+                                <small>Microservice Architectures<b class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</b></small>
                             </li>
                             <li class="fragment">
-                                <span>&nbsp;Einführung&nbsp;</span>
+                                <span>&nbsp;Presentation&nbsp;</span>
                                 <small>Seneca - a Micro-Services toolkit for Node.js <b class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</b></small>
                             </li>
                             <li class="fragment">
-                                <span>&nbsp;Angerissen&nbsp;</span>
+                                <span>&nbsp; Some notes &nbsp;</span>
                                 <small>Docker - an open platform for distributed apps<b class="fragment" style="margin-left: 20px; color:green; font-size: 2em;">&#10003;</b></small>
                             </li>
 
@@ -94,16 +94,16 @@
 
                     <section data-markdown>
                         <h1 style="position:absolute;top: -143px; right: -200px; font-size: 11em; color: silver">1</h1>
-                        ### 1 Anwendung = 1 Prozess
+                        ### 1 application = 1 process 
                         <br/>  
                                              
                         <ul>
-                            <li class="fragment"><strong>Monolith:</strong> Code ist möglichst zentral an einem Ort</li>
-                            <li class="fragment"><strong>Technologien:</strong> ein Stack <small style="padding-top: 12px;">(z.B. MSSQL / C# / HTML5 / JavaScript)</small></li>
-                            <li class="fragment"><strong>Mehr Features:</strong> mehr LOC</li>
-                            <li class="fragment"><strong>Dokumentation:</strong> Betriebshandbuch essenziell</li>  
-                            <li class="fragment"><strong>Deployment:</strong> alles auf einmal, Wartungsfenster</li>  
-                            <li class="fragment"><strong>Schichtenarchitektur</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> Generalisierung <i class="fa fa-arrow-right"></i> eigene Frameworks <small style="padding-top: 12px;">(gefährlich!)</small></li>  
+                            <li class="fragment"><strong>Monolith:</strong> code is preferably centralized at one place</li>
+                            <li class="fragment"><strong>Technologies:</strong> one stack <small style="padding-top: 12px;">(e.g. MSSQL / C# / HTML5 / JavaScript)</small></li>
+                            <li class="fragment"><strong>More features:</strong> more LOC</li>
+                            <li class="fragment"><strong>Documentation:</strong> operations manual is required</li>  
+                            <li class="fragment"><strong>Deployment:</strong> all at once, downtimes</li>  
+                            <li class="fragment"><strong>Multitier architecture</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-arrow-right"></i> generalization <i class="fa fa-arrow-right"></i> own frameworks <small style="padding-top: 12px;">(bad idea!)</small></li>  
                         </ul>
                     </section>
                     
@@ -114,9 +114,9 @@
                     <section data-markdown>
                         <i class="icon ion-happy fragment" style="font-size: 3em"></i>
 
-                        #### ... ich habe in meinem Entwicklerleben<br/>schon an vielen Monolithen kräftig mitgewirkt!   
+                        #### ... I worked on a lot of monolithic applications!   
                         
-                        <small>Das ist alles im Grunde nicht schlimm, aber...</small>
+                        <small>And this is not bad at all, but...</small>
                     </section>                     
                     
                     <section data-markdown>
@@ -139,7 +139,7 @@
                         <blockquote style="">
                             In short, the <strong>microservice architectural style</strong> is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. 
                             
-                            <cite><a href="http://martinfowler.com/articles/microservices.html">Martin Fowler</a>   </cite>
+                            <cite><a href="http://martinfowler.com/articles/microservices.html">Martin Fowler</a></cite>
                         </blockquote>
                     </section> 
                    
@@ -149,11 +149,11 @@
                         <br/>  
                                              
                         <ul>
-                            <li class="fragment"><strong>Komponenten:</strong> via Services, lose Kopplung</li>
-                            <li class="fragment"><strong>Technologien:</strong> verschiedene Technologie-Stacks möglich</li>
-                            <li class="fragment"><strong>Mehr Features:</strong> falls möglich, neuer Service</li>
-                            <li class="fragment"><strong>Dokumentation:</strong> (implizit) durch Schnittstellen</li>  
-                            <li class="fragment"><strong>Deployment:</strong> jeder Service unabhängig</li>  
+                            <li class="fragment"><strong>Components:</strong> small services, loose coupling</li>
+                            <li class="fragment"><strong>Technologies:</strong> multiple technology stacks are possible</li>
+                            <li class="fragment"><strong>More features:</strong> if possible, introduced by a new service</li>
+                            <li class="fragment"><strong>Documentation:</strong> (implicitely) via RESTful APIs</li>  
+                            <li class="fragment"><strong>Deployment:</strong> every service on its own</li>  
                         </ul>
                     </section>   
                     
