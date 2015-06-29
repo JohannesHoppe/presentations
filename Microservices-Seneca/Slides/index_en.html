@@ -203,8 +203,8 @@
                     </section> 
                     
                     <section data-markdown>
-                        ### Vorher
-                        <small>nicht __asynchron__, keine lose Kopplung</small>
+                        ### Before 
+                        <small>not __asynchronous__, no loose coupling</small>
 
                         ```js contenteditable 
                         // app.js
@@ -260,44 +260,48 @@
                         }
                         ```
                     </section> 
+                       
+                    <section data-markdown data-state="mindblown">
+                        # !
+                    </section>  
 
                     <section data-markdown>
-                        <small>Beispiel</small> 
-                        ### Discount für Kunden ermitteln
+                        <small>Example</small> 
+                        ### Discount for customer
                              
                         <br/>
-                        Nachricht von CheckoutService:
+                        Message from CheckoutService:
                         ```javascript contenteditable 
                         {
                             command: 'discount',
-                            customer: { /* Kunde */ },
-                            products: [ { /* Produkt1 */ }, { /* Produkt2 */ } ] 
+                            customer: { /* customer */ },
+                            products: [ { /* product1 */ }, { /* product2 */ } ] 
                         }
                         ```
                     </section> 
                     
                     <section data-markdown>
-                        ###### Beispiel 
+                        ###### Example 
                         ### Discount Service
                              
                         <br/>
-                        <small>Reagiert, wenn es eine Nachricht mit dem Pattern</small>
+                        <small>Is reacting on messages with the pattern</small>
                         ```javascript contenteditable 
                         {
                             command: 'discount'
                         }
                         ```
                         <mail></mail>
-                        <small>gibt. Er ignoriert alle anderen Nachrichten. </small>
+                        <small>It ignores all other messages.</small>
                     </section>
 
 
                     <section data-markdown>
-                        <small>Beispiel</small> 
-                        ### VIP-Kunden Discount Service
+                        ###### Example 
+                        ### Discount Service 
                              
                         <br/>
-                        <small>Reagiert, wenn es eine Nachricht mit dem Pattern</small>
+                        <small>Is reacting on messages with the pattern</small>
                         ```javascript contenteditable 
                         {
                             command: 'discount',
@@ -307,16 +311,12 @@
                         }
                         ```
                         <mail></mail>
-                        <small>gibt. Diese Pattern wird gegennüber Discount Service bevorzugt.</small>
-                    </section>   
-                                               
-                    <section data-markdown data-state="mindblown">
-                        # !
-                    </section>   
+                        <small>The more specific pattern is preferred.</small>
+                    </section>    
                     
                     <section data-markdown>
-                        ### Pattern + Action
-                        <small>seneca.add(pattern, action): __asynchron__   </small>
+                        ### Patterns + Actions
+                        <small>seneca.add(pattern, action): __asynchronous__   </small>
 
                         ```js contenteditable 
                         // app.js
@@ -352,7 +352,7 @@
     
                     <section data-markdown>
                         ### Tests
-                        <small>super einfach</small>
+                        <small>like a breeze</small>
 
                         ```js contenteditable 
                         var assert = require('should'),
@@ -376,7 +376,7 @@
 
                     <section data-markdown>
                         ### seneca-transport
-                        <small>&micro;</small>
+                        <small>&micro; starts here</small>
 
                         ```js contenteditable 
                         // act as a server
@@ -398,8 +398,8 @@
                         ## Seneca
                         <small>in a nutshell</small>    
                         
-                        * [<span title="Generic plugin loader functionality for Node.js frameworks.">use-plugin</span>](https://github.com/rjrodger/use-plugin) ersetzt require() 
-                        * Actions == pattern matching == JSON serializable      
+                        * [<span title="Generic plugin loader functionality for Node.js frameworks.">use-plugin</span>](https://github.com/rjrodger/use-plugin) replaces require() 
+                        * actions == pattern matching == JSON serializable      
                         * easy wiring  
                         
                         <br/>
@@ -408,11 +408,11 @@
                     </section>                       
 
                     <section data-markdown>
-                        ### Tipps
+                        ### Tips
  
-                        * [seneca-web](https://github.com/rjrodger/seneca-web) schickere URL routes für [express](http://expressjs.com/)
-                        * [chairo](https://github.com/hapijs/chairo) volle Integration in [hapi](https://github.com/hapijs/hapi)  
-                        * [Plugins](http://senecajs.org/plugins.html), Plugins, Plugins
+                        * [seneca-web](https://github.com/rjrodger/seneca-web) URL routes for [express](http://expressjs.com/)
+                        * [chairo](https://github.com/hapijs/chairo) full integration into [hapi](https://github.com/hapijs/hapi)  
+                        * [plugins](http://senecajs.org/plugins.html), plugins, plugins
                     </section> 
 
                 </section>   
@@ -423,9 +423,12 @@
                     </section>                        
                     
                     <section data-markdown>
-                        ## [Boot2Docker](https://docs.docker.com/installation/windows/)
-                        
-                        Docker Client on &nbsp;<i class="fa fa-windows"></i>
+                        ### Docker Client on &nbsp;<i class="fa fa-linux"></i> <i class="fa fa-apple"></i>
+                           
+                        <br/>
+
+                        ### Docker Client on &nbsp;<i class="fa fa-windows"></i> 
+                        [Boot2Docker](https://docs.docker.com/installation/windows/)
                     </section>                      
                     
                     <section data-markdown>
@@ -456,7 +459,8 @@
                     <section data-markdown>
                         <img src="images/screemshot-docker.png" alt="" />
                     </section>
-
+                    
+                    <!--
                     <section data-markdown>
                         ## Docker on <i class="fa fa-windows"></i> Azure
                         <br/>
@@ -467,8 +471,9 @@
 
                         * <i class="fa fa-arrow-right"></i> [Verwenden der Docker-VM-Erweiterung mit dem Azure-Portal](http://azure.microsoft.com/documentation/articles/virtual-machines-docker-with-portal/)
                     </section>  
-                    
-                </section>
+                    -->
+               
+                    </section>
                 
 
                 <section>
@@ -484,7 +489,7 @@
                 </section>
 
                 <section data-markdown>
-                    # Danke!
+                    ## Thank you!
                     
                     <br/>
 
