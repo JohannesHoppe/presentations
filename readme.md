@@ -105,6 +105,7 @@ Es werden unter anderem folgende Themen behandelt:
 [5]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18488
 [6]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18454
 [7]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18986
+[8]: http://www.meetup.com/node-js-Mannheim/events/222685767/
 
 &nbsp;
 <hr>
