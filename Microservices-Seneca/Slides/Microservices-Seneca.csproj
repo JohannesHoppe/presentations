@@ -39,6 +39,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="index_dwx15.html" />
     <Content Include="index_en.html" />
     <Content Include="images\companies\Netflix_2014_logo.svg" />
     <Content Include="images\companies\PayPal_2014_logo.svg" />
