@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: 29d1c5bc36da364ad5aa86946d420b7bbc54a253 */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1 id="vortr-ge-2015-von-johannes-hoppe">Vorträge 2015 von Johannes Hoppe</h1>
+<p>Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2015.</p>
+<h2 id="inhalt">Inhalt</h2>
+<ol>
+<li><a href="#ionic">Hybride Apps mit Cordova, AngularJS und Ionic</a></li>
+<li><a href="#tests">JS Unit- und Oberflächentests mit Karma &amp; Protractor</a></li>
+<li><a href="#odata">Hypermedia-REST-APIs mit der ASP.NET Web API und OData</a></li>
+<li><a href="#iot">Internet der Dinge mit dem Galileo Board und JavaScript</a></li>
+<li><a href="#seneca">Microservices am Beispiel von Seneca</a></li>
+<li><a href="#angular">Workshop: Einstieg in AngularJS</a></li>
+</ol>
+<hr>
+
+<p><a name="ionic"></a></p>
+<h2 id="hybride-apps-mit-cordova-angularjs-und-ionic">Hybride Apps mit Cordova, AngularJS und Ionic</h2>
+<ul>
+<li><a href="http://dotnet-day-franken.de/">.NET Day Franken: 13.06.2015 11:30-12:40</a></li>
+</ul>
+<p>Dank Apache Cordova ist es möglich, Ihr bestehendes Wissen zu HTML5, JavaScript und CSS3 auf mobile Apps anzuwenden. Nutzen Sie AngularJS von Google um Techniken wie MVC und Data Binding in den Browser zu bringen. Erfahren Sie in diesem Vortrag, wie Sie in durch den jüngsten Spross, dem Ionic Framework, ansprechende Oberflächen für iOS, Android und Windows Phone gestalten können. Statt PowerPoint erwartet Sie viel Live Coding. Johannes Hoppe wird zusammen mit Ihnen eine erste Ionic -Anwendung entwickeln.</p>
+<p><a href="http://johanneshoppe.github.io/IonicPresentation/Slides/">» Präsentation Starten</a> </p>
+<hr>
+
+<p><a name="tests"></a></p>
+<h2 id="js-unit-und-oberfl-chentests-mit-karma-protractor">JS Unit- und Oberflächentests mit Karma &amp; Protractor</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/18498">DWX: 15.06.2015 16:30-17:30 Uhr / Track: JavaScript</a></li>
+<li><a href="http://www.enterjs.de/abstracts#unit-und-oberflaechentests">enterJS: 19.06.2015 10:45-11:30 Uhr / Raum Spectrum A</a></li>
+</ul>
+<p>Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute Architektur. Durch automatisierte Tests lässt sich sicherstellen, dass die Software fehlerfrei funktioniert und die fachlichen Spezifikationen erfüllt sind. In diesem Vortrag wird der Test-Runner Karma vorgestellt, mit welchem Unit-Test für JavaScript Anwendungen erstellt werden können. Zum Einsatz wird das BDD-Framework Jasmine kommen. Oberflächentests sind eine gute Ergänzung zu Unit-Tests, denn mit ihnen lässt sich die Anwendung aus der Sicht des Anwenders überprüfen. Hierfür wird Protractor beleuchtet, welcher auf Basis von Selenium End-To-End-Tests von JavaScript-Anwendungen und speziell von AngularJS-Anwendungen ermöglicht.</p>
+<p><a href="http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides">» Präsentation Starten</a><br><a href="https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples">» Beispiel-Anwendungen</a>  </p>
+<hr>
+
+<p><a name="odata"></a></p>
+<h2 id="hypermedia-rest-apis-mit-der-asp-net-web-api-und-odata">Hypermedia-REST-APIs mit der ASP.NET Web API und OData</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/18404">DWX: 16.06.2015 16:30-17:30 Uhr / Track: Web</a></li>
+</ul>
+<p>Bei einer modernen Web-Anwendung ist Kommunikation per REST die erste Wahl. Doch hinsichtlich der einzusetzenden Protokolle, Formate und Konventionen bleiben diverse Fragen für die praktische Umsetzung offen. Microsoft gibt hier mit dem Open Data Protocol (OData) eine ausführliche und standardisierte Antwort.<br>Erfahren Sie in diesem Vortrag, wie das OData Protokoll aufgebaut ist und wie Metadaten den Entwicklungsalltag erleichtern. Ohne zusätzlichen Aufwand wird Ihre ASP.NET Web API seitenweise Ausgabe, Sortierung, Filterung und Navigation innerhalb der Daten unterstützen. Weiterhin wird eine Reihe von kompatiblen JavaScript-Frameworks beleuchtet, unter anderen Breeze.js, JayData und Kendo UI.</p>
+<p><a href="http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Slides">» Präsentation Starten</a><br><a href="https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Rest-WebAPI-OData/ODataDemo">» Beispiel-Anwendung</a><br><a href="http://johanneshoppe.github.io/Presentations2015/Rest-WebAPI-OData/Doc/Hypermedia-REST-APIs%20mit%20der%20ASP.NET%20Web%20API%20und%20OData.pdf">» Artikel PDF</a><br><a href="https://github.com/JohannesHoppe/Presentations2015/blob/gh-pages/Rest-WebAPI-OData/Doc/index.md">» Artikel Online</a>      </p>
+<hr>
+
+<p><a name="iot"></a></p>
+<h2 id="internet-der-dinge-mit-dem-galileo-board-und-javascript">Internet der Dinge mit dem Galileo Board und JavaScript</h2>
+<ul>
+<li><a href="https://entwicklertag.de/karlsruhe/2015/internet-things-mit">Karlsruher Entwicklertag: 20.05.2015</a></li>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/18488">DWX: 17.06.2015 11:45-12:45 Uhr / Track: IoT</a> <em>(zusammen mit Gregor Biswanger)</em></li>
+</ul>
+<p>Das Intel Galileo Board ist ein Einplatinencomputer, mit dem Sie das Internet der Dinge erforschen und innovative Projekte erstellen können. Dieser Vortrag zeigt alles, was Sie brauchen um loszulegen: Das kostenfreie Intel XDK und wie dadurch mit JavaScript die Logik für den Zugriff auf Sensoren programmiert wird. Sie steigen mit den Grundlagen ein und werden dann mit den wichtigsten Frameworks und Vorgehensweisen vertraut gemacht. </p>
+<p><a href="https://github.com/JohannesHoppe/Workshop_Javascript_Internet-of-Things/">» Github-Repository mit vielen Anleitungen</a><br><a href="https://github.com/JohannesHoppe/Workshop_Javascript_Internet-of-Things/tree/gh-pages/examples">» Beispiel-Anwendungen &quot;Intel IoT on Galileo with mobile companion app&quot;</a><br><a href="http://johanneshoppe.github.io/Workshop_Javascript_Internet-of-Things/Slides/index_short.html">» Präsentation Starten</a></p>
+<hr>
+
+<p><a name="seneca"></a></p>
+<h2 id="microservices-am-beispiel-von-seneca">Microservices am Beispiel von Seneca</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/18454">DWX: 17.06.2015 15:00-16:00 Uhr / Track: Azure</a></li>
+<li><a href="http://www.meetup.com/node-js-Mannheim/events/222685767/">Node.js Meetup MA: 30.06.2015</a></li>
+</ul>
+<p>Geschäftsanwendungen neigen dazu, über die Jahre zu einem gigantischen Monolithen anzuwachsen. Microservices sind ein alternatives Architekturparadigma, bei der die Anwendung in kleine dezentrale Services aufgeteilt wird. Dieser Vortrag zeigt, wie eine Architektur mit diesem Ansatz aufgebaut werden kann.<br>Zur Erläuterung wird das Node.js-Framework Seneca eingesetzt, welches die Kommunikation der Services über HTTP und JSON realisiert. Docker wird anschließend verwendet, um die einzelnen Services unabhängig voneinander zu deployen. Der Einsatz von Node.js ist nicht vorgeschrieben, denn der Architekturansatz ist auf alle Programmiersprachen und Frameworks anwendbar.</p>
+<p><a href="http://johanneshoppe.github.io/Presentations2015/Microservices-Seneca/Slides">» Präsentation Starten</a><br>ENGLISH: <a href="http://johanneshoppe.github.io/Presentations2015/Microservices-Seneca/Slides/index_en.html">» Start presentation</a>  </p>
+<hr>
+
+<p><a name="angular"></a></p>
+<h2 id="einstieg-in-angularjs">Einstieg in AngularJS</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/18986">DWX: 18.06.2015 09:00-17:00 Uhr</a></li>
+</ul>
+<p>Sie planen ein neues Webprojekt? Stellen Sie sicher, dass AngularJS das richtige Framework für Ihren Einsatzzweck ist. In diesem intensiven eintägigen Workshop wird AngularJS anhand von praktischen Beispielen erläutert. Sie erfahren wertvolle Tipps und bekommen Best Practices für die Entwicklung einer Single-Page-Application auf Basis von AngularJS vermittelt.</p>
+<p>Es werden unter anderem folgende Themen behandelt:</p>
+<ul>
+<li>MVC und Routing</li>
+<li>MVVM &amp; Two-Way Binding</li>
+<li>Dependendy-Injection und Module</li>
+<li>Controller, Services und Direktiven</li>
+<li>Fehleranalyse und Debugging</li>
+<li>Zusätzliche Frameworks wie Bootstrap und Kendo UI</li>
+<li>Ausblick auf Angular 2.0</li>
+</ul>
+<p>&nbsp;</p>
+<hr>
+
+<p><em>&copy; 2015, Johannes Hoppe</em></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
