@@ -1,0 +1,587 @@
+﻿<!doctype html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Vortrag: JS Unit- und Oberflächentests mit Karma & Protractor</title>
+
+        <meta name="description" content="Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute Architektur. Durch automatisierte Tests lässt sich sicherstellen, dass die Software fehlerfrei funktioniert und die fachlichen Spezifikationen erfüllt sind. In diesem Vortrag wird der Test-Runner Karma vorgestellt, mit welchem Unit-Test für JavaScript Anwendungen erstellt werden können. Zum Einsatz wird das BDD-Framework Jasmine kommen. Oberflächentests sind eine gute Ergänzung zu Unit-Tests, denn mit ihnen lässt sich die Anwendung aus der Sicht des Anwenders überprüfen. Hierfür wird Protractor beleuchtet, welcher auf Basis von Selenium End-To-End-Tests von JavaScript-Anwendungen und speziell von AngularJS-Anwendungen ermöglicht.">
+        <meta name="author" content="Johannes Hoppe">
+        
+        <link rel="shortcut icon" href="images/favicon.ico" >
+        <meta property="og:image" content="http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides/images/logo.png" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="lib/font/font-awesome/css/font-awesome.min.css" />
+        <link href="lib/font/ionicons/css/ionicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/theme/neutral.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <!--<link rel="stylesheet" href="lib/css/zenburn.css">-->
+        <link href="lib/css/github.css" rel="stylesheet" />   
+        
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section>
+                    
+                    <img src="images/logo-keep-calm.svg" width="75%"  alt="" style="margin-top: -100px;"/>  
+                    <h1 class="nowrap" style="font-size: 0.7em; margin-top: -80px; text-shadow: none;">WITH KARMA & PROTRACTOR</h1>                        
+
+                    <br class="hidePrint" />
+                    <br class="hidePrint" />
+                    <small class="hidePrint">Navigation mit <span class="key">Esc</span>, <span class="key">→</span> und <span class="key">↓</span></small>  
+                </section>
+                
+                <section>
+                    <section data-markdown>
+                        ![johannes](images/johannes.png)
+                     
+                        ### [Johannes Hoppe](http://JohannesHoppe.de)
+                    </section>     
+                </section>   
+                
+                <section>
+                     
+                    <section data-markdown>
+                        ## Unit Testing
+                                   
+                        ![tools](images/icon_bug.png)
+                    </section> 
+
+
+                    <section data-markdown data-state="jasmine">
+                        ## Früher
+                        <small>Jasmine HTML runner</small>
+                        
+                        ```html contenteditable small
+                        _LT_!DOCTYPE html_GT_
+                        _LT_html_GT_
+                        _LT_head_GT_
+                            _LT_title_GT_Jasmine Spec Runner_LT_/title_GT_
+
+                            _LT_link rel=_QUOT_stylesheet_QUOT_ href=_QUOT_lib/jasmine-1.3.1/jasmine.css_QUOT_ /_GT_
+                            _LT_script src=_QUOT_lib/jasmine-1.3.1/jasmine.js_QUOT__GT__LT_/script_GT_
+                            _LT_script src=_QUOT_lib/jasmine-1.3.1/jasmine-html.js_QUOT__GT__LT_/script_GT_
+
+                            _LT_!-- include source files here... --_GT_
+                            _LT_script src=_QUOT_src/Player.js_QUOT__GT__LT_/script_GT_
+                            _LT_script src=_QUOT_src/Song.js_QUOT__GT__LT_/script_GT_
+
+                            _LT_!-- include spec files here... --_GT_
+                            _LT_script src=_QUOT_spec/SpecHelper.js_QUOT__GT__LT_/script_GT_
+                            _LT_script src=_QUOT_spec/PlayerSpec.js_QUOT__GT__LT_/script_GT_
+
+                            _LT_script_GT_
+
+                                (function () {
+
+                                    var htmlReporter = new jasmine.HtmlReporter();
+                                    var jasmineEnv = jasmine.getEnv();
+
+                                    jasmineEnv.addReporter(htmlReporter);
+                                    jasmineEnv.specFilter = function (spec) {
+                                        return htmlReporter.specFilter(spec);
+                                    };
+
+                                    var currentWindowOnload = window.onload;
+
+                                    window.onload = function () {
+                                        if (currentWindowOnload) { currentWindowOnload(); }
+                                        jasmineEnv.execute();
+                                    };
+                                })();
+                            _LT_/script_GT_
+
+                        _LT_/head_GT_
+
+                        _LT_body_GT_
+                        _LT_/body_GT_
+                        _LT_/html_GT_
+                        ```
+                    </section>
+
+                    <section data-markdown data-state="tumbleweed">
+                        ## Früher
+                        
+                        <iframe src="js/jasmine/SpecRunner.html" class="spec" scrolling="no"></iframe>
+                    </section>
+
+                    <section data-markdown data-state="jasmine">
+                        <img src="images/logo-jasmine.svg" alt="" width="30%" />
+                        
+                        __b__ehavior-__d__riven __d__evelopment (BDD) framework
+                    </section>  
+                                      
+                    <section data-markdown data-state="jasmine">
+                        ### Suites, <span title="Specifications">Specs</span> & Expectations    
+                        <br/>
+
+                        ```javascript contenteditable 
+                        describe("a suite", function() {
+                           it("contains spec with an expectation", function() {
+                             expect(true).toBe(true);
+                           });
+                        });
+                        ```
+                    </section> 
+                    
+                    <section>
+                        <img src="images/logo-karma.svg" alt="" width="50%" />
+                    </section> 
+
+                    <section data-markdown data-state="karma">
+                        <blockquote style="width: 710px; color:gray;">
+                            On the <strong>AngularJS</strong> team, we rely on testing and we always seek better tools to make our life easier.
+                            That's why we created
+                            <strong>Karma</strong> - a test runner that fits all our needs.
+                        </blockquote>
+                    </section>        
+
+
+                    <section data-markdown data-state="karma">
+                        <img src="images/garfield.svg" alt="" width="50%" />
+
+                        <small>Demo Hello Garfield: 
+                            <a href="http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/examples/01_helloGarfield/">1</a> | 
+                            <a href="https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples/01_helloGarfield">2</a>
+                        </small>
+                    </section>
+
+                    <section>
+                        
+                        <div style="display: inline-block;font-size: 0.8em;">&nbsp;<br />var gretchenfrage =</div>    
+                        <div style="display: inline-block;"><img src="images/logo-js.svg" style="height:180px;" alt="" /><br />plain</div>||<div style="display: inline-block;"><img src="images/logo-grunt.svg" style="height:200px;" alt="" /><br />grunt</div>||<div style="display: inline-block;"><img src="images/logo-gulp.svg" style="height:200px;width: 200px;" alt="" /><br />gulp;</div><div style="display: inline-block;width:100px;">&nbsp;</div>
+
+                    </section> 
+                    
+
+                    <section data-markdown data-state="karma">
+                        <h4 style="font-size: 0.5em; line-height: 0;">Heute mal</h4>
+                        ### Plain Node.js
+                             
+                        ```cmd contenteditable cmd
+                        $ npm init
+                        $ npm install karma --save-dev
+                        $ npm install -g karma-cli
+                        $ npm install karma-jasmine karma-chrome-launcher --save-dev
+                        $ karma init
+                        $ karma start  #oder: npm test
+                        ```
+                        
+                        <br/>
+                        <br/>
+                        <small>Tipp: Karma nicht global installieren - Versionskonflikte zwischen Projekten!</small>
+                    </section>   
+                    
+                    <section data-markdown data-state="karma">
+                        ### Windows? 
+                        
+                        ```txt contenteditable cmd white
+                        SET CHROME_BIN = "C:\Users\Me\AppData\Local\Google\Chrome\Application\chrome.exe"
+                        ```
+                    </section>
+                    
+                    <section data-markdown data-state="karma">
+                        ### package.json
+                        
+                        ```javascript contenteditable small
+                        {
+                          "name": "Tests-Karma-Protractor",
+                          "version": "1.0.0",
+                          "description": "Example package",
+                          "main": "index.js",
+                          "directories": {
+                            "test": "test"
+                          },
+                          "scripts": {
+                            "test": "karma start"
+                          },
+                          "author": "Johannes Hoppe",
+                          "license": "MIT",
+                          "devDependencies": {
+                            "jasmine-core": "^2.3.4",
+                            "karma": "^0.12.36",
+                            "karma-chrome-launcher": "^0.1.12",
+                            "karma-jasmine": "^0.3.5"
+                          }
+                        }
+                        ```
+                    </section>
+                    
+                    <section data-markdown data-state="karma">
+                        ### karma.conf.js
+                        
+                        ```javascript contenteditable
+                        module.exports = function(config) {
+                            config.set({
+                                basePath: 'scripts',
+                                frameworks: ['jasmine'],
+                                files: ['**/*.js'],
+                                exclude: [],
+                                autoWatch: true,
+                                browsers: ['Chrome']
+                            });
+                        };
+                        ```   
+                        
+                    </section> 
+                    
+                    <section data-markdown data-state="karma">
+                        ### karma.conf.js
+                            
+                        ```javascript contenteditable style=padding-top:100px;padding-bottom:100px;font-size:30px;  
+                        files: [ /* Reihenfolge? */ ]
+                        ```   
+                        <garfield></garfield>
+                    </section>
+                     
+                    <section>
+                        
+                        <div style="display: inline-block;font-size: 0.8em;">&nbsp;<br />var gretchenfrage2 =</div>    
+                        <div style="display: inline-block;"><img src="images/logo-js.svg" style="height:180px;" alt="" /><br />&lt;script&gt;</div>||<div style="display: inline-block;"><img src="images/logo-requirejs.svg" style="height:200px;" alt="" /><br />RequireJS</div>||<div style="display: inline-block;"><img src="images/logo-browserify-wizard-hat-blue.svg" style="height:120px;margin:0;" /><br /><img src="images/logo-browserify.svg" style="height:80px;margin:0;" /><br />CommonJS;</div><div style="display: inline-block;width:100px;">&nbsp;</div>
+
+                    </section> 
+                                                                       
+                    <section data-markdown data-state="karma">
+                        ```javascript contenteditable  
+                        define('Garfield', [], function() {
+
+                            var Garfield = function () {
+                                this.getName = function () {
+                                    return "Garfield";
+                                };
+                            };
+    
+                            return Garfield;
+                        });
+
+                        require(['Garfield'], function(Garfield) {
+    
+                            var garfield = new Garfield();
+                            garfield.getName();
+                        });
+                        ```   
+                        <garfield></garfield>
+                    </section>
+                                                                                           
+                    <section data-markdown data-state="karma">
+                        ### Finaler Unit-Test
+
+                        <br/>
+                        ```javascript contenteditable  
+                        define(['Garfield'], function(Garfield) {
+
+                            describe('Garfield', function() {
+        
+                                it('should have a name', function() {
+        
+                                    var garfield = new Garfield();
+                                    expect(garfield.getName()).toEqual("Garfield");
+                                });
+                            });
+                        });
+                        ```   
+                    </section> 
+                
+                    <section data-markdown data-state="karma">
+                        <img src="images/garfield.svg" alt="" width="50%" />
+
+                        <small>Demo Hello Garfield (require.js): 
+                            <a href="http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/examples/02_helloGarfield_require/">1</a> | 
+                            <a href="https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples/02_helloGarfield_require">2</a>
+                        </small>
+                    </section>
+
+                </section>
+
+                <section>
+                    
+                    <section data-markdown>
+                        ## E2E Testing
+                          
+                        <i class="fa fa-eye" style="font-size:7em;"></i>
+                    </section>                     
+                     
+                    <section data-state="protractor">
+                        <img src="images/logo-protractor.png" alt="" width="50%" />
+                    </section>    
+                     
+                    <section data-markdown data-state="protractor">
+                        ### Terminologie
+                        
+                        <ul class="model">
+                            <li class="x-fragment">
+                                <span>&nbsp; &nbsp;Selenium &nbsp; &nbsp;</span>
+                                <small>OS-project to automate web browsers</small>
+                            </li>
+                            <li class="x-fragment">
+                                <span>Selenium 2.0</span>
+                                <small>concept of WebDrivers</small>
+                            </li>
+                            <li class="x-fragment">
+                                <span>&nbsp;WebDrivers&nbsp;</span>
+                                <small>drivers control a browser (e.g. <a href="https://sites.google.com/a/chromium.org/chromedriver/">ChromeDriver</a>)<br/>
+                                       and implement the <a href="https://code.google.com/p/selenium/wiki/JsonWireProtocol">WebDriver wire protocol</a></small>
+                            </li>
+                            <li class="x-fragment">
+                                <span><a href="https://github.com/SeleniumHQ/selenium/wiki/WebDriverJs">WebDriverJS</a></span>
+                                <small>JavaScript bindings for <b>WebDriver</b> (over wire protocol)</small>
+                            </li>
+                            <li class="x-fragment">
+                                <span style="background-color: #b52e31;">&nbsp; <a href="https://angular.github.io/protractor/">Protractor</a> &nbsp;</span>
+                                <small>end-to-end test framework (not only) for AngularJS<br/>on top of <b>WebDriverJS</b></small>
+                            </li>
+                        </ul>   
+
+                        <br/>
+                        <br/>
+                        <small>[mehr](http://yizeng.me/2014/04/25/relationships-between-different-versions-of-selenium/)</small>
+                    </section>
+
+                    <section data-markdown data-state="protractor">
+                        ### Installation
+                             
+                        ```cmd contenteditable cmd style=font-size:1.1em
+                        $ npm install -g protractor # 💾 protractor 💾 webdriver-manager  
+                        $ webdriver-manager update  # 💾 ChromeDriver
+                        $ webdriver-manager start
+                        $ protractor protractor.conf.js
+                        ```
+                    </section>    
+                    
+                    <section data-markdown data-state="protractor">
+                        ### protractor.conf.js
+                            
+                        ```javascript contenteditable 
+                        exports.config = {
+                            seleniumAddress: 'http://localhost:4444/wd/hub',
+                            specs: ['e2e/*Spec.js']
+                        };
+                        ```
+                    </section>   
+                    
+                    <section data-markdown data-state="protractor">
+                        ### AngularJS Spec 
+                            
+                        ```javascript contenteditable 
+                        describe('Protractor Demo Spec', function() {
+
+                            it('should have a title', function() {
+                                browser.get('http://johanneshoppe.github.io/angular_calc/');
+                                expect(browser.getTitle()).toEqual('AngularJS Calculator');
+                            });
+                        });
+                        ```
+                    </section>    
+                    
+                    <section data-markdown data-state="protractor">
+                        ### Expect
+                        <small>das normale Jasmine expect wurde ge-patched</small>
+                        
+                        ```javascript contenteditable 
+                        browser.getTitle().then(function (title) {
+                            expect(title).toBe('AngularJS Calculator');
+                        });
+                        ```
+                        <i class="fa fa-arrow-down"></i> 
+                        
+                        ```javascript contenteditable 
+                        expect(browser.getTitle()).toBe('AngularJS Calculator');
+                        ```
+
+                    </section>
+
+                    
+                    <section data-markdown data-state="protractor">
+                        ### Ohne Angular
+                            
+                        ```javascript contenteditable small 
+                        describe('Johannes Talk at DWX', function() {
+
+                            beforeEach(function () {
+                                // no waiting on angular to load and finish its tasks 
+                                browser.ignoreSynchronization = true;
+                            });
+
+                            it('should have the expected title', function() {
+
+                                browser.get('http://www.developer-week.de/Programm/Veranstaltung/(event)/18498');
+                                var heading = element(by.tagName('h2'));
+                                expect(heading.getText()).toEqual('JS Unit- und Oberflächentests mit Karma _AMP_ Protractor');
+                            });
+
+                            afterEach(function() {
+                                return browser.ignoreSynchronization = false;
+                            });
+                        });
+                        ```
+                    </section>
+
+                    <section data-markdown data-state="protractor">
+                        <h2>Locator Spickzettel</h2>
+                        <small>[by](https://github.com/angular/protractor/blob/master/docs/locators.md).irgendwas() + asynchronous actions</small>
+                        <br/><br/>
+
+                        <table style="font-size: 0.6em" width="100%">
+                            <tr>
+                                <td><code>&lt;span&gt;{{yourName}}&lt;/span&gt;</code></td>
+                                <td><code>element(by.binding('yourName'));</code></td>
+                            </tr>
+                            <tr style="background-color:#eee;">
+                                <td><code>&lt;input ng-model="password"&gt;</code></td>
+                                <td><code>element(by.input('password'));</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;tr ng-repeat="foo in foos"&gt;</code></td>
+                                <td><code>element(by.repeater('foo in foos')).row(1)</code></td>
+                            </tr>
+                            <tr  style="background-color:#eee;">
+                                <td></td>
+                                <td><code>element.by(repeater('foo in foos')).column('foo.bar');</code></td>
+                            </tr>
+                            
+                        </table>
+                       
+                    </section>                    
+                    
+                    <section data-markdown data-state="protractor">
+                        <h2>Debugging</h2>
+                        <br/><br/>
+
+                        <table style="font-size: 0.6em" width="100%">
+                           
+                            <tr>
+                                <td><b>wd-debug</b></td>
+                                <td><code>
+                                        browser.pause();<br/>  
+                                        // Enter "c" to move the test forward by one task<br/>
+                                        // Enter "repl" to enter interactive mode
+                                    </code></td>
+                            </tr>                            
+                            <tr style="background-color:#eee;">
+                                <td><b>node debugger</b></td>
+                                <td><code>
+                                        cmd: protractor debug protractor.conf.js<br/> 
+                                        browser.debugger()<br/>   
+                                        // Enter "c" to continue after breakpoint
+                                    </code></td>
+                            </tr>
+                            <tr>
+                                <td><b>node-debug</b></td>
+                                <td><code>
+                                        cmd: node-debug node_modules/protractor/bin/protractor protractor.conf.js<br/> 
+                                        browser.debugger()
+                                    </code></td>
+                            </tr>
+                        </table>
+
+                        
+                        <br/>
+                        <small>[Debugging](https://github.com/angular/protractor/blob/master/docs/debugging.md)</small>
+                       
+                    </section> 
+                    
+                    <section data-markdown data-state="protractor">
+                        <h2>Schamlose Werbung</h2>
+                        <small> :-)</small>
+                        <br/><br/>
+                        [<img src="images/node-inspector.png" alt="" width="50%"/>](https://www.npmjs.com/package/gulp-node-debug)
+
+                        [gulp-node-debug](https://www.npmjs.com/package/gulp-node-debug)
+                    </section>
+
+
+                </section>               
+
+                <section>
+                    
+                    <section data-markdown>
+                        ## Downloads
+                        
+                        ![tools](images/icon_file.png)
+
+                        #### [github.com/JohannesHoppe/Presentations2015](https://github.com/JohannesHoppe/Presentations2015/)
+                    </section> 
+                   
+                </section>
+
+                <section data-markdown>
+                    # Danke!
+                    
+                    <br/>
+
+                    * <i class="fa fa-home"></i> &nbsp;<b>[johanneshoppe.de](http://johanneshoppe.de)</b>
+                    * <i class="fa fa-twitter-square"></i> &nbsp;<b>[@JohannesHoppe](https://twitter.com/JohannesHoppe)</b>
+                    * <i class="fa fa-facebook-square"></i> &nbsp;<b>[Johannes.Hoppe](https://www.facebook.com/johannes.hoppe)</b>
+                </section> 
+            </div>
+
+        </div>
+        
+        <div class="pesentation-details">
+            <p>
+                Created by <a href="http://haushoppe-its.de" target="_blank">Johannes Hoppe</a>
+                <span >| <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
+            </p>
+        </div>
+
+
+        <script src="js/require.js"></script> 
+        <script src="js/require.config.js"></script> 
+           
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script> 
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                minScale: 0.2,
+                maxScale: 1.2,
+                controls: true,
+                progress: true,
+                history: true,
+                keyboard: true,
+                overview: true,
+                center: true,
+                rollingLinks: false,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function () { return !!document.body.classList; } },
+                    { src: 'plugin/showSource/showSource.js' }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
