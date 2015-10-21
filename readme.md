@@ -32,7 +32,8 @@ Dank Apache Cordova ist es möglich, Ihr bestehendes Wissen zu HTML5, JavaScript
 
 Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute Architektur. Durch automatisierte Tests lässt sich sicherstellen, dass die Software fehlerfrei funktioniert und die fachlichen Spezifikationen erfüllt sind. In diesem Vortrag wird der Test-Runner Karma vorgestellt, mit welchem Unit-Test für JavaScript Anwendungen erstellt werden können. Zum Einsatz wird das BDD-Framework Jasmine kommen. Oberflächentests sind eine gute Ergänzung zu Unit-Tests, denn mit ihnen lässt sich die Anwendung aus der Sicht des Anwenders überprüfen. Hierfür wird Protractor beleuchtet, welcher auf Basis von Selenium End-To-End-Tests von JavaScript-Anwendungen und speziell von AngularJS-Anwendungen ermöglicht.
 
-[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides)  
+[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides)
+[» Präsentation als PDF](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Vortrag%20-%20JavaScript%20Unit-%20und%20Oberflächentests%20mit%20Karma%20&%20Protractor.pdf)
 [» Beispiel-Anwendungen](https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples)  
  
 
