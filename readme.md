@@ -10,6 +10,7 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2015.
 4. [Internet der Dinge mit dem Galileo Board und JavaScript](#iot)
 5. [Microservices am Beispiel von Seneca](#seneca)
 6. [Workshop: Einstieg in AngularJS](#angular)
+7. [Angular 2.0 – Einführung & Schnellstart](#angular2)
  
 <hr>
 
@@ -20,7 +21,9 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2015.
 
 Dank Apache Cordova ist es möglich, Ihr bestehendes Wissen zu HTML5, JavaScript und CSS3 auf mobile Apps anzuwenden. Nutzen Sie AngularJS von Google um Techniken wie MVC und Data Binding in den Browser zu bringen. Erfahren Sie in diesem Vortrag, wie Sie in durch den jüngsten Spross, dem Ionic Framework, ansprechende Oberflächen für iOS, Android und Windows Phone gestalten können. Statt PowerPoint erwartet Sie viel Live Coding. Johannes Hoppe wird zusammen mit Ihnen eine erste Ionic -Anwendung entwickeln.
 
-[» Präsentation Starten](http://johanneshoppe.github.io/IonicPresentation/Slides/) 
+[» Präsentation Starten](http://johanneshoppe.github.io/IonicPresentation/Slides/)  
+[» Präsentation als PDF](http://johanneshoppe.github.io/IonicPresentation/Vortrag%20-%20Hybride%20Apps%20mit%20Cordova,%20AngularJS%20und%20Ionic%20-%20Franken.pdf)  
+[» Beispiel-Anwendung](http://plnkr.co/edit/MrCCas?p=preview)
 
 <hr>
 
@@ -32,8 +35,8 @@ Dank Apache Cordova ist es möglich, Ihr bestehendes Wissen zu HTML5, JavaScript
 
 Sauber Code und Test Driven Development (TDD) sind die Grundlage für eine gute Architektur. Durch automatisierte Tests lässt sich sicherstellen, dass die Software fehlerfrei funktioniert und die fachlichen Spezifikationen erfüllt sind. In diesem Vortrag wird der Test-Runner Karma vorgestellt, mit welchem Unit-Test für JavaScript Anwendungen erstellt werden können. Zum Einsatz wird das BDD-Framework Jasmine kommen. Oberflächentests sind eine gute Ergänzung zu Unit-Tests, denn mit ihnen lässt sich die Anwendung aus der Sicht des Anwenders überprüfen. Hierfür wird Protractor beleuchtet, welcher auf Basis von Selenium End-To-End-Tests von JavaScript-Anwendungen und speziell von AngularJS-Anwendungen ermöglicht.
 
-[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides)
-[» Präsentation als PDF](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Vortrag%20-%20JavaScript%20Unit-%20und%20Oberflächentests%20mit%20Karma%20&%20Protractor.pdf)
+[» Präsentation Starten](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Slides)  
+[» Präsentation als PDF](http://johanneshoppe.github.io/Presentations2015/Tests-Karma-Protractor/Vortrag%20-%20JavaScript%20Unit-%20und%20Oberflächentests%20mit%20Karma%20&%20Protractor.pdf)  
 [» Beispiel-Anwendungen](https://github.com/JohannesHoppe/Presentations2015/tree/gh-pages/Tests-Karma-Protractor/examples)  
  
 
@@ -98,6 +101,24 @@ Es werden unter anderem folgende Themen behandelt:
 - Zusätzliche Frameworks wie Bootstrap und Kendo UI
 - Ausblick auf Angular 2.0
 
+
+&nbsp;
+<hr>
+
+<a name="angular2"></a>
+## Angular 2.0 – Einführung & Schnellstart
+
+* [Developer Open Space: 17.10.2015 15:00-16:00 Uhr][8]
+
+Per Live-Coding mit Pair-Programming haben Gregor und ich einen Schnellstart in das neue Framework gegeben: TypeScript, Komponenten, Dekoratoren, Bindings, Events, Formularverarbeitung und Datenfluss in einer NG2-App. In 45 Minuten stand die erste Single-Page-App. Im Anschluss an die tolle Session möchte ich hier noch einmal alle Infos zusammen tragen.
+
+[» Präsentation Starten](https://angular2buch.de/presentations/book-rating/)  
+[» Präsentation als PDF](https://angular2buch.de/presentations/Einf%C3%BChrung%20in%20Angular%202.pdf)  
+[» Beispiel-Anwendung](https://github.com/Angular2Buch/angular-2-book-rating-app)    
+
+_&copy; 2015, Johannes Hoppe_
+
+
 [0]: http://dotnet-day-franken.de/
 [1]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18498
 [2]: http://www.enterjs.de/abstracts#unit-und-oberflaechentests
@@ -107,8 +128,5 @@ Es werden unter anderem folgende Themen behandelt:
 [6]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18454
 [7]: http://www.developer-week.de/Programm/Veranstaltung/(event)/18986
 [8]: http://www.meetup.com/node-js-Mannheim/events/222685767/
+[9]: http://blog.johanneshoppe.de/2015/10/angular2-einfuehrung-schnellstart/
 
-&nbsp;
-<hr>
-
-_&copy; 2015, Johannes Hoppe_
