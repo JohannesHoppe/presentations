@@ -113,7 +113,6 @@ Es werden unter anderem folgende Themen behandelt:
 Per Live-Coding mit Pair-Programming haben Gregor und ich einen Schnellstart in das neue Framework gegeben: TypeScript, Komponenten, Dekoratoren, Bindings, Events, Formularverarbeitung und Datenfluss in einer NG2-App. In 45 Minuten stand die erste Single-Page-App. Im Anschluss an die tolle Session möchte ich hier noch einmal alle Infos zusammen tragen.
 
 [» Präsentation Starten](https://angular2buch.de/presentations/book-rating/)  
-[» Präsentation als PDF](https://angular2buch.de/presentations/Einf%C3%BChrung%20in%20Angular%202.pdf)  
 [» Beispiel-Anwendung](https://github.com/Angular2Buch/angular-2-book-rating-app)    
 
 _&copy; 2015, Johannes Hoppe_

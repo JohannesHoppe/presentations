@@ -42,6 +42,8 @@ AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angula
 <a name="angular2devsession"></a>
 ## Schnellstart mit Angular 2
 
+* [Frankfurter Entwicklertag: 10.03.2016 14:15 - 15:00 Uhr / Track: Technology][3F]
+* [Karlsruher Entwicklertag: 15.06.2016 10:45 - 11:30 Uhr / Track: JavaScript][3K]
 * [DWX: 21.06.2016 14:15 - 16:15 Uhr / Track: Angular 2][3]
 
 AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe und Gregor Woiwode stellen Ihnen Angular 2 in einer Live-Coding Session vor. Sie erhalten einen fundierten Überblick über folgende Themen:
@@ -106,5 +108,7 @@ _&copy; 2016, Johannes Hoppe_
 [1]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20557
 [2]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20596
 [3]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20598
+[3F]: https://entwicklertag.de/frankfurt/2016/live-coding-mit-angular-2
+[3K]: https://entwicklertag.de/karlsruhe/2016/live-coding-mit-angular-2
 [4]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20683
 [5]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20747
