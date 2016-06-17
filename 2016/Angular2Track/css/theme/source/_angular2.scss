@@ -1,0 +1,48 @@
+
+
+.angular2 {
+    .reveal {
+        background-image: url('../../img/angular2-logo.svg'), url( '../../img/dwx-logo.png');
+        //background-position: 10px 10px;
+        background-position: top -80px left -100px, top 10px right 30px;
+        background-size: 500px, 150px;
+
+        //@include transition(background-image 0.4s linear);
+        //@include color(#007ACC);
+    }
+
+    
+    h3 {
+        margin-top: -50px;
+        margin-bottom: 75px;
+        font-weight: normal;
+        /* text-align: left; */
+    }
+}
+
+
+
+
+.tracks {
+    li {
+        display: inline-block;
+        width: 450px;
+        /* border: 1px solid gray; */
+    }
+
+    img {
+        width: 120px;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    p {
+        display: inline-block;
+        vertical-align: 110%;
+        font-size: 0.65em;
+        margin-left: 0.5em;
+        width: 300px;
+        /* border: 1px solid gray; */
+    }
+}

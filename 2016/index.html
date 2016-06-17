@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: 29d1c5bc36da364ad5aa86946d420b7bbc54a253 */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1 id="vortr-ge-2016-von-johannes-hoppe">Vorträge 2016 von Johannes Hoppe</h1>
+<p>Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2016.</p>
+<h2 id="inhalt">Inhalt</h2>
+<ol>
+<li><a href="#nativescript">Introduction to NativeScript</a></li>
+<li><a href="#angular2live">Live-Coding mit Angular 2</a></li>
+<li><a href="#angular2devsession">Schnellstart mit Angular 2</a></li>
+<li><a href="#angular2nativescript">Native Mobile Apps mit NativeScript und Angular 2.0</a></li>
+<li><a href="#angular2workshop">Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen</a></li>
+</ol>
+<hr>
+
+<p><a name="nativescript"></a></p>
+<h2 id="introduction-to-nativescript">Introduction to NativeScript</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/20557">DWX: 20.06.2016 17:00 - 18:00 Uhr / Track: Cross-Plattform</a></li>
+</ul>
+<p>NativeScript is a free and open source JavaScript framework for building native iOS, Android, and (soon) Windows Phone apps. But I know what you’re thinking: another way of building apps? What makes NativeScript special? Here are a a few cool things:</p>
+<ul>
+<li>Direct access to native APIs—no plugins required. Want to create a file on Android? Run new java.io.File()—in JavaScript!</li>
+<li>Completely native performance through the use of a JavaScript bridge natively available on all three mobile platforms.</li>
+<li>Cross-platform libraries for common use cases. Need to call a JSON API? Run http.getJSON</li>
+<li>Style native apps using CSS. Yep, that’s actually a thing.</li>
+</ul>
+<p>Curious about how it all works? Come learn! Architectures will be explained; apps will be built; and fun will be had by all.</p>
+<hr>
+
+
+<p><a name="angular2live"></a></p>
+<h2 id="live-coding-mit-angular-2">Live-Coding mit Angular 2</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/20596">DWX: 21.06.2016 10:30 - 11:30 Uhr / Track: Angular 2</a></li>
+</ul>
+<p>AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe stellt Ihnen Angular 2 mittels einer Live-Coding Session vor. Zum Ende der des Vortrags kennen Sie die wichtigsten Bausteine von Angular 2. Sie werden in der Lage sein, eine erste Anwendung selbst aufzusetzen.</p>
+<hr>
+
+
+<p><a name="angular2devsession"></a></p>
+<h2 id="schnellstart-mit-angular-2">Schnellstart mit Angular 2</h2>
+<ul>
+<li><a href="https://entwicklertag.de/frankfurt/2016/live-coding-mit-angular-2">Frankfurter Entwicklertag: 10.03.2016 14:15 - 15:00 Uhr / Track: Technology</a></li>
+<li><a href="https://entwicklertag.de/karlsruhe/2016/live-coding-mit-angular-2">Karlsruher Entwicklertag: 15.06.2016 10:45 - 11:30 Uhr / Track: JavaScript</a></li>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/20598">DWX: 21.06.2016 14:15 - 16:15 Uhr / Track: Angular 2</a></li>
+</ul>
+<p>AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe und Gregor Woiwode stellen Ihnen Angular 2 in einer Live-Coding Session vor. Sie erhalten einen fundierten Überblick über folgende Themen:</p>
+<ul>
+<li>Einstieg in Typescript</li>
+<li>Setup einer Angular 2 App</li>
+<li>Template-Syntax</li>
+<li>Komponenten, Pipes &amp; Direktiven</li>
+<li>Tooling</li>
+</ul>
+<p>Zum Ende der DevSession kennen Sie die wichtigsten Bausteine von Angular 2. Sie werden in der Lage sein, eine erste Angular 2-Anwendung selbst aufzusetzen. Sie erhalten ausführliche Materialien zur Nacharbeit. </p>
+<p><a href="https://angular2buch.de/presentations/book-rating/">» Präsentation Starten</a><br><a href="https://angular2buch.de/angular-2-book-rating-app/src/">» Demo-Anwendung</a> </p>
+<hr>
+
+
+
+<p><a name="angular2nativescript"></a></p>
+<h2 id="native-mobile-apps-mit-nativescript-und-angular-2-0">Native Mobile Apps mit NativeScript und Angular 2.0</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/20683">DWX: 22.06.2016 09:00 - 10:00 Uhr / Track: Mobile Architekturen</a></li>
+</ul>
+<p>NativeScript ist einen freies Open-Source Framework für die Entwicklung von nativen Apps für iOS, Android und Windows Phone. Die Geschäftslogik wird in JavaScript oder TypeScript entwickelt, Design und Stil werden per XML und CSS definiert. Heraus kommt plattformspezifischer Code. Schon wieder ein neu Art Apps zu entwickeln? Wozu das Ganze? Warum sollte man auf NativeScript setzten? Diese und weitere Fragen werden wir in der Session klären. Wir werden die Architektur betrachten, eine App bauen, native APIs ansprechen und das Ganze mit Angular 2.0 verdrahten. Klingt irre. Ist es auch. Und macht viel Spaß!</p>
+<p><a href="http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln">» Intro Blogpost</a><br><a href="http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/">» Zusatz Setup Emulator</a></p>
+<hr>
+
+
+
+<p><a name="angular2workshop"></a></p>
+<h2 id="angular-2-einstieg-in-die-komponentenbasierte-entwicklung-von-single-page-anwendungen">Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen</h2>
+<ul>
+<li><a href="http://www.developer-week.de/Programm/Veranstaltung/(event)/20747">DWX: 23.06.2016 09:00 - 17:00 Uhr</a></li>
+</ul>
+<p>AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe und Gregor Woiwode stellen Ihnen Angular 2 in einem insivensiven Tagesworkshop vor. Unter Anleitung der beiden Angular-Experten werden Sie folgende Themen kennen lernen:</p>
+<ul>
+<li>Typescript</li>
+<li>Setup einer Angular 2 App</li>
+<li>Template-Syntax</li>
+<li>Komponenten, Pipes &amp; Direktiven</li>
+<li>Navigation mit dem neuem Component-Router</li>
+<li>Integration von Polymer &amp; Kendo UI</li>
+<li>Tooling</li>
+<li>Unit-Test und Oberflächentests</li>
+</ul>
+<p>Zum Ende des Workshops haben Sie die Grundlagen und fortgeschrittene Themen von Angular 2 gemeistert. Sie erhalten ausführliche Materialien zur Nacharbeit.</p>
+<p><a href="https://angular2buch.de/presentations/book-rating/workshop.html">» Präsentation Starten</a>  </p>
+<hr>
+
+
+
+
+<p><em>&copy; 2016, Johannes Hoppe</em></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

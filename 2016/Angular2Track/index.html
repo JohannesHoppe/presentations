@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>DWX: Angular 2 Track</title>
+
+        <meta name="description" content="DWX Developer Week 2016 - Alle Vorträge zum Angular 2 Track">
+        <meta name="author" content="Johannes Hoppe">
+
+        <link rel="shortcut icon" href="img/favicon.ico" >
+        <meta property="og:image" content="https://johanneshoppe.github.io/presentations/2016/Angular2Track/img/thumbnail.png" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/neutral.css" id="theme">
+        <link rel="stylesheet" href="lib/font/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="lib/font/ionicons/css/ionicons.min.css" />
+
+        <!-- Code syntax highlighting -->
+        <link href="lib/css/github.css" rel="stylesheet" />
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <style>
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+
+                <section data-state="angular2">
+                    <!--
+                    <img data-src="img/angular2-logo.svg" width="30%"></img>
+
+                    <h1 style="font-size: 2.5em; line-height: 1.3em;">Angular 2</h1>
+                    <h3 style="font-size: 0.8em;">Einführung &amp; Schnellstart</h3>
+                    -->
+
+                    <h3>Angular 2 Talks</h3>
+                    <ul class="tracks">
+                        <li><img src="img/speaker/Korinth-Timo.png">
+
+                            <p>
+                                <strong>Timo Korinth</strong><br>
+                                <small>Dienstag 9:00 - 10:00</small><br>
+                                Speed-up AngularJS - Hochperformante Webanwendungen bauen
+                            </p>
+                        </li>
+
+                        <li><img src="img/speaker/Hoppe-Johannes.png">
+                            
+                            <p>
+                                <strong>Johannes Hoppe</strong><br>
+                                <small>Dienstag 10:30 - 11:30</small><br>
+                                Angular 2: Überlick mit Live-Coding<br><br>
+                            </p>
+                        </li>
+
+                        <li><img src="img/speaker/Precht-Pascal.png">
+
+                            <p>
+                                <strong>Pascal Precht</strong><br>
+                                <small>Dienstag 11:45 - 12:45</small><br>
+                                Angular 2 Change Detection Explained
+                            </p>
+                        </li>
+
+                        <li><img src="img/speaker/Woiwode-Gregor.png">
+
+                            <p>
+                                <strong>Gregor Woiwode</strong><br>
+                                <small>& Johannes Hoppe<br>
+                                Dienstag 14:15 - 16:15<br><br></small><br>
+                                DevSession:<br>Schnellstart mit Angular 2
+                            </p>
+                        </li>
+
+                        <li><img src="img/speaker/Steyer-Manfred.png">
+                        
+                            <p>
+                                <strong>Manfred Steyer</strong><br>
+                                <small>Dienstag 16:45 - 18:45</small><br>
+                                DevSession: Angular 2 Upgrade-Workshop<br><br>
+                            </p>
+                        </li>
+
+                        <li><img src="img/speaker/Witalec-Sebastian.png">
+                            <p>
+                            <strong>Sebastian Witalec</strong>
+                                <small> & Johannes Hoppe<br>
+                                <strong>Mittwoch</strong> 9:00 - 10:00<br><br></small><br>
+                                Native Mobile Apps mit NativeScript & Angular 2
+                            </p>
+                        </li>
+
+                    </ul>
+                
+                </section>
+
+            </div>
+
+        </div>
+
+        <div class="pesentation-details hidePrint">
+            <p>
+                <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
+            </p>
+        </div>
+
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+
+               // width: '960',
+               // height: '700',
+
+                minScale: 0.2,
+                maxScale: 1.0,
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    // own:
+                    { src: 'plugin/showSource/jqlite.min.js' },
+                    { src: 'plugin/showSource/http.min.js' },
+                    { src: 'plugin/showSource/enhanceCodeBlocks.js' },
+                    { src: 'plugin/showSource/showSource.js' }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
