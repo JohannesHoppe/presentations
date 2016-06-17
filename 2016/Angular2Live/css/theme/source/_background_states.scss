@@ -1,0 +1,110 @@
+@mixin transition ($t) {
+    -webkit-transition: $t;
+    -moz-transition: $t;
+    -o-transition: $t;
+    transition: $t;
+}
+
+@mixin color($color) {
+    h1, h2, h3, h4, strong, i {
+        color: $color !important;
+    }
+}
+
+.reveal {
+    background-image: url('../../img/pixel.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @include transition(none);
+}
+
+
+.typescript {
+    .reveal {
+        background-image: url('../../img/typescript-logo-state.png');
+        background-position: 10px 10px;
+
+        @include transition(background-image 0.8s linear);
+        @include color(#007ACC);
+    }
+}
+
+.karma {
+    .reveal {
+        background-image: url('../../img/logo-karma-state.svg');
+        background-position: 10px 10px;
+
+        @include transition(background-image 0.8s linear);
+        @include color(#429f87);
+    }
+}
+
+.ng-shield {
+    margin: auto;
+    width: 353px;
+    height: 372px;
+    background: url('../../img/angular2-shield.svg') no-repeat top left;
+
+    &::before {
+        font-size:6em;
+        color: white;
+        line-height: 1.6em;
+    }
+}
+
+.ng-shield-fix-shield {
+    &::before {
+        margin-left: 16px;
+    }
+}
+
+@mixin revealAwesome ($content) {
+    &::before {
+        font: normal normal normal 3em FontAwesome;
+        content: $content;
+        color: $headingColor;
+        margin-left: 10px;
+    }
+}
+
+.github {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f09b")
+        &::before {
+            line-height: 1.2em;
+        }
+    }
+}
+
+.star {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f006")
+        &::before {
+            line-height: 1.2em;
+        }
+    }
+}
+
+.code {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f121")
+    }
+}
+
+.forms {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f046")
+    }
+}
+
+.refresh {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f021")
+    }
+}
