@@ -30,11 +30,11 @@ Curious about how it all works? Come learn! Architectures will be explained; app
 
 
 <a name="angular2live"></a>
-## Live-Coding mit Angular 2
+## Angular 2: Überblick mit Live-Coding
 
 * [DWX: 21.06.2016 10:30 - 11:30 Uhr / Track: Angular 2][2]
 
-AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe stellt Ihnen Angular 2 mittels einer Live-Coding Session vor. Zum Ende der des Vortrags kennen Sie die wichtigsten Bausteine von Angular 2. Sie werden in der Lage sein, eine erste Anwendung selbst aufzusetzen.
+AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe gib Ihnen einen ersten Überblick zu Angular 2 und stellt Ihnen das neue Framework mittels einer Live-Coding Session vor. Zum Ende der des Vortrags kennen Sie die wichtigsten Bausteine von Angular 2.
 
 <hr>
 
