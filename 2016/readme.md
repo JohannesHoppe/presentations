@@ -5,7 +5,7 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2016.
 ## Inhalt
 
 1. [Introduction to NativeScript](#nativescript)
-2. [Live-Coding mit Angular 2](#angular2live)
+2. [Angular: Überblick mit Live-Coding](#angular2live)
 3. [Schnellstart mit Angular 2](#angular2devsession)
 4. [Native Mobile Apps mit NativeScript und Angular 2.0](#angular2nativescript)
 5. [Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen](#angular2workshop)
