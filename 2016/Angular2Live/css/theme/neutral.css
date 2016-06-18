@@ -594,6 +594,19 @@ ul.model {
   .karma .reveal h1, .karma .reveal h2, .karma .reveal h3, .karma .reveal h4, .karma .reveal strong, .karma .reveal i {
     color: #429f87 !important; }
 
+.universal .reveal {
+  background-image: url("../../img/universal.png");
+  background-position: 10px 10px;
+  background-size: 100px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .universal .reveal h1, .universal .reveal h2, .universal .reveal h3, .universal .reveal h4, .universal .reveal strong, .universal .reveal i {
+    color: #258200 !important; }
+  .universal .reveal a {
+    color: #258200; }
+
 .ng-shield {
   margin: auto;
   width: 353px;

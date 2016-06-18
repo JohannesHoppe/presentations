@@ -19,7 +19,6 @@
     @include transition(none);
 }
 
-
 .typescript {
     .reveal {
         background-image: url('../../img/typescript-logo-state.png');
@@ -37,6 +36,21 @@
 
         @include transition(background-image 0.8s linear);
         @include color(#429f87);
+    }
+}
+
+
+.universal {
+    .reveal {
+        background-image: url('../../img/universal.png');
+        background-position: 10px 10px;
+        background-size: 100px;
+
+        @include transition(background-image 0.8s linear);
+        @include color(#258200);
+        a {
+            color: #258200;
+        }
     }
 }
 

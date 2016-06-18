@@ -74,7 +74,7 @@
                     </script>
                 </section>
 
-                    <section data-markdown>
+                <section data-markdown>
                     <script type="text/template">
                         ![!Trend1](img/trend2.png)
 
@@ -90,7 +90,6 @@
                     </script>
                 </section>
 
-
                 <section>
 
                     <blockquote>
@@ -101,13 +100,34 @@
 
                 </section>   
 
-                <section>
+                <section data-markdown>
                     <script type="text/template">
-
-                    # Client- & Server-Side
-
+                        # Highlights
                     </script>
-                </section>   
+                </section>
+
+                <section data-state="universal">
+                    <section data-markdown data-separator-notes="^Note:"> 
+                        <script type="text/template">
+                            ![Universal](/img/universal.png) <!-- .element: width="35%" -->
+                            ### Client-Side + Server-Side
+                            <small>[github.com/angular/universal](https://github.com/angular/universal)</small>
+                            
+                            <aside class="notes">    
+                            Angular Universal will allow developers to run their Angular 2 applications directly on the server. With Angular 1, the applications always ran on the client side, which made things like search engine optimization (SEO) and social sharing links difficult to implement as web crawlers generally do not execute JavaScript before scraping a webpage.
+                            Applications are built just as they would be on the front end with some slight changes to accompany features that servers do not have available such as setting up a redis store instead of localstorage. Angular Universal apps are rendered on the server and then sent to the client. This greatly decreases load times on mobile devices and makes the apps feel snappier.
+                            </aside>
+                        </script>
+                    </section>
+
+                    <section data-markdown> 
+                        <script type="text/template">
+                            ```typescript|contenteditable|spellcheck=false|
+                            test
+                            ```
+                        </script>
+                    </section>
+                </section>
 
 
                 <section data-markdown>
