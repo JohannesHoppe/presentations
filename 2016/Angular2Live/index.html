@@ -120,6 +120,35 @@
 
 
                 <section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ![ANgular Material](img/material-big.png)
+                            ## <a style="color:#0273D4" href="https://github.com/angular/angular-cli" style="color: #a1292b" target="_blank">Angular Material</a>
+                        </script>
+                    </section>
+                    
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ```ruby|cmd|small
+                            $ npm install -g 
+                                git+https://git@github.com/Angular2Buch/angular-cli-material-flag.git
+                            $ ng new mini-rating --material
+                            $ cd mini-rating
+                            $ npm start
+                            ```
+
+                            <small>(siehe [#1038](https://github.com/angular/angular-cli/pull/1038))</small>
+                        </script>
+                    </section>
+                </section>
+                
+
+
+
+
+                <section>
                     
                     <section data-markdown>
                         <script type="text/template">
@@ -164,35 +193,6 @@
                     </section>
 
                 </section>
-
-
-
-
-                <section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![ANgular Material](img/material-big.png)
-                            ## <a style="color:#0273D4" href="https://github.com/angular/angular-cli" style="color: #a1292b" target="_blank">Angular Material</a>
-                        </script>
-                    </section>
-                    
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ```ruby|cmd|small
-                            $ npm install -g 
-                                git+https://git@github.com/Angular2Buch/angular-cli-material-flag.git
-                            $ ng new mini-rating --material
-                            $ cd mini-rating
-                            $ npm start
-                            ```
-
-                            <small>(siehe [#1038](https://github.com/angular/angular-cli/pull/1038))</small>
-                        </script>
-                    </section>
-                </section>
-
 
 
 
@@ -317,6 +317,36 @@
                     </section>
                     
                 </section>
+
+
+
+                <section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ![AngularJS 1](img/AngularJS-large.png)
+                            ## @angular/upgrade
+                        </script>
+                    </section>
+                    
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ```typescript|contenteditable|spellcheck=false
+                            import { UpgradeAdapter } from '@angular/upgrade';
+
+                            var upgradeAdapter = new UpgradeAdapter();
+                            var app = angular.module('myApp', []); // OLD AngularJS 1 App
+
+                            upgradeAdapter.bootstrap(document.body, ['myApp']);
+                            ```
+
+                            <!-- http://blog.thoughtram.io/angular/2015/10/24/upgrading-apps-to-angular-2-using-ngupgrade.html -->
+                        </script>
+                    </section>
+                </section>
+
+
                 
                 <section data-state="angular2">
                 
