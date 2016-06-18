@@ -36,6 +36,8 @@ Curious about how it all works? Come learn! Architectures will be explained; app
 
 AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe gib Ihnen einen ersten Überblick zu Angular 2 und stellt Ihnen das neue Framework mittels einer Live-Coding Session vor. Zum Ende der des Vortrags kennen Sie die wichtigsten Bausteine von Angular 2.
 
+[» Präsentation Starten](https://johanneshoppe.de/presentations/book-rating/)  
+
 <hr>
 
 
