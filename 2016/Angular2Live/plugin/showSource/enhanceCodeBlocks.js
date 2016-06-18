@@ -20,6 +20,9 @@
           for (var i=0; i<elements.length; i++) {
 
               var element = elements[i];
+              if (!element) {
+                  continue;
+              }
 
               // contains a equals char --> add a attribute
               if (~element.indexOf('=')) {
