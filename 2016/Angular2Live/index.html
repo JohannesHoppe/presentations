@@ -128,7 +128,6 @@
                         </script>
                     </section>
                     
-
                     <section data-markdown>
                         <script type="text/template">
                             ```ruby|cmd|small
@@ -142,6 +141,59 @@
                             <small>(siehe [#1038](https://github.com/angular/angular-cli/pull/1038))</small>
                         </script>
                     </section>
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ```typescript|contenteditable|small|spellcheck=false
+                            // app.component.ts
+                            import { Component } from '@angular/core';
+                            import { MdList } from '@angular2-material/list/';
+                            import { MdToolbar } from '@angular2-material/toolbar';
+                            import { MdButton } from '@angular2-material/button';
+                            import { MdSlideToggle } from '@angular2-material/slide-toggle';
+                            
+                            @Component({
+                              moduleId: module.id,
+                              selector: 'app-root',
+                              templateUrl: 'app.component.html',
+                              styleUrls: ['app.component.css'],
+                              directives: [MdList, MdToolbar, MdButton, MdSlideToggle]
+                            })
+                            export class AppComponent {
+                              title = 'DWX app works!';
+                            }
+                            ```
+
+                            <small>[Components](https://justindujardin.github.io/ng2-material/)</small>
+                        </script>
+                    </section>
+
+                     <section data-markdown>
+                        <script type="text/template">
+                            ```html|contenteditable|small|spellcheck=false
+                            <!-- app.component.html --->
+                            <md-toolbar color="primary">
+                              {{ title }}
+                            </md-toolbar>
+                            
+                            <div style="padding: 7px">
+                              <button md-button>Basic Button</button>
+                              <button md-raised-button>Raised Button</button>
+                            
+                              <md-slide-toggle>Slide Toggle</md-slide-toggle>
+                            </div>
+                            ```
+                        </script>
+                    </section>                   
+
+                     <section data-markdown>
+                        <script type="text/template">
+                            ### Heureka! <!-- .element: style="color:#009688" -->
+                            ![Demo](img/material-demo.png)
+                        </script>
+                    </section>      
+
+                    <!-- http://plnkr.co/edit/o077B6uEiiIgkC0S06dd?p=preview -->
                 </section>
                 
 
