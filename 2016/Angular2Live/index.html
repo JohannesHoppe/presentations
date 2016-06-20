@@ -147,7 +147,6 @@
                             ```typescript|contenteditable|small|spellcheck=false
                             // app.component.ts
                             import { Component } from '@angular/core';
-                            import { MdList } from '@angular2-material/list/';
                             import { MdToolbar } from '@angular2-material/toolbar';
                             import { MdButton } from '@angular2-material/button';
                             import { MdSlideToggle } from '@angular2-material/slide-toggle';
@@ -156,8 +155,7 @@
                               moduleId: module.id,
                               selector: 'app-root',
                               templateUrl: 'app.component.html',
-                              styleUrls: ['app.component.css'],
-                              directives: [MdList, MdToolbar, MdButton, MdSlideToggle]
+                              directives: [MdToolbar, MdButton, MdSlideToggle]
                             })
                             export class AppComponent {
                               title = 'DWX app works!';
@@ -194,6 +192,7 @@
                     </section>      
 
                     <!-- http://plnkr.co/edit/o077B6uEiiIgkC0S06dd?p=preview -->
+
                 </section>
                 
 
@@ -223,6 +222,114 @@
                             </aside>
                         </script>
                     </section>
+
+                    <section data-state="augury" data-markdown>>
+                        <script type="text/template">
+                            <div class="banner" style="width: 3000px; margin-left: -1000px; height: 420px; padding-top: 50px; padding-bottom: 50px">
+                                ![Universal](img/augury-logo.svg) <!-- .element: width="35%" -->
+                            </div>
+                            ### Angular Augury
+                            <small>[augury.angular.io](https://augury.angular.io/)</small>
+                        </script>
+                    </section>
+
+                    <section data-state="augury" data-markdown>>
+                        <script type="text/template">
+                            ![Augury](img/augury-screenloop.gif)
+
+                            <small>[augury.angular.io/demo/](https://augury.angular.io/demo/)</small>
+                            
+                        </script>
+                    </section>
+
+                    <!--
+                     <section data-markdown>
+                        <script type="text/template">
+                            ```ruby|cmd|small
+                            $ npm install book-monkey2-api --saveDev
+                            $ ng serve
+                            ```
+                        </script>
+                    </section>    
+                    -->  
+
+                    <section data-markdown>
+                        <script type="text/template">
+                            ```typescript|contenteditable|small|spellcheck=false
+                            // app.component.ts
+                            import { Component, OnInit } from '@angular/core';
+                            import { Http } from '@angular/http'; // not forget: HTTP_PROVIDERS
+                            import { MD_LIST_DIRECTIVES } from '@angular2-material/list/';
+                            import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
+                            
+                            export class Book {
+                              constructor(public title: string,
+                                          public description: string,
+                                          public rating: number = 0) { }
+                            }
+                            
+                            @Component({
+                              moduleId: module.id,
+                              selector: 'app-root',
+                              templateUrl: 'app.component.html',
+                              directives: [MD_LIST_DIRECTIVES, MD_TOOLBAR_DIRECTIVES]
+                            })
+                            export class AppComponent implements OnInit {
+                              title: string = 'DWX app works!';
+                              books: Book[];
+                              constructor(private http: Http) { }
+                            
+                              ngOnInit() {
+                                this.http
+                                  .get('http://book-monkey2-api.angular2buch.de/books')
+                                  .subscribe(response => {
+                                    this.books = response.json();
+                                  });
+                              }
+                            }
+                            ```
+
+                            <small class="mini">
+                                import {HTTP_PROVIDERS} from '@angular/http';  
+                                bootstrap(AppComponent, [HTTP_PROVIDERS]);
+                            </small>
+                        </script>
+                    </section>
+
+                     <section data-markdown>
+                        <script type="text/template">
+                            ```html|contenteditable|small|spellcheck=false
+                            <!-- app.component.html --->
+                            <md-toolbar color="primary">
+                            {{ title }}
+                            </md-toolbar>
+
+                            <div style="padding: 7px">
+                            
+                            <md-content>
+
+                                <md-list>
+                                    <md-list-item class="md-3-line  md-long-text" *ngFor="let book of books; let index = index" style="margin-top: 20px;">
+                                    <img [src]="book.thumbnails[0].url" class="md-avatar" width="50" />
+                                    <div class="md-list-item-text" >
+                                        <h3>{{ book.title }}</h3>
+                                        <p>{{ book.description }}</p>
+                                    </div>
+                                    </md-list-item>
+                                </md-list>
+
+                            </md-content>
+                            </div>
+                            ```
+
+                            <small class="mini">
+                                &lt;style&gt;
+                                .md-list-item { height:auto !important; }
+                                img { margin: 10px }
+                                &lt;/style&gt;
+                            </small>
+                        </script>
+                    </section> 
 
                     <section data-markdown>
                         <script type="text/template">

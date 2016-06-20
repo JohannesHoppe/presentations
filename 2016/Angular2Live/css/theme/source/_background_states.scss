@@ -54,6 +54,26 @@
     }
 }
 
+.augury {
+    .reveal {
+
+        div.banner {
+          background: -webkit-linear-gradient(rgb(81,45,168),rgb(103,58,183));
+          background: linear-gradient(rgb(81,45,168),rgb(103,58,183));
+        }
+
+        background-image: url('../../img/augury-logo.svg');
+        background-position: 10px 10px;
+        background-size: 100px;
+
+        @include transition(background-image 0.8s linear);
+        @include color(rgb(103,58,183));
+        a {
+            color: rgb(103,58,183);
+        }
+    }
+}
+
 .ng-shield {
     margin: auto;
     width: 353px;

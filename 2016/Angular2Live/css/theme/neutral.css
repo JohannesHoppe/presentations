@@ -607,6 +607,22 @@ ul.model {
   .universal .reveal a {
     color: #258200; }
 
+.augury .reveal {
+  background-image: url("../../img/augury-logo.svg");
+  background-position: 10px 10px;
+  background-size: 100px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .augury .reveal div.banner {
+    background: -webkit-linear-gradient(#512da8, #673ab7);
+    background: linear-gradient(#512da8, #673ab7); }
+  .augury .reveal h1, .augury .reveal h2, .augury .reveal h3, .augury .reveal h4, .augury .reveal strong, .augury .reveal i {
+    color: #673ab7 !important; }
+  .augury .reveal a {
+    color: #673ab7; }
+
 .ng-shield {
   margin: auto;
   width: 353px;
