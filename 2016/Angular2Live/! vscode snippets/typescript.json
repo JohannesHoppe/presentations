@@ -14,12 +14,24 @@
 	}
 */
 
+	 "Material Book": {
+		"prefix": "mtbook",
+		"body": [
+			"export class Book {",
+			"  constructor(public title: string,",
+			"              public description: string,",
+			"              public rating: number = 0) { }",
+			"}"
+		],
+		"description": "book class"
+	},
+
 	 "Material Imports 1": {
 		"prefix": "mtimp1",
 		"body": [
 			"import { MdToolbar } from '@angular2-material/toolbar';",
 			"import { MdButton } from '@angular2-material/button';",
-			"import { MdSlideToggle } from '@angular2-material/slide-toggle'"
+			"import { MdSlideToggle } from '@angular2-material/slide-toggle';"
 		],
 		"description": "Material Imports 1"
 	},
