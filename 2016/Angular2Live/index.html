@@ -218,7 +218,7 @@
                         </script>
                     </section>
 
-                    <section data-state="universal" data-markdown>>
+                    <section data-state="universal" data-markdown>
                         <script type="text/template">
                             ![Universal](img/universal.png) <!-- .element: width="35%" -->
                             ### Angular Universal
@@ -228,6 +228,39 @@
                             Angular Universal will allow developers to run their Angular 2 applications directly on the server. With Angular 1, the applications always ran on the client side, which made things like search engine optimization (SEO) and social sharing links difficult to implement as web crawlers generally do not execute JavaScript before scraping a webpage.
                             Applications are built just as they would be on the front end with some slight changes to accompany features that servers do not have available such as setting up a redis store instead of localstorage. Angular Universal apps are rendered on the server and then sent to the client. This greatly decreases load times on mobile devices and makes the apps feel snappier.
                             </aside>
+                        </script>
+                    </section>
+
+                    <section>
+                        <blockquote>
+                        <strong>Note:</strong><br>Universal currently only<br>works with router-deprecated
+                        </blockquote>
+
+                        <small><a href="https://github.com/angular/universal#best-practices">Quelle</a></small>
+                         </script>
+                    </section>
+
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ### Angular 2 offline<br>template compilation
+                            <br>
+
+                            * NPM: angular2-template-compiler
+                            * typescript@next (nightly builds)
+                        </script>
+                    </section>
+
+                    <section  data-markdown>
+                        <script type="text/template">
+                        ![Universal](img/offline-template.png) <!-- .element: style="margin-top:-100px" -->
+
+                        <small>
+                        * kein Template Compiler im Browser
+                        * kein Template Parsing im Browser
+                        * Kein Directive Lookup im Browser
+                        </small>
+
+                        <small>[Quelle](https://medium.com/@richavyas/aha-moments-from-ngconf-2016-part-1-angular-2-0-compile-cycle-6f462f68632e#.a5bk7066h)</small>
                         </script>
                     </section>
 
@@ -241,6 +274,12 @@
                         </script>
                     </section>    
                     -->  
+
+                    <section  data-markdown>
+                        <script type="text/template">
+                            ### State Changes...
+                        </script>
+                    </section>
 
                     <section data-markdown>
                         <script type="text/template">
@@ -279,7 +318,7 @@
                             ```
 
                             <small class="mini">
-                                mtimp2, mtbook, mtdir2, mtinit, mtget
+                                mtimp2, mtbook, mtdir2, mtinit, mtget  
                                 import {HTTP_PROVIDERS} from '@angular/http';  
                                 bootstrap(AppComponent, [HTTP_PROVIDERS]);
                             </small>
@@ -313,8 +352,8 @@
                             ```
                             
                             <small class="mini">
-                                __mtlist__  
-                                __mtfix__  
+                                mtlist  
+                                mtfix  
                                 &lt;style&gt;
                                 .md-list-item { height:auto !important; }
                                 img { margin: 10px }
