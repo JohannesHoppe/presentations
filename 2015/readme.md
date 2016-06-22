@@ -115,7 +115,14 @@ Per Live-Coding mit Pair-Programming haben Gregor und ich einen Schnellstart in 
 [» Präsentation Starten](https://angular2buch.de/presentations/book-rating/)  
 [» Beispiel-Anwendung](https://github.com/Angular2Buch/angular-2-book-rating-app)    
 
+<hr>
+
+# [&laquo; zurück](index.html)
+
+<hr>
+
 _&copy; 2015, Johannes Hoppe_
+
 
 
 [0]: http://dotnet-day-franken.de/
