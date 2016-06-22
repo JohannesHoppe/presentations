@@ -103,7 +103,7 @@ Zum Ende des Workshops haben Sie die Grundlagen und fortgeschrittene Themen von 
 
 <hr>
 
-# [&laquo; zurück](index.html)
+# [&laquo; zurück](../)
 
 <hr>
 

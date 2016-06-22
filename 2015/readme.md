@@ -117,7 +117,7 @@ Per Live-Coding mit Pair-Programming haben Gregor und ich einen Schnellstart in 
 
 <hr>
 
-# [&laquo; zurück](index.html)
+# [&laquo; zurück](../)
 
 <hr>
 
