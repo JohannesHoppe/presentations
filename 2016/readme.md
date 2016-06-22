@@ -74,6 +74,8 @@ NativeScript ist einen freies Open-Source Framework für die Entwicklung von nat
 
 [» Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)
 [» Zusatz Setup Emulator](http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/)
+[» Präsentation Downloaden (PPTX)](http://johanneshoppe.github.io/presentations/2016/Angular2NativeScript/DWX-Angular%202.0%20und%20NativeScript.pptx)  
+
 
 <hr>
 
@@ -84,7 +86,7 @@ NativeScript ist einen freies Open-Source Framework für die Entwicklung von nat
 
 * [DWX: 23.06.2016 09:00 - 17:00 Uhr][5]
 
-AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe und Gregor Woiwode stellen Ihnen Angular 2 in einem insivensiven Tagesworkshop vor. Unter Anleitung der beiden Angular-Experten werden Sie folgende Themen kennen lernen:
+AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angular 2 mischt Google die Webentwicklung gehörig auf. Das neue Framework macht keine Kompromisse. Es setzt auf die Programmiersprache TypeScript, komponentenbasierte Entwicklung, eine neue Template-Syntax und ein verbessertes Tooling. Kurzum: alles ist neu! Johannes Hoppe und Gregor Woiwode stellen Ihnen Angular 2 in einem intensiven Tagesworkshop vor. Unter Anleitung der beiden Angular-Experten werden Sie folgende Themen kennen lernen:
 
 - Typescript
 - Setup einer Angular 2 App
