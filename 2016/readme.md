@@ -1,4 +1,4 @@
-# Vorträge 2016 von Johannes Hoppe
+# Vorträge 2016 von Johannes Hoppe <small>(und Freunden)</small>
 
 Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2016.
 
@@ -8,7 +8,7 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2016.
 2. [Angular: Überblick mit Live-Coding](#angular2live)
 3. [Schnellstart mit Angular 2](#angular2devsession)
 4. [Native Mobile Apps mit NativeScript und Angular 2.0](#angular2nativescript)
-5. [Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen](#angular2workshop)
+5. [Workshop Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen](#angular2workshop)
  
 <hr>
 
@@ -25,6 +25,14 @@ NativeScript is a free and open source JavaScript framework for building native 
 - Style native apps using CSS. Yep, that’s actually a thing.
 
 Curious about how it all works? Come learn! Architectures will be explained; apps will be built; and fun will be had by all.
+
+Speakers: Sebastian Witalec, (Johannes Hoppe)
+
+[» DWX16 Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)
+[» Setting up Android-Emulators](http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/)
+ 
+
+
 
 <hr>
 
@@ -72,8 +80,15 @@ Zum Ende der DevSession kennen Sie die wichtigsten Bausteine von Angular 2. Sie 
 
 NativeScript ist einen freies Open-Source Framework für die Entwicklung von nativen Apps für iOS, Android und Windows Phone. Die Geschäftslogik wird in JavaScript oder TypeScript entwickelt, Design und Stil werden per XML und CSS definiert. Heraus kommt plattformspezifischer Code. Schon wieder ein neu Art Apps zu entwickeln? Wozu das Ganze? Warum sollte man auf NativeScript setzten? Diese und weitere Fragen werden wir in der Session klären. Wir werden die Architektur betrachten, eine App bauen, native APIs ansprechen und das Ganze mit Angular 2.0 verdrahten. Klingt irre. Ist es auch. Und macht viel Spaß!
 
+<<<<<<< HEAD
 [» Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)  
 [» Zusatz Setup Emulator](http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/)  
+=======
+Speakers: Sebastian Witalec, Johannes Hoppe
+
+[» DWX16 Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)
+[» Setting up Android-Emulators](http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/)
+>>>>>>> updates links
 [» Präsentation Downloaden (PPTX)](http://johanneshoppe.github.io/presentations/2016/Angular2NativeScript/DWX-Angular%202.0%20und%20NativeScript.pptx)  
 
 
@@ -82,7 +97,7 @@ NativeScript ist einen freies Open-Source Framework für die Entwicklung von nat
 
 
 <a name="angular2workshop"></a>
-## Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen
+## Workshop Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen
 
 * [DWX: 23.06.2016 09:00 - 17:00 Uhr][5]
 
@@ -99,7 +114,7 @@ AngularJS ist das populärste Framework für Single-Page-Anwendungen. Mit Angula
 
 Zum Ende des Workshops haben Sie die Grundlagen und fortgeschrittene Themen von Angular 2 gemeistert. Sie erhalten ausführliche Materialien zur Nacharbeit.
 
-[» Präsentation Starten](https://angular2buch.de/presentations/book-rating/workshop.html)  
+Trainer: [Gregor Woiwode](http://www.woiwode.info/blog/), [Johannes Hoppe](http://haushoppe-its.de)
 
 <hr>
 
@@ -109,7 +124,8 @@ Zum Ende des Workshops haben Sie die Grundlagen und fortgeschrittene Themen von 
 
  
 
-_&copy; 2016, Johannes Hoppe_
+_&copy; 2016, [Johannes Hoppe](http://haushoppe-its.de)
+_
 
 
 [1]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20557
