@@ -28,7 +28,7 @@ Curious about how it all works? Come learn! Architectures will be explained; app
 
 Speakers: Sebastian Witalec, (Johannes Hoppe)
 
-[» DWX16 Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)
+[» DWX16 Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)  
 [» Setting up Android-Emulators](http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/)
  
 
@@ -82,8 +82,8 @@ NativeScript ist einen freies Open-Source Framework für die Entwicklung von nat
 
 Speakers: Sebastian Witalec, Johannes Hoppe
 
-[» DWX16 Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)
-[» Setting up Android-Emulators](http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/)
+[» DWX16 Intro Blogpost](http://www.developer-week.de/Blog/Mobile-Apps-mit-Angular-2-entwickeln)  
+[» Setting up Android-Emulators](http://blog.johanneshoppe.de/2016/06/setting-up-android-emulators-for-nativescript-development/)  
 [» Präsentation Downloaden (PPTX)](http://johanneshoppe.github.io/presentations/2016/Angular2NativeScript/DWX-Angular%202.0%20und%20NativeScript.pptx)  
 
 
