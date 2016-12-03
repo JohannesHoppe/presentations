@@ -1,4 +1,4 @@
-/* a lot of other css that we will use later on */
+/* a lot small CSS classes for varoius usages */
 
 $neutralColor: #a6a6a6;
 
@@ -23,7 +23,7 @@ $neutralColor: #a6a6a6;
     }
 }
 
-// looks like a cursor key
+// looks like a cursor key (start slide)
 .key {
     position: relative;
     bottom: 5px;
@@ -112,30 +112,42 @@ ul.model {
 
     li {
         margin-bottom: 30px;
-        color: #494D4D
+        color: #494D4D;
+
+        span {
+
+            text-align:center;
+            min-width: 220px;
+            display:inline-block;
+
+            padding: 5px !important;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: #000000 0 2px 5px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+
+            background-color: $headingColor;
+            color: white;
+            margin-right: 20px;
+
+        }
+        span a {
+            color: white !important;
+        }
     }
 
-     span {
-        padding: 5px !important;
-        border-radius: 10px;
-        background: #fff;
-        box-shadow: #000000 0 2px 5px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
-
-        margin: 7px;
-        /* background-color: darken($neutralColor, 20%);  */
-        background-color: #0F7391;
-        color: white;
-        width: 300px;
-    }
-    span a {
-        color: white !important;
-    }
 }
 
 
+.reveal pre {
+    box-shadow: none;
+    margin-top: 30px;
+    padding: 10px;
+}
+
 .reveal pre code {
-    background-color: rgb(248, 248, 255);
+    //background-color: rgb(248, 248, 255);
+    background-color: white;
     color: #333;
 
     &.small {
@@ -144,8 +156,15 @@ ul.model {
         max-height: 500px;
     }
 
-    // blinking cursor to mimic shell
-    &.cmd {
+    &.mini {
+        font-size: 14px;
+        line-height: 16px;
+        max-height: 800px;
+        width: 100%;
+    }
+
+    // looks like a shell with blinking cursor
+    &.lang-bash {
 
         background-color: #202020;
         border: 4px solid silver;
@@ -175,16 +194,17 @@ ul.model {
             animation: 1s blink step-end infinite;
         }
 
-        &.white span.keyword {
+        span.hljs-keyword {
             color: #e2e2e2 !important;
         }
     }
-    
+
     &.cmd.small {
         font-size: 0.85em !important;
     }
 }
 
+// used by the blinking cursor
 @keyframes "blink"         { from, to { color: transparent; } 50% { color: white; } }
 @-moz-keyframes "blink"    { from, to { color: transparent; } 50% { color: white; } }
 @-webkit-keyframes "blink" { from, to { color: transparent; } 50% { color: white; } }
@@ -223,13 +243,15 @@ ul.model {
       color: $headingColor;
 }
 
+// hidden stuff in print mode
 @media print {
     .hidePrint {
         display: none !important;
+        height: 0; // really, really not display
     }
 }
 
-/* device preview */
+/* device preview (iPhone iframe) */
 
 .device-preview {
 
@@ -266,3 +288,37 @@ ul.model {
 }
 
 /* END: device preview */
+/* cross through things, see http://stackoverflow.com/a/21958440 */
+
+.cross-through {
+    position: relative;
+    overflow: hidden; //hide overflow of pseudo elements
+}
+
+.cross-through:before,
+.cross-through:after
+{
+    position: absolute;
+    content: '';
+    background: brown;
+    display: block;
+    width: 100%;
+    height: 2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    //center the X vertically and horizontally:
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    opacity: 0.5;
+}
+
+.cross-through:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* end: cross out */

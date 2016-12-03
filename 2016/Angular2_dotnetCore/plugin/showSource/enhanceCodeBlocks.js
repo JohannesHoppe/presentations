@@ -45,6 +45,16 @@
                   $this.attr(element, "");
               }
           }
+
+          // some defaults - should have always contenteditable
+          if (!~$this.attr('class').indexOf('contenteditable')) {
+              $this.attr('contenteditable', "");
+          }
+
+          // some defaults - should have always spellcheck=false
+          if (!~$this.attr('class').indexOf('spellcheck')) {
+              $this.attr('spellcheck', "false");
+          }
       });
     });
 })(window.jqlite);

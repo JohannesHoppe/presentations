@@ -1,0 +1,61 @@
+aside.handsOn {
+    display: none;
+}
+
+
+
+#handsOnMaster {
+
+    display: block;
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    background-color: ghostwhite;
+    font-size: 1.6em;
+    width: 400px;
+    height: 100%;
+    z-index: 31; // in front of the navigation arrows, because on small projector screens the navigation arrows overlapp
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+
+    .ng-shield {
+        width: 200px;
+        height: 210px;
+        background-size: 100%;
+
+        &::before {
+    	    font-size:4.5em;
+            line-height: 1.8em;
+        }
+    }
+
+    h3 {
+        color: $headingColor;
+        font-family: 'OpenSansExtrabold';
+    }
+}
+
+#handsOnDisplay {
+
+    text-align: left;
+    line-height: 1.3em;
+
+    code {
+        font-size: 1.1em ;
+        font-family: Courier, monospace !important;
+        padding: 0.1em;
+        margin: 0;
+        background-color: ghostwhite;
+        border-radius: 3px;
+    }
+
+    li {
+        margin-top: 5px;
+    }
+}
+
+// maves the section to left, to give #handsOnDisplay enough space
+.sectionMoveLeft {
+    margin-left: -200px !important;
+}

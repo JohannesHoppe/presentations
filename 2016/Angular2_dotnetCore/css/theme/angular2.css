@@ -1,0 +1,805 @@
+@charset "UTF-8";
+/**
+ * A theme for reveal.js by johannes (baed on white.scss)
+ */
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url("../../lib/font/OpenSans/OpenSans-Regular-webfont.eot");
+  src: url("../../lib/font/OpenSans/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/OpenSans/OpenSans-Regular-webfont.woff") format("woff"), url("../../lib/font/OpenSans/OpenSans-Regular-webfont.ttf") format("truetype"), url("../../lib/font/OpenSans/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSansItalic";
+  src: url("../../lib/font/OpenSans/OpenSans-Italic-webfont.eot");
+  src: url("../../lib/font/OpenSans/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/OpenSans/OpenSans-Italic-webfont.woff") format("woff"), url("../../lib/font/OpenSans/OpenSans-Italic-webfont.ttf") format("truetype"), url("../../lib/font/OpenSans/OpenSans-Italic-webfont.svg#OpenSansItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../../lib/font/OpenSans/OpenSans-Bold-webfont.eot");
+  src: url("../../lib/font/OpenSans/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/OpenSans/OpenSans-Bold-webfont.woff") format("woff"), url("../../lib/font/OpenSans/OpenSans-Bold-webfont.ttf") format("truetype"), url("../../lib/font/OpenSans/OpenSans-Bold-webfont.svg#OpenSansBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "OpenSansExtrabold";
+  src: url("../../lib/font/OpenSans/OpenSans-ExtraBold-webfont.eot");
+  src: url("../../lib/font/OpenSans/OpenSans-ExtraBold-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/OpenSans/OpenSans-ExtraBold-webfont.woff") format("woff"), url("../../lib/font/OpenSans/OpenSans-ExtraBold-webfont.ttf") format("truetype"), url("../../lib/font/OpenSans/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
+  color: #fff; }
+
+strong {
+  color: #a1292b; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: white;
+  background-color: white; }
+
+.reveal {
+  font-family: "OpenSansRegular", sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  color: #2a2b2c; }
+
+::selection {
+  color: #fff;
+  background: #26351C;
+  text-shadow: none; }
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 20px 0;
+  color: #a1292b;
+  font-family: "OpenSansBold", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 2.5em; }
+
+.reveal h2 {
+  font-size: 1.6em; }
+
+.reveal h3 {
+  font-size: 1.3em; }
+
+.reveal h4 {
+  font-size: 1em; }
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong,
+.reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q,
+.reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #0273D4;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
+
+.reveal a:hover {
+  color: #013c6f;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #014a88; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #2a2b2c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
+
+.reveal a img {
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #0273D4;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #0273D4; }
+
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #0273D4; }
+
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #0273D4; }
+
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #0273D4; }
+
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #013c6f; }
+
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #013c6f; }
+
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #013c6f; }
+
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #013c6f; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #0273D4;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/* styles that will make the design cleaner */
+body {
+  font-family: 'OpenSansRegular', sans-serif; }
+
+em, em * {
+  font-family: 'OpenSansItalic', sans-serif; }
+
+img {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important; }
+
+.reveal ul {
+  list-style-type: none; }
+
+.reveal.overview .slides section {
+  background: rgba(0, 0, 0, 0.1); }
+
+.reveal.overview .slides section:hover,
+.reveal.overview .slides section.present {
+  background: rgba(0, 0, 0, 0.3); }
+
+/* a lot small CSS classes for varoius usages */
+.nowrap {
+  white-space: nowrap; }
+
+.pesentation-details {
+  position: absolute;
+  left: 10px;
+  bottom: 5px;
+  color: gray;
+  font-size: 0.8em; }
+  .pesentation-details a {
+    color: #51483D;
+    text-decoration: none; }
+  .pesentation-details a:hover {
+    color: #8B7C69; }
+
+.key {
+  position: relative;
+  bottom: 5px;
+  display: inline-block;
+  line-height: 30px;
+  min-width: 30px;
+  color: #000;
+  padding: 3px !important;
+  text-shadow: none;
+  letter-spacing: 0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: #000000 0 2px 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+  vertical-align: sub !important;
+  margin: 0 7px !important; }
+
+blockquote {
+  margin-top: 40px !important;
+  box-shadow: none; }
+
+/* Pure CSS Blockquote Styling */
+/*
+    <blockquote>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna. Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget leo nunc, nec tempus mi? Curabitur id nisl mi, ut vulputate urna. Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae!
+    <cite>Somebody famous</cite>
+    </blockquote>
+*/
+blockquote:before {
+  font-family: Georgia, serif;
+  display: block;
+  content: "\201C";
+  font-size: 4em;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  color: #2e2e2c; }
+
+.reveal blockquote:after {
+  font-family: Georgia, serif;
+  content: '\201D';
+  font-size: 4em;
+  position: absolute;
+  right: 0px;
+  bottom: -70px;
+  color: #2e2e2c; }
+
+blockquote cite {
+  color: #999999;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px; }
+
+blockquote cite:before {
+  content: "\2014 \2009"; }
+
+ol {
+  margin: 40px 0 0 130px !important; }
+
+small.mini {
+  text-align: left;
+  font-size: 12px;
+  margin-top: 10px;
+  width: 90%; }
+
+small.miniR {
+  text-align: right;
+  font-size: 12px;
+  margin-top: 10px;
+  width: 70%; }
+
+ul.model {
+  margin-top: 30px; }
+  ul.model li {
+    margin-bottom: 30px;
+    color: #494D4D; }
+    ul.model li span {
+      text-align: center;
+      min-width: 220px;
+      display: inline-block;
+      padding: 5px !important;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: #000000 0 2px 5px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+      background-color: #a1292b;
+      color: white;
+      margin-right: 20px; }
+    ul.model li span a {
+      color: white !important; }
+
+.reveal pre {
+  box-shadow: none;
+  margin-top: 30px;
+  padding: 10px; }
+
+.reveal pre code {
+  background-color: white;
+  color: #333; }
+  .reveal pre code.small {
+    font-size: 14px;
+    line-height: 16px;
+    max-height: 500px; }
+  .reveal pre code.mini {
+    font-size: 14px;
+    line-height: 16px;
+    max-height: 800px;
+    width: 100%; }
+  .reveal pre code.lang-bash {
+    background-color: #202020;
+    border: 4px solid silver;
+    border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    box-shadow: 2px 2px 3px #6E6E6E;
+    color: #e2e2e2;
+    display: block;
+    font: 1.2em 'andale mono', 'lucida console', monospace;
+    line-height: 1.5em;
+    overflow: auto;
+    padding: 15px !important;
+    margin-top: 20px; }
+    .reveal pre code.lang-bash::after {
+      content: "_";
+      font-weight: 100;
+      font-size: 30px;
+      color: #2E3D48;
+      -webkit-animation: 1s blink step-end infinite;
+      -moz-animation: 1s blink step-end infinite;
+      -ms-animation: 1s blink step-end infinite;
+      -o-animation: 1s blink step-end infinite;
+      animation: 1s blink step-end infinite; }
+    .reveal pre code.lang-bash span.hljs-keyword {
+      color: #e2e2e2 !important; }
+  .reveal pre code.cmd.small {
+    font-size: 0.85em !important; }
+
+@keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@-moz-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent; }
+  50% {
+    color: white; } }
+
+/* fix font aweseome */
+.fa {
+  display: inline-block !important;
+  font-family: FontAwesome !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  line-height: 1 !important;
+  font-style: normal !important;
+  color: #a1292b; }
+
+/* fix font aweseome */
+.fa-2x {
+  font-size: 2em !important; }
+
+.fa-3x {
+  font-size: 3em !important; }
+
+.fa-4x {
+  font-size: 4em !important; }
+
+.fa-5x {
+  font-size: 5em !important; }
+
+/* fix ionicons */
+.ion {
+  color: #a1292b; }
+
+@media print {
+  .hidePrint {
+    display: none !important;
+    height: 0; } }
+
+/* device preview (iPhone iframe) */
+.device-preview {
+  height: 810px;
+  width: 435px;
+  background: url("../../img/img_iphone-case.png") no-repeat center center;
+  background-size: cover;
+  margin-top: -75px  !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: none;
+  max-height: none; }
+  .device-preview .device-screen {
+    margin: 0;
+    height: 568px;
+    width: 320px;
+    margin-top: 119px;
+    margin-left: 2px;
+    overflow: hidden;
+    background-color: white;
+    /*
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+        */
+    max-width: none;
+    max-height: none; }
+
+/* END: device preview */
+/* cross through things, see http://stackoverflow.com/a/21958440 */
+.cross-through {
+  position: relative;
+  overflow: hidden; }
+
+.cross-through:before,
+.cross-through:after {
+  position: absolute;
+  content: '';
+  background: brown;
+  display: block;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0.5; }
+
+.cross-through:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+/* end: cross out */
+/*
+ * here we are hacking the different styled states into the presentation, eg.
+ * <section data-state="typescript">
+ */
+/* ***************************** TOP Left Logos ***************************** */
+.reveal {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
+
+.typescript .reveal {
+  background-image: url("../../img/states/typescript-logo.png");
+  background-position: 10px 10px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .typescript .reveal h1, .typescript .reveal h2, .typescript .reveal h3, .typescript .reveal h4, .typescript .reveal strong, .typescript .reveal i {
+    color: #007ACC !important; }
+
+.karma .reveal {
+  background-image: url("../../img/states/karma-logo.svg");
+  background-position: 10px 10px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .karma .reveal h1, .karma .reveal h2, .karma .reveal h3, .karma .reveal h4, .karma .reveal strong, .karma .reveal i {
+    color: #429f87 !important; }
+
+.kata .reveal {
+  background-image: none; }
+  .kata .reveal::before {
+    content: "\5957\62F3";
+    color: #a1292b;
+    font-size: 2em;
+    margin-left: 10px;
+    line-height: 1.2em; }
+  .kata .reveal section {
+    width: 1500px !important;
+    margin-left: -125px; }
+    .kata .reveal section ul {
+      list-style-type: disc !important;
+      font-size: 0.8em; }
+    .kata .reveal section code {
+      background-color: ghostwhite !important; }
+
+.universal .reveal {
+  background-image: url("../../img/states/universal-logo.png");
+  background-position: 10px 10px;
+  background-size: 100px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .universal .reveal h1, .universal .reveal h2, .universal .reveal h3, .universal .reveal h4, .universal .reveal strong, .universal .reveal i {
+    color: #258200 !important; }
+  .universal .reveal a {
+    color: #258200; }
+
+.angular2start .reveal {
+  background-image: url("../../img/logos/angular2-logo.svg");
+  background-position: top -80px left -100px, top 20px right 20px;
+  background-size: 500px, 200px; }
+
+@media print {
+  .angular2start .reveal {
+    background-image: url("../../img/logos/angular2-logo.svg");
+    background-position: top -40px left -50px, top 20px right 20px;
+    background-size: 250px, 100px; } }
+
+.github .reveal {
+  background-image: none; }
+  .github .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+  .github .reveal::before {
+    line-height: 1.2em; }
+
+.star .reveal {
+  background-image: none; }
+  .star .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+  .star .reveal::before {
+    line-height: 1.2em; }
+
+.code .reveal {
+  background-image: none; }
+  .code .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+
+.forms .reveal {
+  background-image: none; }
+  .forms .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+
+.refresh .reveal {
+  background-image: none; }
+  .refresh .reveal::before {
+    font: normal normal normal 3em FontAwesome;
+    content: "";
+    color: #a1292b;
+    margin-left: 10px; }
+
+/* ******************* centered Angular 2 Shield logos ********************** */
+/*
+.augury {
+    .reveal {
+
+        div.banner {
+          background: -webkit-linear-gradient(rgb(81,45,168),rgb(103,58,183));
+          background: linear-gradient(rgb(81,45,168),rgb(103,58,183));
+        }
+
+        background-image: url('../../img/augury-logo.svg');
+        background-position: 10px 10px;
+        background-size: 100px;
+
+        @include transition(background-image 0.8s linear);
+        @include color(rgb(103,58,183));
+        a {
+            color: rgb(103,58,183);
+        }
+    }
+}*/
+.ng-shield {
+  margin: auto;
+  width: 353px;
+  height: 372px;
+  background: url("../../img/angular2-shield.svg") no-repeat top left; }
+  .ng-shield::before {
+    font-size: 6em;
+    color: white;
+    line-height: 1.6em; }
+
+.ng-shield-fix-shield::before {
+  margin-left: 16px; }
+
+aside.handsOn {
+  display: none; }
+
+#handsOnMaster {
+  display: block;
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  top: 0;
+  right: 0;
+  background-color: ghostwhite;
+  font-size: 1.6em;
+  width: 400px;
+  height: 100%;
+  z-index: 31;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+  #handsOnMaster .ng-shield {
+    width: 200px;
+    height: 210px;
+    background-size: 100%; }
+    #handsOnMaster .ng-shield::before {
+      font-size: 4.5em;
+      line-height: 1.8em; }
+  #handsOnMaster h3 {
+    color: #a1292b;
+    font-family: 'OpenSansExtrabold'; }
+
+#handsOnDisplay {
+  text-align: left;
+  line-height: 1.3em; }
+  #handsOnDisplay code {
+    font-size: 1.1em;
+    font-family: Courier, monospace !important;
+    padding: 0.1em;
+    margin: 0;
+    background-color: ghostwhite;
+    border-radius: 3px; }
+  #handsOnDisplay li {
+    margin-top: 5px; }
+
+.sectionMoveLeft {
+  margin-left: -200px !important; }

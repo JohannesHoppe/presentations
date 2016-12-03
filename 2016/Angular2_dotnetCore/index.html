@@ -18,12 +18,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/neutral.css" id="theme">
+        <link rel="stylesheet" href="css/theme/angular2.css">
         <link rel="stylesheet" href="lib/font/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="lib/font/ionicons/css/ionicons.min.css" />
 
-        <!-- Code syntax highlighting -->
-        <link href="lib/css/github.css" rel="stylesheet" />
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/github-angular-red.css">
 
         <!-- Printing and PDF exports -->
         <script>
@@ -33,27 +33,16 @@
             link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
             document.getElementsByTagName( 'head' )[0].appendChild( link );
         </script>
-
-        <!--[if lt IE 9]>
-        <script src="lib/js/html5shiv.js"></script>
-        <![endif]-->
-
-        <style>
-
-
-        </style>
     </head>
 
     <body>
-
-        <div class="reveal">
-
-            <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="reveal" id="reveal">
             <div class="slides">
 
                 <section data-state="angular2">
 
-                    <h1 style="font-size: 3.2em; line-height: 1.3em; color: #68217a"><img style="margin-bottom: -100px;" src="img/core-logo.png" width="300px"> Core</h1>
+                    <img src="logos">
+                    <h1 style="font-size: 3.2em; line-height: 1.3em; color: #68217a"><img style="margin-bottom: -100px;" src="img/logos/core-logo.png" width="300px"> Core</h1>
                     <h3 style="font-size: 0.8em;line-height:6em">DDC 2016 DevSession</h3>
 
                 </section>
@@ -75,88 +64,9 @@
                     <small>Rich Landers (Microsoft)</small><!-- <a href="https://blogs.msdn.microsoft.com/dotnet/2016/06/27/announcing-net-core-1-0/">source</a></small>-->
                 </section>
 
-                <section>
+                <section data-markdown="slides/01_entscheidung.md"></section>
+
                 
-                  <section data-markdown>
-                      <script type="text/template">
-                          ### Die erste
-                          # Entscheidung
-                      </script>
-                  </section>
-                  
-                  <section data-markdown>
-                      <script type="text/template">
-                          Option A
-                          # Frontend + Backend<br>getrennt
-                          
-                          <small>z.B. Angular-CLI + Express (node.js)</small>
-                      </script>
-                  </section>  
-
-                  <section data-markdown>
-                      <script type="text/template">
-                          ```ruby|cmd|small
-                          $ npm install -g angular-cli
-                          $ ng new book-rating
-                          $ cd book-rating
-                          $ npm start
-                          ```
-                      </script>
-                  </section> 
-                  
-                  <section data-markdown>
-                      <script type="text/template">
-                          Option B
-                          # Frontend + Backend<br>zusammen
-                          
-                          <small>z.B. Microsoft ASP.NET Core JavaScript Services</small>
-                      </script>
-                  </section>
-
-                  <section data-markdown>
-                      <script type="text/template">
-                          ```ruby|cmd|small
-                          $ npm install -g yo generator-aspnetcore-spa
-                          $ cd some-empty-directory
-                          $ yo aspnetcore-spa
-                          $ dotnet run
-                          ```
-                      </script>
-                  </section>                   
-
-                  <section data-markdown>
-                      <script type="text/template">
-                          # Visual Studio ?
-                      </script>
-                  </section> 
-                  
-                  <section data-markdown>
-                      <script type="text/template">
-                          ![Angular 2 TypeScript Snippets for VS Code](img/vscode.gif)  <!-- .element: width="80%" -->
-                          ## Visual Studio Code
-                      </script>
-                  </section>
-                </section>
-                
-                
-                <section>
-
-
-
-
-
-
-
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            <i class="ng-shield fa fa-github "></i>
-                            ## <a href="https://github.com/angular/angular-cli" style="color: #a1292b" target="_blank">Angular CLI</a>
-                        </script>
-                    </section>
-
-
-                </section>
 
 
 
@@ -174,10 +84,11 @@
                         </a>
                       </div>
                     </div>
-
-                    </section>
+                  </section>
                 </section>  
-                
+   
+                <section data-markdown="slides/end.md" data-state="angular2start" class="hidePrint"></section>
+            
 
             </div>
 
@@ -185,7 +96,8 @@
 
         <div class="pesentation-details hidePrint">
             <p>
-                <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span>
+                @JohannesHoppe
+                <span >| <a href="?print-pdf" tooltip="activates PDF print stylesheet" target="_blank">Print PDF</a></span> - <a href="/" style="font-weight: bold; text-decoration: underline;">zurück</a>
             </p>
         </div>
 
@@ -194,14 +106,8 @@
         <script src="js/reveal.min.js"></script>
 
         <script>
-
-            // Full list of configuration options available at:
-            // https://github.com/hakimel/reveal.js#configuration
+            // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
-
-               // width: '960',
-               // height: '700',
-
                 minScale: 0.2,
                 maxScale: 1.0,
                 controls: true,
@@ -211,22 +117,21 @@
 
                 transition: 'convex', // none/fade/slide/convex/concave/zoom
 
-                // Optional reveal.js plugins
+                // More info https://github.com/hakimel/reveal.js#dependencies
                 dependencies: [
-                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown-hacked.js' }, // HACKED!!
                     { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     // own:
                     { src: 'plugin/showSource/jqlite.min.js' },
                     { src: 'plugin/showSource/http.min.js' },
                     { src: 'plugin/showSource/enhanceCodeBlocks.js' },
-                    { src: 'plugin/showSource/showSource.js' }
+                    { src: 'plugin/showSource/showSource.js' },
+                    { src: 'plugin/handsOn/handsOn.js' }
+
                 ]
             });
-
         </script>
     </body>
 </html>

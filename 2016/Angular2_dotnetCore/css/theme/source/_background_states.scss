@@ -1,3 +1,18 @@
+/*
+ * here we are hacking the different styled states into the presentation, eg.
+ * <section data-state="typescript">
+ */
+
+ // for top-left logos are not images but icon-fonts
+@mixin revealAwesome ($content) {
+    &::before {
+        font: normal normal normal 3em FontAwesome;
+        content: $content;
+        color: $headingColor;
+        margin-left: 10px;
+    }
+}
+
 @mixin transition ($t) {
     -webkit-transition: $t;
     -moz-transition: $t;
@@ -11,8 +26,12 @@
     }
 }
 
+/* ***************************** TOP Left Logos ***************************** */
+// states folder: here i usally make those logos a bit smaller and reduce details, and/or make it a bit transparent
+// logos folder: untouched logos, can be used in states or in the content
+
 .reveal {
-    background-image: url('../../img/pixel.png');
+    background-image: none;
     background-repeat: no-repeat;
     background-position: left top;
 
@@ -21,7 +40,7 @@
 
 .typescript {
     .reveal {
-        background-image: url('../../img/typescript-logo-state.png');
+        background-image: url('../../img/states/typescript-logo.png');
         background-position: 10px 10px;
 
         @include transition(background-image 0.8s linear);
@@ -31,7 +50,7 @@
 
 .karma {
     .reveal {
-        background-image: url('../../img/logo-karma-state.svg');
+        background-image: url('../../img/states/karma-logo.svg');
         background-position: 10px 10px;
 
         @include transition(background-image 0.8s linear);
@@ -39,10 +58,39 @@
     }
 }
 
+.kata {
+    .reveal {
+
+        background-image: none;
+
+        &::before {
+            content: "\5957\62F3";
+            color: $headingColor;
+            font-size: 2em;
+            margin-left: 10px;
+            line-height: 1.2em;
+        }
+
+        section {
+            // stretching because of big bullet points, this might break on different ratious
+            width: 1500px !important;
+            margin-left: -125px;
+
+            ul {
+                list-style-type: disc !important;
+                font-size: 0.8em;
+            }
+
+            code {
+                background-color: ghostwhite !important;
+            }
+        }
+    }
+}
 
 .universal {
     .reveal {
-        background-image: url('../../img/universal.png');
+        background-image: url('../../img/states/universal-logo.png');
         background-position: 10px 10px;
         background-size: 100px;
 
@@ -54,6 +102,69 @@
     }
 }
 
+.angular2start {
+    .reveal {
+        background-image: url('../../img/logos/angular2-logo.svg');// , url('../../img/logos/developer_media_logo.jpg');
+        background-position: top -80px left -100px, top 20px right 20px;
+        background-size: 500px, 200px;
+    }
+}
+
+@media print {
+    .angular2start {
+        .reveal {
+            background-image: url('../../img/logos/angular2-logo.svg');// , url('../../img/logos/developer_media_logo.jpg');
+            background-position: top -40px left -50px, top 20px right 20px;
+            background-size: 250px, 100px;
+        }
+    }
+}
+
+.github {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f09b");
+        &::before {
+            line-height: 1.2em;
+        }
+    }
+}
+
+.star {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f006");
+        &::before {
+            line-height: 1.2em;
+        }
+    }
+}
+
+.code {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f121");
+    }
+}
+
+.forms {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f046");
+    }
+}
+
+.refresh {
+    .reveal {
+        background-image: none;
+        @include revealAwesome("\f021");
+    }
+}
+
+/* ******************* centered Angular 2 Shield logos ********************** */
+
+
+/*
 .augury {
     .reveal {
 
@@ -72,7 +183,7 @@
             color: rgb(103,58,183);
         }
     }
-}
+}*/
 
 .ng-shield {
     margin: auto;
@@ -93,52 +204,3 @@
     }
 }
 
-@mixin revealAwesome ($content) {
-    &::before {
-        font: normal normal normal 3em FontAwesome;
-        content: $content;
-        color: $headingColor;
-        margin-left: 10px;
-    }
-}
-
-.github {
-    .reveal {
-        background-image: none;
-        @include revealAwesome("\f09b")
-        &::before {
-            line-height: 1.2em;
-        }
-    }
-}
-
-.star {
-    .reveal {
-        background-image: none;
-        @include revealAwesome("\f006")
-        &::before {
-            line-height: 1.2em;
-        }
-    }
-}
-
-.code {
-    .reveal {
-        background-image: none;
-        @include revealAwesome("\f121")
-    }
-}
-
-.forms {
-    .reveal {
-        background-image: none;
-        @include revealAwesome("\f046")
-    }
-}
-
-.refresh {
-    .reveal {
-        background-image: none;
-        @include revealAwesome("\f021")
-    }
-}
