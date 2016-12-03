@@ -53,9 +53,8 @@
 
                 <section data-state="angular2">
 
-                    <h1 style="font-size: 3.2em; line-height: 1.3em;">Angular & .NET Core
-                        <span style="font-size: 3.2em;display:block; margin-top: -190px; margin-left: 660px;">2</span></h1>
-                    <h3 style="font-size: 0.8em;line-height:2.3em">DDC 2016 DevSession</h3>
+                    <h1 style="font-size: 3.2em; line-height: 1.3em; color: #68217a"><img style="margin-bottom: -100px;" src="img/core-logo.png" width="300px"> Core</h1>
+                    <h3 style="font-size: 0.8em;line-height:6em">DDC 2016 DevSession</h3>
 
                 </section>
                 
@@ -64,363 +63,90 @@
                     Angular 1 is a framework.<br>Angular 2 is a platform.<br>
                     
                     </blockquote>
-                    Brad Green<br><small>(Eng Director of Angular)</small>
-                </section>
-
-                <section data-markdown>
-                    <script type="text/template">
-                        # Highlights
-                    </script>
-                </section>
-
-                <section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Millions](img/loved-by-millions.png)  <!-- .element: width="80%" -->
-                            ## Millionen Nutzer
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![!Trend1](img/trend1.png)
-
-                            <small>
-                                <span style="color:#3f85f2">React</span>,
-                                <span style="color:#dd4437">Ember</span>,
-                                <span style="color:#f4b400">Angular 2</span>,
-                                <span style="color:#0f9d58">Aurelia</span>
-                                <i class="fa fa-arrow-right"></i>
-                                [Google Trends](https://www.google.com/trends/explore#q=reactjs%2Breact.js-jsx%2C%20emberjs%2Bember.js%20%2B%20ember2%2Bember%20js%202%2Bember%202.0%2C%20angular2%2Bangularjs%202%2Bangular%20js%202%2Bangularjs%202.0%20-angular%20acceleration%20-angular%20velocity%20-angular%20speed%20-angular%20momentum-angular%20displacement-angular%20frequency-angular%20momentum%202-web%20api%202%2C%20Aureliajs%2BAurelia.js&date=1%2F2011%2066m&cmpt=q&tz=Etc%2FGMT%2B8)
-                            </small>
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![!Trend1](img/trend2.png)
-
-                            <small>
-                                <span style="color:#3f85f2">React</span>,
-                                <span style="color:#dd4437">Ember</span>,
-                                <span style="color:#f4b400">Angular 2</span>,
-                                <span style="color:#0f9d58">Aurelia</span>,
-                                <span style="color:#7e3794">AngularJS</span>
-                                <i class="fa fa-arrow-right"></i>
-                                [Google Trends](https://www.google.com/trends/explore#q=reactjs%2Breact.js-jsx%2C%20emberjs%2Bember.js%20%2B%20ember2%2Bember%20js%202%2Bember%202.0%2C%20angular2%2Bangularjs%202%2Bangular%20js%202%2Bangularjs%202.0%20-angular%20acceleration%20-angular%20velocity%20-angular%20speed%20-angular%20momentum-angular%20displacement-angular%20frequency-angular%20momentum%202-web%20api%202%2C%20Aureliajs%2BAurelia.js%2C%20AngularJS&date=1%2F2011%2066m&cmpt=q&tz=Etc%2FGMT%2B8)
-                            </small>
-                        </script>
-                    </section>
-
-                </section>
-
-
-
-
-
-                <section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![ANgular Material](img/material-big.png)
-                            ## <a style="color:#0273D4" href="https://github.com/angular/angular-cli" style="color: #a1292b" target="_blank">Angular Material</a>
-                        </script>
-                    </section>
-                    
-                    <section data-markdown>
-                        <script type="text/template">
-                            ```ruby|cmd|small
-                            $ npm install -g 
-                                git+https://git@github.com/Angular2Buch/angular-cli-material-flag.git
-                            $ ng new mini-rating --material
-                            $ cd mini-rating
-                            $ npm start
-                            ```
-
-                            <small>(siehe [#1038](https://github.com/angular/angular-cli/pull/1038))</small>
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ```typescript|contenteditable|small|spellcheck=false
-                            // app.component.ts
-                            import { Component } from '@angular/core';
-                            import { MdToolbar } from '@angular2-material/toolbar';
-                            import { MdButton } from '@angular2-material/button';
-                            import { MdSlideToggle } from '@angular2-material/slide-toggle';
-                            
-                            @Component({
-                              moduleId: module.id,
-                              selector: 'app-root',
-                              templateUrl: 'app.component.html',
-                              directives: [MdToolbar, MdButton, MdSlideToggle]
-                            })
-                            export class AppComponent {
-                              title = 'DWX app works!';
-                            }
-                            ```
-
-                            <small>[Components](https://justindujardin.github.io/ng2-material/)</small>
-                        
-                            <small class="mini">
-                                mtimp1, mtdir1
-                            </small>
-                        </script>
-                    </section>
-
-                     <section data-markdown>
-                        <script type="text/template">
-                            ```html|contenteditable|small|spellcheck=false
-                            <!-- app.component.html --->
-                            <md-toolbar color="primary">
-                              {{ title }}
-                            </md-toolbar>
-                            
-                            <div style="padding: 7px">
-                              <button md-button>Basic Button</button>
-                              <button md-raised-button>Raised Button</button>
-                            
-                              <md-slide-toggle>Slide Toggle</md-slide-toggle>
-                            </div>
-                            ```
-
-                            <small class="mini">
-                                mtsimple
-                            </small>
-                        </script>
-                    </section>                   
-
-                     <section data-markdown>
-                        <script type="text/template">
-                            ### Heureka! <!-- .element: style="color:#009688" -->
-                            ![Demo](img/material-demo.png)
-                        </script>
-                    </section>      
-
-                    <!-- http://plnkr.co/edit/o077B6uEiiIgkC0S06dd?p=preview -->
-
+                    <small>Brad Green (Google)</small>
                 </section>
                 
-
-
-
-
                 <section>
+                    <blockquote>
+                     We’ve rebuilt the foundation of .NET: [...] [for]<!--to be targeted at the needs of today’s world:-->
+                     highly distributed cloud applications, micro services and containers.
                     
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Speed Performance](img/speed-performance.svg)  <!-- .element: width="60%" -->
-                            ## Speed & Performance
-
-                            <small>Server-side rendering, Web Workers, Change Detection...</small>
-                        </script>
-                    </section>
-
-                    <section data-state="universal" data-markdown>
-                        <script type="text/template">
-                            ![Universal](img/universal.png) <!-- .element: width="35%" -->
-                            ### Angular Universal
-                            <small>[github.com/angular/universal](https://github.com/angular/universal)</small>
-                            
-                            <aside class="notes">    
-                            Angular Universal will allow developers to run their Angular 2 applications directly on the server. With Angular 1, the applications always ran on the client side, which made things like search engine optimization (SEO) and social sharing links difficult to implement as web crawlers generally do not execute JavaScript before scraping a webpage.
-                            Applications are built just as they would be on the front end with some slight changes to accompany features that servers do not have available such as setting up a redis store instead of localstorage. Angular Universal apps are rendered on the server and then sent to the client. This greatly decreases load times on mobile devices and makes the apps feel snappier.
-                            </aside>
-                        </script>
-                    </section>
-
-                    <section>
-                        <blockquote>
-                        <strong>Note:</strong><br>Universal currently only<br>works with router-deprecated
-                        </blockquote>
-
-                        <small><a href="https://github.com/angular/universal#best-practices">Quelle</a></small>
-                         </script>
-                    </section>
-
-                    <section  data-markdown>
-                        <script type="text/template">
-                            ### Angular 2 offline<br>template compilation
-                            <br>
-
-                            * NPM: angular2-template-compiler
-                            * typescript@next (nightly builds)
-                        </script>
-                    </section>
-
-                    <section  data-markdown>
-                        <script type="text/template">
-                        ![Universal](img/offline-template.png) <!-- .element: style="margin-top:-100px" -->
-
-                        <small>
-                        * kein Template Compiler im Browser
-                        * kein Template Parsing im Browser
-                        * Kein Directive Lookup im Browser
-                        </small>
-
-                        <small>[Quelle](https://medium.com/@richavyas/aha-moments-from-ngconf-2016-part-1-angular-2-0-compile-cycle-6f462f68632e#.a5bk7066h)</small>
-                        </script>
-                    </section>
-
-                    <!--
-                     <section data-markdown>
-                        <script type="text/template">
-                            ```ruby|cmd|small
-                            $ npm install book-monkey2-api --saveDev
-                            $ ng serve
-                            ```
-                        </script>
-                    </section>    
-                    -->  
-
-                    <section  data-markdown>
-                        <script type="text/template">
-                            ### Change Detection...
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ```typescript|contenteditable|small|spellcheck=false
-                            // app.component.ts
-                            import { Component, OnInit } from '@angular/core';
-                            import { Http } from '@angular/http'; // not forget: HTTP_PROVIDERS
-                            import { MD_LIST_DIRECTIVES } from '@angular2-material/list/';
-                            import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';
-                            
-                            export class Book {
-                              constructor(public title: string,
-                                          public description: string,
-                                          public rating: number = 0) { }
-                            }
-                            
-                            @Component({
-                              moduleId: module.id,
-                              selector: 'app-root',
-                              templateUrl: 'app.component.html',
-                              directives: [MD_LIST_DIRECTIVES, MD_TOOLBAR_DIRECTIVES]
-                            })
-                            export class AppComponent implements OnInit {
-                              title: string = 'DWX app works!';
-                              books: Book[];
-                              constructor(private http: Http) { }
-                            
-                              ngOnInit() {
-                                this.http
-                                  .get('http://book-monkey2-api.angular2buch.de/books')
-                                  .subscribe(response => {
-                                    this.books = response.json();
-                                  });
-                              }
-                            }
-                            ```
-
-                            <small class="mini">
-                                mtimp2, mtbook, mtdir2, mtinit, mtget  
-                                import {HTTP_PROVIDERS} from '@angular/http';  
-                                bootstrap(AppComponent, [HTTP_PROVIDERS]);
-                            </small>
-                        </script>
-                    </section>
-
-                     <section data-markdown>
-                        <script type="text/template">
-                            ```html|contenteditable|small|spellcheck=false
-                            <!-- app.component.html --->
-                            <md-toolbar color="primary">
-                            {{ title }}
-                            </md-toolbar>
-
-                            <div style="padding: 7px">
-                            
-                            <md-content>
-
-                                <md-list>
-                                    <md-list-item class="md-3-line  md-long-text" *ngFor="let book of books; let index = index" style="margin-top: 20px;">
-                                    <img [src]="book.thumbnails[0].url" class="md-avatar" width="50" />
-                                    <div class="md-list-item-text" >
-                                        <h3>{{ book.title }}</h3>
-                                        <p>{{ book.description }}</p>
-                                    </div>
-                                    </md-list-item>
-                                </md-list>
-
-                            </md-content>
-                            </div>
-                            ```
-                            
-                            <small class="mini">
-                                mtlist  
-                                mtfix  
-                                &lt;style&gt;
-                                .md-list-item { height:auto !important; }
-                                img { margin: 10px }
-                                &lt;/style&gt;
-                            </small>
-                        </script>
-                    </section> 
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            <div style="background-color:silver">
-                            ![CD](img/change-detection.svg)  <!-- .element: width="60%" -->
-                            </div>
-
-                            <!--
-                            <ul class="tracks" style="margin-top: 50px;">
-
-                                    <li><img src="img/speaker/Precht-Pascal.png">
-
-                                    <p>
-                                        <strong>Pascal Precht</strong><br>
-                                        <small>Dienstag 11:45 - 12:45</small><br>
-                                        Angular 2 Change Detection Explained
-                                    </p>
-                                </li>
-                            </ul>
-                            -->
-                        </script>
-                    </section>
-
+                    </blockquote>
+                    <small>Rich Landers (Microsoft)</small><!-- <a href="https://blogs.msdn.microsoft.com/dotnet/2016/06/27/announcing-net-core-1-0/">source</a></small>-->
                 </section>
 
+                <section>
+                
+                  <section data-markdown>
+                      <script type="text/template">
+                          ### Die erste
+                          # Entscheidung
+                      </script>
+                  </section>
+                  
+                  <section data-markdown>
+                      <script type="text/template">
+                          Option A
+                          # Frontend + Backend<br>getrennt
+                          
+                          <small>z.B. Angular-CLI + Express (node.js)</small>
+                      </script>
+                  </section>  
 
+                  <section data-markdown>
+                      <script type="text/template">
+                          ```ruby|cmd|small
+                          $ npm install -g angular-cli
+                          $ ng new book-rating
+                          $ cd book-rating
+                          $ npm start
+                          ```
+                      </script>
+                  </section> 
+                  
+                  <section data-markdown>
+                      <script type="text/template">
+                          Option B
+                          # Frontend + Backend<br>zusammen
+                          
+                          <small>z.B. Microsoft ASP.NET Core JavaScript Services</small>
+                      </script>
+                  </section>
 
+                  <section data-markdown>
+                      <script type="text/template">
+                          ```ruby|cmd|small
+                          $ npm install -g yo generator-aspnetcore-spa
+                          $ cd some-empty-directory
+                          $ yo aspnetcore-spa
+                          $ dotnet run
+                          ```
+                      </script>
+                  </section>                   
 
-
+                  <section data-markdown>
+                      <script type="text/template">
+                          # Visual Studio ?
+                      </script>
+                  </section> 
+                  
+                  <section data-markdown>
+                      <script type="text/template">
+                          ![Angular 2 TypeScript Snippets for VS Code](img/vscode.gif)  <!-- .element: width="80%" -->
+                          ## Visual Studio Code
+                      </script>
+                  </section>
+                </section>
+                
+                
                 <section>
 
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Angular 2 TypeScript Snippets for VS Code](img/vscode.gif)  <!-- .element: width="80%" -->
-                            ## Tooling
 
-                            <small class="mini">Angular 2 TypeScript Snippets for VS Code:<br>
-                            ng2component (creates an Angular 2 component)<br>
-                            ng2service (creates an Angular 2 service)</small>
-                        </script>
-                    </section>
 
-                    <section data-state="augury" data-markdown>>
-                        <script type="text/template">
-                            <div class="banner" style="width: 3000px; margin-left: -1000px; height: 420px; padding-top: 50px; padding-bottom: 50px">
-                                ![Universal](img/augury-logo.svg) <!-- .element: width="35%" -->
-                            </div>
-                            ### Angular Augury
-                            <small>[augury.angular.io](https://augury.angular.io/)</small>
-                        </script>
-                    </section>
 
-                    <section data-state="augury" data-markdown>>
-                        <script type="text/template">
-                            ![Augury](img/augury-screenloop.gif)
 
-                            <small>[augury.angular.io/demo/](https://augury.angular.io/demo/)</small>
-                            
-                        </script>
-                    </section>
+
+
 
                     <section data-markdown>
                         <script type="text/template">
@@ -429,170 +155,11 @@
                         </script>
                     </section>
 
-                    <section>
-                        <div class="device-preview" style="overflow: hidden; float:left; display:block;"">
-                            <iframe class="device-screen" src="https://angular2buch.de/angular-2-book-rating-app/src/" d></iframe>
-                        </div>
-
-                        <ul class="tracks" style="display:block;float:right;margin-top: 500px;margin-left:50px">
-                            <li><img src="img/speaker/Woiwode-Gregor.png">
-                                <p>
-                                    <strong>Gregor Woiwode</strong><br>
-                                    <small>& Johannes Hoppe<br>
-                                    Dienstag 14:15 - 16:15<br><br></small><br>
-                                    DevSession:<br>Schnellstart mit Angular 2
-                                </p>
-                            </li>
-                        </ul>
-                    </section>
 
                 </section>
 
 
 
-
-
-
-
-
-
-                <section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Cross Platform](img/responsive-framework.svg)  <!-- .element: width="60%" -->
-                            ## 100% Cross-Platform
-
-                            web, mobile web, native mobile, native desktop, iot...
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Ionic 2](img/ionic2.png)  <!-- .element: width="30%"  style="margin-top: -30px;" -->
-                            <h1 style="color: #4e8ef7;">Ionic 2</h1>
-
-                            <ul class="tracks" style="margin-top: 20px;">
-                                <li><img src="img/speaker/Reimler-Simon-Martin.png">
-
-                                    <p>
-                                        <strong style="color: #4e8ef7;">Simon Martin Reimler</strong><br>
-                                        <small>Dienstag 11:45 - 12:45</small><br>
-                                        Ionic Apps mit Cloud Backend Services - Ein Dreamteam
-                                    </p>
-                                </li>
-                            </ul>
-                        </script>
-                    </section>
-                    
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Angular2 Platform Agnostic](img/Angular2-platform-agnostic.png "Angular2 Platform Agnostic")
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![NativeScript](img/nativescript-loves-angular.png)
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Angular2 with NativeScript](img/Angular2-with-NativeScript.png "Angular2 with NativeScript")
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ```typescript|contenteditable|spellcheck=false
-                            @Component({
-                              selector: "my-app",
-                              template: `<Page>
-                                <StackLayout>
-                                  <Button text="Tap Me" (tap)="onTap()"></Button>
-                                  <Label [text]="counter"></Label>
-                                  <Label *ngIf="counter>10" text="WOW!!!"></Label>
-                                </StackLayout>
-                              </Page>`
-                            })
-                            export class MyComponent {
-                              counter: number = 0;
-                              onTap() { this.counter++; }
-                            }
-                            ```
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Angular2 with NativeScript](img/LoginScreen.png) <!-- .element: style="float:left; display:block;" width="45%" -->
-
-
-                            <ul class="tracks" style="display:block;float:right;margin-top: 300px;margin-left:50px">
-                                <li><img src="img/speaker/Witalec-Sebastian.png">
-                                    <p>
-                                    <strong>Sebastian Witalec</strong>
-                                        <small> & Johannes Hoppe<br>
-                                        <strong>Mittwoch</strong> 9:00 - 10:00<br><br></small><br>
-                                        Native Mobile Apps mit NativeScript & Angular 2
-                                    </p>
-                                </li>
-                            </ul>
-                            
-                            </section>
-                        </script>
-                    </section>
-                    
-                </section>
-
-
-
-                <section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![AngularJS 1](img/AngularJS-large.png)
-                            ### @angular/upgrade
-                        </script>
-                    </section>
-                    
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ```typescript|contenteditable|spellcheck=false
-                            import { UpgradeAdapter } from '@angular/upgrade';
-
-                            var upgradeAdapter = new UpgradeAdapter();
-                            var app = angular.module('myApp', []); // OLD AngularJS 1 App
-
-                            upgradeAdapter.bootstrap(document.body, ['myApp']);
-                            ```
-
-                            <!-- http://blog.thoughtram.io/angular/2015/10/24/upgrading-apps-to-angular-2-using-ngupgrade.html -->
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ![Upgrade](img/manfregNgUpgrade.png) <!-- .element: width="75%" style="margin-top:-30px;margin-right:0px" -->
-
-
-                            <ul class="tracks">
-                                <li><img src="img/speaker/Steyer-Manfred.png">
-                                
-                                    <p>
-                                        <strong>Manfred Steyer</strong><br>
-                                        <small>Dienstag 16:45 - 18:45</small><br>
-                                        DevSession: Angular 2 Upgrade-Workshop<br><br>
-                                    </p>
-                                </li>
-                            </ul>
-                            
-                            </section>
-                        </script>
-                    </section>
-                </section>
 
                 <section data-state="prequel">
                   <section>
@@ -608,79 +175,9 @@
                       </div>
                     </div>
 
-                    <br>
-
-                    <small>
-                        <a href="http://haushoppe-its.de/" target="_blank">Johannes Hoppe</a> |
-                        <a href="http://woiwode.info/" target="_blank">Gregor Woiwode</a> |
-                        <a href="http://d-koppenhagen.de" target="_blank">Danny Koppenhagen</a> |
-                        <a href="http://ferdinand-malcher.de/" target="_blank">Ferdinand Malcher</a>
-                    </small>
                     </section>
                 </section>  
                 
-                <section data-state="angular2">
-                
-                    <h3>Angular 2 Talks</h3>
-                    <ul class="tracks">
-                        <li style="opacity:0.4"><img src="img/speaker/Korinth-Timo.png">
-
-                            <p>
-                                <strong>Timo Korinth</strong><br>
-                                <small>Dienstag 9:00 - 10:00</small><br>
-                                Speed-up AngularJS - Hochperformante Webanwendungen bauen
-                            </p>
-                        </li>
-
-                        <li style="opacity:0.4"><img src="img/speaker/Hoppe-Johannes.png">
-                            
-                            <p>
-                                <strong>Johannes Hoppe</strong><br>
-                                <small>Dienstag 10:30 - 11:30</small><br>
-                                Angular 2: Überlick mit Live-Coding<br><br>
-                            </p>
-                        </li>
-
-                        <li><img src="img/speaker/Reimler-Simon-Martin.png">
-
-                            <p>
-                                <strong>Simon Martin Reimler</strong><br>
-                                <small>Dienstag 11:45 - 12:45</small><br>
-                                Ionic Apps mit Cloud Backend Services - Ein Dreamteam
-                            </p>
-                        </li>
-
-                        <li><img src="img/speaker/Woiwode-Gregor.png">
-
-                            <p>
-                                <strong>Gregor Woiwode</strong><br>
-                                <small>& Johannes Hoppe<br>
-                                Dienstag 14:15 - 16:15<br><br></small><br>
-                                DevSession:<br>Schnellstart mit Angular 2
-                            </p>
-                        </li>
-
-                        <li><img src="img/speaker/Steyer-Manfred.png">
-                        
-                            <p>
-                                <strong>Manfred Steyer</strong><br>
-                                <small>Dienstag 16:45 - 18:45</small><br>
-                                DevSession: Angular 2 Upgrade-Workshop<br><br>
-                            </p>
-                        </li>
-
-                        <li><img src="img/speaker/Witalec-Sebastian.png">
-                            <p>
-                            <strong>Sebastian Witalec</strong>
-                                <small> & Johannes Hoppe<br>
-                                <strong>Mittwoch</strong> 9:00 - 10:00<br><br></small><br>
-                                Native Mobile Apps mit NativeScript & Angular 2
-                            </p>
-                        </li>
-
-                    </ul>
-                
-                </section>
 
             </div>
 

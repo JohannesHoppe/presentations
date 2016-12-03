@@ -2,7 +2,7 @@
 
 .angular2 {
     .reveal {
-        background-image: url('../../img/angular2-logo.svg'), url( '../../img/dwx-logo.png');
+        background-image: url('../../img/angular2-logo.svg'); //, url( '../../img/dwx-logo.png');
         //background-position: 10px 10px;
         background-position: top -80px left -100px, top 10px right 30px;
         background-size: 500px, 150px;
@@ -10,8 +10,6 @@
         //@include transition(background-image 0.4s linear);
         //@include color(#007ACC);
     }
-
-
 }
 
 
