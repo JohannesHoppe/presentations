@@ -1,0 +1,65 @@
+{
+/*
+	 // Place your snippets for HTML here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+	 "material-simple": {
+		"prefix": "mtsimple",
+		"body": [
+				"<md-toolbar color=\"primary\">",
+				"	{{ $1 }}",
+				"</md-toolbar>",
+				"",
+				"<div style=\"padding: 7px\">",
+				"	<button md-button>Basic Button</button>",
+				"	<button md-raised-button>Raised Button</button>",
+				"",
+				"	<md-slide-toggle>Slide Toggle</md-slide-toggle>",
+				"</div>"
+		],
+		"description": "Material Buttons"
+	 },
+
+	 "material-fix": {
+		"prefix": "mtfix",
+		"body": [
+			"<style> .md-list-item { height:auto !important; } img { margin: 10px } </style>"
+		],
+		"description": "Fixes HTML Styling"
+	},
+
+
+	"material-list": {
+		"prefix": "mtlist",
+		"body": [
+			"<div style=\"padding: 7px\">",
+			"",
+			"<md-content>",
+			"",
+			"    <md-list>",
+			"        <md-list-item class=\"md-3-line  md-long-text\" *ngFor=\"let $2 of $1; let index = index\" style=\"margin-top: 20px;\">",
+			"        <img [src]=\"book.thumbnails[0].url\" class=\"md-avatar\" width=\"50\" />",
+			"        <div class=\"md-list-item-text\" >",
+			"            <h3>{{ $2.$3 }}</h3>",
+			"            <p>{{ $2.$4 }}</p>",
+			"        </div>",
+			"        </md-list-item>",
+			"    </md-list>",
+			"",
+			"</md-content>",
+			"</div>"
+		],
+		"description": "Material ngFor List"
+	}
+}

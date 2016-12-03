@@ -1,0 +1,94 @@
+{
+/*
+	 // Place your snippets for TypeScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+	 "Material Book": {
+		"prefix": "mtbook",
+		"body": [
+			"export class Book {",
+			"  constructor(public title: string,",
+			"              public description: string,",
+			"              public rating: number = 0) { }",
+			"}"
+		],
+		"description": "book class"
+	},
+
+	 "Material Imports 1": {
+		"prefix": "mtimp1",
+		"body": [
+			"import { MdToolbar } from '@angular2-material/toolbar';",
+			"import { MdButton } from '@angular2-material/button';",
+			"import { MdSlideToggle } from '@angular2-material/slide-toggle';"
+		],
+		"description": "Material Imports 1"
+	},
+
+	 "Material Imports 2": {
+		"prefix": "mtimp2",
+		"body": [
+			"import { Component, OnInit } from '@angular/core';",
+			"import { Http } from '@angular/http'; // not forget: HTTP_PROVIDERS",
+			"import { MD_LIST_DIRECTIVES } from '@angular2-material/list/';",
+			"import { MD_TOOLBAR_DIRECTIVES } from '@angular2-material/toolbar';"
+		],
+		"description": "Material Imports 1"
+	},
+
+	 "Material Directives 1": {
+		"prefix": "mtdir1",
+		"body": [
+			"directives: [MdToolbar, MdButton, MdSlideToggle]"
+		],
+		"description": "Material Directives 1"
+	},
+
+	"Material Directives 2": {
+		"prefix": "mtdir2",
+		"body": [
+			"directives: [MD_LIST_DIRECTIVES, MD_TOOLBAR_DIRECTIVES]"
+		],
+		"description": "Material Directives 2"
+	},
+
+	"Material: implements OnInit": {
+		"prefix": "mtinit",
+		"body": [
+			"implements OnInit {",
+			"   $1",
+			"",
+			"	constructor($2) { }",
+			"",
+			"	ngOnInit() {",
+			"     $3",
+			"	}",
+			"}"
+		],
+		"description": "Material: implements OnInit"
+	},
+
+
+	"Material: http get": {
+		"prefix": "mtget",
+		"body": [
+			"this.http",
+			"  .get('http://book-monkey2-api.angular2buch.de/books')",
+			"  .subscribe(response => {",
+			"    this.books = response.json();",
+			"  });"
+		],
+		"description": "Material: http get"
+	}
+}
