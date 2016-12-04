@@ -56,16 +56,13 @@ $ npm install -g yo generator-aspnetcore-spa
 $ yo aspnetcore-spa
 $ dotnet run
 ```
-oder
+
+
+
+
+## Fixme!<br><small>clean restore</small>
 ```bash
-$ git clone https://github.com/JohannesHoppe/angularCore.git .
-```
-
-
-
-
-## Hinweis: bei Github Clone 
-```bash
+$ git clone https://git.io/v1lnP .
 $ dotnet restore
 $ npm install
 $ npm run fixme

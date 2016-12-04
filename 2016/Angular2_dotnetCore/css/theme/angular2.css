@@ -622,6 +622,20 @@ ul.model {
   -o-transition: none;
   transition: none; }
 
+.core .reveal {
+  background-image: url("../../img/logos/core-logo.svg");
+  background-position: 10px 10px;
+  background-size: 100px, 100px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .core .reveal h1, .core .reveal h2, .core .reveal h3, .core .reveal h4, .core .reveal strong, .core .reveal i {
+    color: #68217a !important; }
+  .core .reveal section ul {
+    list-style-type: disc !important;
+    font-size: 0.8em; }
+
 .typescript .reveal {
   background-image: url("../../img/states/typescript-logo.png");
   background-position: 10px 10px;
@@ -633,7 +647,7 @@ ul.model {
     color: #007ACC !important; }
 
 .karma .reveal {
-  background-image: url("../../img/states/karma-logo.svg");
+  background-image: none;
   background-position: 10px 10px;
   -webkit-transition: background-image 0.8s linear;
   -moz-transition: background-image 0.8s linear;
@@ -641,6 +655,9 @@ ul.model {
   transition: background-image 0.8s linear; }
   .karma .reveal h1, .karma .reveal h2, .karma .reveal h3, .karma .reveal h4, .karma .reveal strong, .karma .reveal i {
     color: #429f87 !important; }
+  .karma .reveal a {
+    color: #337b68;
+    font-size: 0.8em; }
 
 .kata .reveal {
   background-image: none; }

@@ -38,6 +38,30 @@
     @include transition(none);
 }
 
+.core {
+    .reveal {
+        background-image: url('../../img/logos/core-logo.svg');
+        background-position: 10px 10px;
+        background-size: 100px, 100px;
+
+        @include transition(background-image 0.8s linear);
+        @include color(#68217a);
+
+        section {
+            // stretching because of big bullet points, this might break on different ratious
+
+
+            ul {
+                list-style-type: disc !important;
+                font-size: 0.8em;
+                //color: #68217a;
+            }
+
+        }
+
+    }
+}
+
 .typescript {
     .reveal {
         background-image: url('../../img/states/typescript-logo.png');
@@ -50,11 +74,17 @@
 
 .karma {
     .reveal {
-        background-image: url('../../img/states/karma-logo.svg');
+        //background-image: url('../../img/states/karma-logo.svg');
+        background-image: none;
         background-position: 10px 10px;
 
         @include transition(background-image 0.8s linear);
         @include color(#429f87);
+
+        a {
+            color: darken(#429f87, 10%);
+            font-size: 0.8em;
+        }
     }
 }
 
