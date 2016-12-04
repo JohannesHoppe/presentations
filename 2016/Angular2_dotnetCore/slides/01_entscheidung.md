@@ -24,8 +24,7 @@ $ npm start
 Option B
 # Frontend + Backend<br>zusammen
 
-<small>z.B. Microsoft ASP.NET Core JavaScript Services</small><br>
-<small>Ja, das ist was offizielles von __Microsoft__! ;-)</small>
+<small>z.B. _Microsoft_ ASP.NET Core JavaScript Services</small>
 
 
 

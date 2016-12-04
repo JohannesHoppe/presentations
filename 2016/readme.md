@@ -9,6 +9,8 @@ Mehrere Vorträge und Begleitmaterial für das laufende Jahr 2016.
 3. [Schnellstart mit Angular 2](#angular2devsession)
 4. [Native Mobile Apps mit NativeScript und Angular 2.0](#angular2nativescript)
 5. [Workshop Angular 2: Einstieg in die komponentenbasierte Entwicklung von Single-Page-Anwendungen](#angular2workshop)
+6. [Dreamteam: ASP.NET Core und Angular 2.0](#angular2dotnetCore)
+http://johanneshoppe.github.io/presentations/2016/Angular2_dotnetCore/
  
 <hr>
 
@@ -113,9 +115,19 @@ Trainer: [Gregor Woiwode](http://www.woiwode.info/blog/), [Johannes Hoppe](http:
 
 <hr>
 
-# [&laquo; zurück](../)
+
+<a name="angular2dotnetCore"></a>
+## Dreamteam: ASP.NET Core und Angular 2.0
+
+* [DDC: 05.12.2016 14:00 - 18:00 Uhr][6]
+
+Zum Ende der DevSession kennen Sie die wichtigsten Bausteine von Angular 2 und ASP.NET Core, sowie eine Auswahl von Entwurfsmustern und Frameworks, welche AngularJS und die .NET-Welt optimal verbinden.
+
+[» Präsentation Starten](http://johanneshoppe.github.io/presentations/2016/Angular2_dotnetCore/)   
 
 <hr>
+
+# [&laquo; zurück](../)
 
  
 
@@ -130,3 +142,4 @@ _
 [3K]: https://entwicklertag.de/karlsruhe/2016/live-coding-mit-angular-2
 [4]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20683
 [5]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20747
+[6]: http://www.dotnet-developer-conference.de/dreamtem-asp-net-core-und-angular-2-0/
