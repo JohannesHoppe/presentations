@@ -752,7 +752,7 @@ ul.model {
   margin: auto;
   width: 353px;
   height: 372px;
-  background: url("../../img/angular2-shield.svg") no-repeat top left; }
+  background: url("../../img/logos/angular2-shield.svg") no-repeat top left; }
   .ng-shield::before {
     font-size: 6em;
     color: white;
