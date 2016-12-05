@@ -123,8 +123,7 @@ Trainer: [Gregor Woiwode](http://www.woiwode.info/blog/), [Johannes Hoppe](http:
 Zum Ende der DevSession kennen Sie die wichtigsten Bausteine von Angular 2 und ASP.NET Core, sowie eine Auswahl von Entwurfsmustern und Frameworks, welche AngularJS und die .NET-Welt optimal verbinden.
 
 [» Präsentation Starten](http://johanneshoppe.github.io/presentations/2016/Angular2_dotnetCore/)   
-[» Demo-Anwendung](https://github.com/JohannesHoppe/angularCore
-Vielen Dank!
+[» Demo-Anwendung](https://github.com/JohannesHoppe/angularCore)
 https://github.com/JohannesHoppe/angularCore)   
 
 <hr>
