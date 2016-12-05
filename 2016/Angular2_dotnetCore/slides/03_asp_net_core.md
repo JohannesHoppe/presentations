@@ -85,6 +85,7 @@ public class Program
 ```csharp
 public class Startup
 {
+    // configures the HTTP request pipeline
     public void Configure(IApplicationBuilder app)
     {
         app.UseStaticFiles();

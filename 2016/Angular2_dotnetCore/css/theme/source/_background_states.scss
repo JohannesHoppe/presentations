@@ -48,13 +48,28 @@
         @include color(#68217a);
 
         section {
-            // stretching because of big bullet points, this might break on different ratious
-
-
             ul {
                 list-style-type: disc !important;
                 font-size: 0.8em;
-                //color: #68217a;
+            }
+
+        }
+
+    }
+}
+
+.angular {
+    .reveal {
+        background-image: url('../../img/logos/angular2-logo.svg');
+        background-position: 10px 10px;
+        background-size: 100px, 100px;
+
+        @include transition(background-image 0.8s linear);
+
+        section {
+            ul {
+                list-style-type: disc !important;
+                font-size: 0.8em;
             }
 
         }

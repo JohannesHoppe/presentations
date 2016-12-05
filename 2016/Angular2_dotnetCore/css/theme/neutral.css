@@ -629,6 +629,18 @@ ul.model {
     list-style-type: disc !important;
     font-size: 0.8em; }
 
+.angular .reveal {
+  background-image: url("../../img/logos/angular2-logo.svg");
+  background-position: 10px 10px;
+  background-size: 100px, 100px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .angular .reveal section ul {
+    list-style-type: disc !important;
+    font-size: 0.8em; }
+
 .typescript .reveal {
   background-image: url("../../img/states/typescript-logo.png");
   background-position: 10px 10px;
@@ -1406,6 +1418,18 @@ ul.model {
   .core .reveal h1, .core .reveal h2, .core .reveal h3, .core .reveal h4, .core .reveal strong, .core .reveal i {
     color: #68217a !important; }
   .core .reveal section ul {
+    list-style-type: disc !important;
+    font-size: 0.8em; }
+
+.angular .reveal {
+  background-image: url("../../img/logos/angular2-logo.svg");
+  background-position: 10px 10px;
+  background-size: 100px, 100px;
+  -webkit-transition: background-image 0.8s linear;
+  -moz-transition: background-image 0.8s linear;
+  -o-transition: background-image 0.8s linear;
+  transition: background-image 0.8s linear; }
+  .angular .reveal section ul {
     list-style-type: disc !important;
     font-size: 0.8em; }
 
