@@ -124,7 +124,6 @@ Zum Ende der DevSession kennen Sie die wichtigsten Bausteine von Angular 2 und A
 
 [» Präsentation Starten](http://johanneshoppe.github.io/presentations/2016/Angular2_dotnetCore/)   
 [» Demo-Anwendung](https://github.com/JohannesHoppe/angularCore)
-https://github.com/JohannesHoppe/angularCore)   
 
 <hr>
 
