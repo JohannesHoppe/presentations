@@ -17,7 +17,7 @@
 # Vorteile
 
 * Robuster → "Enterprise-Ready"
-* Multi-target (Web, Mobile, Hybridm Native, Desktop...)
+* Multi-target (Web, Mobile [Hybrid / Native], Desktop...)
 * Dependendies (statt Rad neu erfinden)
 * v1 == SPA Marktführer
 * Third-Party-Controls

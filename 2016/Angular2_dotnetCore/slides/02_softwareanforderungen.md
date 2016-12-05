@@ -61,9 +61,18 @@ npm install -g yo
 ## ASP.NET Core + Angular Seeed
 <small>(aspnet/JavaScriptServices)</small>
 ```bash
+$ cd neuer-ordner
 $ npm install -g yo generator-aspnetcore-spa
 $ yo aspnetcore-spa
 $ dotnet run
+```
+
+
+
+
+### Probleme mit NuGet?
+```bash
+dotnet restore --source https://nuget.org/api/v2/
 ```
 
 
