@@ -1,5 +1,10 @@
 ![](img/logos/angular2-logo.svg) <!-- .element: style="width:200px; margin-bottom: -10px" -->
-# NG2 
+# Angular 2 
+
+
+
+
+# Vorteile
 
 
 
@@ -9,12 +14,24 @@
 
 
 
+# Vorteile
+
+* Robuster → "Enterprise-Ready"
+* Multi-target (Web, Mobile, Hybridm Native, Desktop...)
+* Dependendies (statt Rad neu erfinden)
+* v1 == SPA Marktführer
+* Third-Party-Controls
+* Alles auf GH, alles OSS, mitmachen!
+
+
+
+
+# Nachteile
+
+
+
+
 ![RIP](img/angular2-upgrade-hell.png)
-
-
-
-
-![RIP](img/logos/typescript-logo.svg) <!-- .element: style="width:60%" -->
 
 
 
@@ -24,34 +41,11 @@
 
 
 
-![Webpack](./img/tooling/webpack-flow.png)
+## Observables over Promises
+<br>
+![Observables](img/observables.png)
 
-
-
-
-## Webpack dev middleware
-
-```csharp
-app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
-    HotModuleReplacement = true
-});
-```
-
-----
-
-* Normale watch +
-* Hot module replacement (HMR) 
-
-aber _NUR_ im Debug Modus
-
-
-
-
-# <i class="fa fa-exclamation-triangle"></i>
-
-```bash
-$ set ASPNETCORE_ENVIRONMENT=Development
-$ dotnet run
-```
-
-![](img/ASPNETCORE_ENVIRONMENT.png)
+<br>
+<small>
+    <a href="http://reactivex.io/documentation" target="_blank">http://reactivex.io/documentation/observable.html</a>
+</small>

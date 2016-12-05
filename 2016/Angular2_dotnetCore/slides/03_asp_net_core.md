@@ -4,6 +4,11 @@
 
 
 
+![](img/logos/csharp6.png) <!-- .element: style="width:200px" -->
+
+
+
+
 ![](img/asp_net_core.png)
 <small>Quelle: [Hanselman](http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx)</small>
 
@@ -98,6 +103,12 @@ public class Startup
 
 
 # <i class="fa fa-exclamation-triangle"></i>
-Neu:
-* Keine Konventionen für HTTP Verben mehr 
-  z.B. GetAllBooks() → GET, PostBook() → POST
+__Stolperfalle__
+* Keine Konventionen für HTTP Verben mehr!  
+  jetzt also expliziet:<br>
+  GetAllBooks() → GET, PostBook() → POST 
+
+
+
+
+# Let's code!

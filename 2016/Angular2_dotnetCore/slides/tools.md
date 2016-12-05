@@ -101,28 +101,3 @@ $ npm start
 
 
 
-# <i class="fa fa-exclamation-triangle"></i>
-### .vscode/settings.json
-
-```js
-{
-  "typescript.tsdk": "node_modules/typescript/lib"
-}
-```
-
-
-
-
-## VSCode Extensions
-
-![tslint](img/vscode-ts/omnisharp.png) <!-- .element: style="width:120px" -->
-![tslint](img/vscode-ts/tslint.svg) <!-- .element: style="width:120px" -->
-![tslint](img/vscode-ts/EditorConfig.png) <!-- .element: style="width:120px" -->
-![tslint](img/vscode-ts/vscode-icons.png) <!-- .element: style="width:120px" -->
-![tslint](img/vscode-ts/autoimport.png) <!-- .element: style="width:120px" -->
-
-* [`ext install csharp`](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
-* [`ext install tslint`](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
-* [`ext install EditorConfig`](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-* [`ext install vscode-icons`](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons)
-* [`ext install autoimport`](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)

@@ -39,14 +39,3 @@ $ dotnet run
 
 
 ![](img/yo.png) <!-- .element: style="width:615px;border: 10px solid black !important" -->
-
-
-
-
-# IDE?
-
-
-
-
-![Angular 2 TypeScript Snippets for VS Code](img/vscode.gif)  <!-- .element: width="80%" -->
-## Visual Studio Code
