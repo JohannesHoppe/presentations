@@ -133,8 +133,7 @@ https://github.com/JohannesHoppe/angularCore)
 
  
 
-_&copy; 2016, [Johannes Hoppe](http://haushoppe-its.de)
-_
+_&copy; 2016, [Johannes Hoppe](http://haushoppe-its.de)_
 
 
 [1]: http://www.developer-week.de/Programm/Veranstaltung/(event)/20557
