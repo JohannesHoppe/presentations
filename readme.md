@@ -4,6 +4,7 @@ Mehrere Vorträge und Begleitmaterial für 2015 und das laufende Jahr 2016.
 
 # [» Jahr 2015](2015)
 # [» Jahr 2016](2016)
+# [» Jahr 2017](https://presentations.angular.schule/)
 
 # Vorträge seit 2010
 
